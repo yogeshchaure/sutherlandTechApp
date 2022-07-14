@@ -53,6 +53,8 @@
         <page path="/jsff/standardRateSetupForm.jsff" usageId="com_sgs_view_standardRateSetupFormPageDef"/>
         <page path="/jsff/TPASetup.jsff" usageId="com_sgs_view_TPASetupPageDef"/>
         <page path="/jsff/TPASetupForm.jsff" usageId="com_sgs_view_TPASetupFormPageDef"/>
+        <page path="/jsff/ApproveAllocatedICoTransaction.jsff"
+              usageId="com_sgs_view_ApproveAllocatedICoTransactionPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="com_sgs_view_welcomePagePageDef" path="jsf.welcomePagePageDef"/>
@@ -102,6 +104,8 @@
         <page id="com_sgs_view_standardRateSetupFormPageDef" path="jsff.standardRateSetupFormPageDef"/>
         <page id="com_sgs_view_TPASetupPageDef" path="jsff.TPASetupPageDef"/>
         <page id="com_sgs_view_TPASetupFormPageDef" path="jsff.TPASetupFormPageDef"/>
+        <page id="com_sgs_view_ApproveAllocatedICoTransactionPageDef"
+              path="jsff.ApproveAllocatedICoTransactionPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="SGSAppModuleDataControl" Package="com.sgs.model.service"
