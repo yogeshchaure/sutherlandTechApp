@@ -13,7 +13,7 @@
             <af:button actionListener="#{bindings.Commit.execute}"
                        id="b1" action="back"
                        disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonAPInv;action=Update'])}"
-                       text="Save and Close" accessKey="S"/>
+                       text="Save and Close AND COMMIT" accessKey="S"/>
             <af:button actionListener="#{bindings.Rollback.execute}" immediate="true" id="b2"
                        action="back"
                        rendered="#{pageFlowScope.pAddEditAPInv == 'EDIT'}" text="Cancel" accessKey="C">
