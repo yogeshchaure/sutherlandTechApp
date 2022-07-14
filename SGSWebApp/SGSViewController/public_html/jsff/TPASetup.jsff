@@ -8,22 +8,7 @@
         <f:facet name="bottom"/>
         <f:facet name="center">
             <af:panelBox text="TPA Master" id="pb1">
-                <f:facet name="toolbar">
-                    <af:toolbar id="t1">
-                        <af:button id="b7" icon="/resources/icons/microsoft-excel.png" shortDesc="Export to Excel"
-                                   disabled="#{bindings.SgsTpaMasterVO1.estimatedRowCount &lt;= 0}">
-                            <af:exportCollectionActionListener type="excelHTML" exportedId="pc1:resId1"
-                                                               filename="TPAMasterNew.xls"/>
-                        </af:button>
-                        <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                   disabled="#{!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']}"
-                                   id="b1" action="ADD" icon="/resources/icons/plus.png"
-                                   shortDesc="Create/Add Cost Identification Rule"/>
-                        <af:button disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"
-                                   id="b2" shortDesc="Delete Business Unit" icon="/resources/icons/delete.png"
-                                   action="#{pageFlowScope.TPAMaterBean.deleteTPAmaster}"/>
-                    </af:toolbar>
-                </f:facet>
+                <f:facet name="toolbar"/>
                 <af:panelGroupLayout layout="vertical" id="pgl1">
                     <af:panelHeader text=" " id="ph1">
                         <af:query id="qryId1" headerText="Search" disclosed="true"
@@ -35,7 +20,23 @@
                     </af:panelHeader>
                     <af:panelCollection id="pc1" styleClass="AFStretchWidth">
                         <f:facet name="menus"/>
-                        <f:facet name="toolbar"/>
+                        <f:facet name="toolbar">
+                            <af:toolbar id="t1">
+                                <af:button id="b7" icon="/resources/icons/microsoft-excel.png"
+                                           shortDesc="Export to Excel"
+                                           disabled="#{bindings.SgsTpaMasterVO1.estimatedRowCount &lt;= 0}">
+                                    <af:exportCollectionActionListener type="excelHTML" exportedId="resId1"
+                                                                       filename="TPAMasterNew.xls"/>
+                                </af:button>
+                                <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                           disabled="#{!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']}"
+                                           id="b1" action="ADD" icon="/resources/icons/plus.png"
+                                           shortDesc="Create/Add Cost Identification Rule"/>
+                                <af:button disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"
+                                           id="b2" shortDesc="Delete Business Unit" icon="/resources/icons/delete.png"
+                                           action="#{pageFlowScope.TPAMaterBean.deleteTPAmaster}"/>
+                            </af:toolbar>
+                        </f:facet>
                         <f:facet name="statusbar"/>
                         <af:table value="#{bindings.SgsTpaMasterVO1.collectionModel}" var="row"
                                   rows="#{bindings.SgsTpaMasterVO1.rangeSize}"
@@ -45,8 +46,7 @@
                             <af:column headerText="TPA ID" id="resId1c1">
                                 <!--<af:outputText value="#{row.TpaId}"
                                                shortDesc="#{bindings.SgsTpaMasterVO1.hints.TpaId.tooltip}" id="ot1"/>-->
-                                <af:link text="#{row.TpaId}" id="l1" action="EDIT"
-                                         inlineStyle="font-weight:bold;"/>
+                                <af:link text="#{row.TpaId}" id="l1" action="EDIT" inlineStyle="font-weight:bold;"/>
                             </af:column>
                             <af:column headerText="Legal Entity (Service Provider)" id="resId1c2">
                                 <af:selectOneChoice value="#{row.bindings.LeServiceProvider.inputValue}"

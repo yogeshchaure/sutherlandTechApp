@@ -14,14 +14,14 @@
                                    disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update'])}"
                                    text="Save and Close" accessKey="S"/>
                         <af:button id="b2" action="back" immediate="true" actionListener="#{bindings.Rollback.execute}"
-                                   rendered="#{pageFlowScope.pSRAddEdit == 'EDIT'}" text="Cancel" accessKey="C"/>
+                                   rendered="#{pageFlowScope.pTPAAddEdit == 'EDIT'}" text="Cancel" accessKey="C"/>
                         <af:button actionListener="#{bindings.Delete.execute}" disabled="#{!bindings.Delete.enabled}"
-                                   id="b3" rendered="#{pageFlowScope.pSRAddEdit == 'ADD'}" action="back"
+                                   id="b3" rendered="#{pageFlowScope.pTPAAddEdit == 'ADD'}" action="back"
                                    immediate="true" text="Cancel" accessKey="C"/>
                     </af:toolbar>
                 </f:facet>
                 <af:panelFormLayout id="pfl1" rows="5">
-                    <af:inputText value="#{bindings.TpaId.inputValue}" label="#{bindings.TpaId.hints.label}"
+                    <af:inputText value="#{bindings.TpaId.inputValue}" label="TPA ID"
                                   required="#{bindings.TpaId.hints.mandatory}"
                                   columns="#{bindings.TpaId.hints.displayWidth}"
                                   maximumLength="#{bindings.TpaId.hints.precision}"
@@ -29,14 +29,14 @@
                         <f:validator binding="#{bindings.TpaId.validator}"/>
                     </af:inputText>
                     <af:selectOneChoice value="#{bindings.LeServiceProvider.inputValue}"
-                                        label="#{bindings.LeServiceProvider.label}"
+                                        label="Legal Entity (Service Provider)"
                                         required="#{bindings.LeServiceProvider.hints.mandatory}"
                                         shortDesc="#{bindings.LeServiceProvider.hints.tooltip}" id="soc1">
                         <f:selectItems value="#{bindings.LeServiceProvider.items}" id="si1"/>
                         <f:validator binding="#{bindings.LeServiceProvider.validator}"/>
                     </af:selectOneChoice>
                     <af:selectOneChoice value="#{bindings.LeServiceReceiver.inputValue}"
-                                        label="#{bindings.LeServiceReceiver.label}"
+                                        label="Legal Entity (Service Receiver)"
                                         required="#{bindings.LeServiceReceiver.hints.mandatory}"
                                         shortDesc="#{bindings.LeServiceReceiver.hints.tooltip}" id="soc2">
                         <f:selectItems value="#{bindings.LeServiceReceiver.items}" id="si2"/>
@@ -49,7 +49,7 @@
                         <f:validator binding="#{bindings.PassThrough.validator}"/>
                     </af:selectOneChoice>
                     <af:selectOneChoice value="#{bindings.PassThroughBu.inputValue}"
-                                        label="#{bindings.PassThroughBu.label}"
+                                        label="Pass Through BU"
                                         required="#{bindings.PassThroughBu.hints.mandatory}"
                                         shortDesc="#{bindings.PassThroughBu.hints.tooltip}" id="soc4">
                         <f:selectItems value="#{bindings.PassThroughBu.items}" id="si4"/>
