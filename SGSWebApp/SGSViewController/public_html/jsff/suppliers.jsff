@@ -11,7 +11,7 @@
         <f:facet name="toolbar"/>
         <af:panelGroupLayout layout="vertical" id="pgl1">
           <af:panelHeader text=" " id="ph1">
-            <af:query id="qryId1" headerText="Search" disclosed="true"
+            <af:query id="qryId1" headerText="Venkat" disclosed="true"
                       value="#{bindings.SgsSuppliersVOCriteriaQuery.queryDescriptor}"
                       model="#{bindings.SgsSuppliersVOCriteriaQuery.queryModel}"
                       queryListener="#{bindings.SgsSuppliersVOCriteriaQuery.processQuery}"
