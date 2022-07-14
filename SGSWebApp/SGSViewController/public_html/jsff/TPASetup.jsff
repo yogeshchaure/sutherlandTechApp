@@ -88,7 +88,7 @@
                                     <f:validator binding="#{row.bindings.PassThroughBu.validator}"/>
                                 </af:selectOneChoice>
                             </af:column>
-                            <af:column headerText="Effective End Data" id="resId1c6">
+                            <af:column headerText="Effective End Date" id="resId1c6">
                                 <af:outputText value="#{row.EffectiveEndDate}"
                                                shortDesc="#{bindings.SgsTpaMasterVO1.hints.EffectiveEndDate.tooltip}"
                                                id="ot2">
