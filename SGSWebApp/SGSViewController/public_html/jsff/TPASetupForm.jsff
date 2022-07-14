@@ -71,7 +71,7 @@
                         <f:validator binding="#{bindings.EffectiveEndDate.validator}"/>
                         <af:convertDateTime pattern="#{bindings.EffectiveEndDate.format}"/>
                     </af:inputDate>
-                    <af:inputDate value="#{bindings.UpdatedDate.inputValue}" label="#{bindings.UpdatedDate.hints.label}"
+                    <af:inputDate value="#{bindings.UpdatedDate.inputValue}" label="Updated Date"
                                   required="#{bindings.UpdatedDate.hints.mandatory}"
                                   columns="#{bindings.UpdatedDate.hints.displayWidth}"
                                   shortDesc="#{bindings.UpdatedDate.hints.tooltip}" id="id3">
