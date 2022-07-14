@@ -21,6 +21,7 @@
    <task-flow-descriptor path="bTaskFlow/apPaymentsDtlBTF.xml" id="apPaymentsDtlBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets">
       <input-parameter name="pAddEditPDtl"/>
    </task-flow-descriptor>
+   <task-flow-descriptor path="bTaskFlow/approveallocatedICoTransactionBTF.xml" id="approveallocatedICoTransactionBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/arInvMainBTF.xml" id="arInvMainBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/arInvoiceBTF.xml" id="arInvoiceBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/arInvoiceFormBTF.xml" id="arInvoiceFormBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets">
