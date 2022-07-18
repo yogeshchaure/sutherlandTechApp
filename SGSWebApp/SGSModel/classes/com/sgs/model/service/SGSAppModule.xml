@@ -158,6 +158,15 @@
   <ViewUsage
     Name="SgsStandarardRateVO1"
     ViewObjectName="com.sgs.model.view.SgsStandarardRateVO"/>
+  <ViewUsage
+    Name="SgsRevAllocatedDataVO"
+    ViewObjectName="com.sgs.model.view.SgsRevAllocatedDataVO"/>
+  <ViewUsage
+    Name="RunAllocationEngineVO"
+    ViewObjectName="com.sgs.model.view.RunAllocationEngineVO"/>
+  <ViewUsage
+    Name="SgsRunIntercompanyExtractionVO"
+    ViewObjectName="com.sgs.model.view.SgsRunIntercompanyExtractionVO"/>
   <ViewLinkUsage
     Name="SgsBUCustomersVL1"
     ViewLinkObjectName="com.sgs.model.viewLink.SgsBUCustomersVL"

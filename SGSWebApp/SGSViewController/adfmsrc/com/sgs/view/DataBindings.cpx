@@ -53,6 +53,15 @@
         <page path="/jsff/standardRateSetupForm.jsff" usageId="com_sgs_view_standardRateSetupFormPageDef"/>
         <page path="/jsff/TPASetup.jsff" usageId="com_sgs_view_TPASetupPageDef"/>
         <page path="/jsff/TPASetupForm.jsff" usageId="com_sgs_view_TPASetupFormPageDef"/>
+        <page path="/jsff/ApproveAllocatedICoTransaction.jsff"
+              usageId="com_sgs_view_ApproveAllocatedICoTransactionPageDef"/>
+        <page path="/jsff/runAllocationEngine.jsff" usageId="com_sgs_view_runAllocationEnginePageDef"/>
+        <page path="/jsff/processMain.jsff" usageId="com_sgs_view_processMainPageDef"/>
+        <page path="/bTaskFlow/runAllocationEngineBTF.xml#runAllocationEngineBTF@CreateInsert"
+              usageId="com_sgs_view_runAllocationEngineBTF_runAllocationEngineBTF_CreateInsertPageDef"/>
+        <page path="/jsff/runIntercompanyExtraction.jsff" usageId="com_sgs_view_runIntercompanyExtractionPageDef"/>
+        <page path="/bTaskFlow/runIntercompanyExtractionBTF.xml#runIntercompanyExtractionBTF@CreateInsert"
+              usageId="com_sgs_view_runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="com_sgs_view_welcomePagePageDef" path="jsf.welcomePagePageDef"/>
@@ -102,6 +111,15 @@
         <page id="com_sgs_view_standardRateSetupFormPageDef" path="jsff.standardRateSetupFormPageDef"/>
         <page id="com_sgs_view_TPASetupPageDef" path="jsff.TPASetupPageDef"/>
         <page id="com_sgs_view_TPASetupFormPageDef" path="jsff.TPASetupFormPageDef"/>
+        <page id="com_sgs_view_ApproveAllocatedICoTransactionPageDef"
+              path="jsff.ApproveAllocatedICoTransactionPageDef"/>
+        <page id="com_sgs_view_runAllocationEnginePageDef" path="jsff.runAllocationEnginePageDef"/>
+        <page id="com_sgs_view_processMainPageDef" path="jsff.processMainPageDef"/>
+        <page id="com_sgs_view_runAllocationEngineBTF_runAllocationEngineBTF_CreateInsertPageDef"
+              path="bTaskFlow.runAllocationEngineBTF_runAllocationEngineBTF_CreateInsertPageDef"/>
+        <page id="com_sgs_view_runIntercompanyExtractionPageDef" path="jsff.runIntercompanyExtractionPageDef"/>
+        <page id="com_sgs_view_runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"
+              path="bTaskFlow.runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="SGSAppModuleDataControl" Package="com.sgs.model.service"

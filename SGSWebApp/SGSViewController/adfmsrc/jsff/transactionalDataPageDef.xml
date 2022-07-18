@@ -7,6 +7,9 @@
     <taskFlow id="transBCostAllocationMainBTF1"
               taskFlowId="/bTaskFlow/transBCostAllocationMainBTF.xml#transBCostAllocationMainBTF" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="approveallocatedICoTransactionBTF1"
+              taskFlowId="/bTaskFlow/approveallocatedICoTransactionBTF.xml#approveallocatedICoTransactionBTF"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>
