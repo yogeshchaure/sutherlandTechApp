@@ -704,6 +704,22 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl {
     }
 
     /**
+
+     * Container's getter for SgsStatisticalDataVO1.
+     * @return SgsStatisticalDataVO1
+     */
+    public ViewObjectImpl getSgsStatisticalDataVO1() {
+        return (ViewObjectImpl) findViewObject("SgsStatisticalDataVO1");
+    }
+
+    /**
+     * Container's getter for SgsARStatisticalDataVO1.
+     * @return SgsARStatisticalDataVO1
+     */
+    public ViewObjectImpl getSgsARStatisticalDataVO1() {
+        return (ViewObjectImpl) findViewObject("SgsARStatisticalDataVO1");
+	}
+	/**
      * Container's getter for RunAllocationEngineVO1.
      * @return RunAllocationEngineVO1
      */
@@ -717,6 +733,7 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl {
      */
     public ViewObjectImpl getSgsRunIntercompanyExtractionVO() {
         return (ViewObjectImpl) findViewObject("SgsRunIntercompanyExtractionVO");
+
     }
 }
 

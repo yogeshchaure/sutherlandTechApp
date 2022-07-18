@@ -60,9 +60,7 @@
                                 <af:showDetailItem id="sdi10" text="Global Settings Set-Up"
                                                    rendered="#{securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=View']}"
                                                    inlineStyle="min-height:500px;" icon="/resources/icons/globalSetting.png"></af:showDetailItem>
-                                <af:showDetailItem id="sdi11" text="User Access Masters"
-                                                   rendered="#{securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=View']}"
-                                                   inlineStyle="min-height:500px;" icon="/resources/icons/useraccess.png"></af:showDetailItem>
+
                             </af:panelSpringboard>
                         </f:facet>
                     </af:decorativeBox>

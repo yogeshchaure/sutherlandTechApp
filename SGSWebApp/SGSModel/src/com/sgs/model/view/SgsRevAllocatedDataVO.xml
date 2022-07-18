@@ -6,14 +6,14 @@
   Name="SgsRevAllocatedDataVO"
   Version="12.2.1.22.48"
   InheritPersonalization="merge"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  PageIterMode="Full"
+  AccessMode="DEFAULT"
   SelectListFlags="1"
   FromListFlags="1"
   WhereFlags="1"
-  BindingStyle="JDBC"
-  CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full"
-  AccessMode="DEFAULT">
+  SelectAllAttributes="false">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
@@ -466,7 +466,6 @@
   </ViewAttribute>
   <ViewAttribute
     Name="RadId"
-    IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="RadId"
     EntityUsage="SgsRevAllocatedData"

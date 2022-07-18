@@ -162,6 +162,12 @@
     Name="SgsRevAllocatedDataVO"
     ViewObjectName="com.sgs.model.view.SgsRevAllocatedDataVO"/>
   <ViewUsage
+    Name="SgsStatisticalDataVO1"
+    ViewObjectName="com.sgs.model.view.SgsStatisticalDataVO"/>
+  <ViewUsage
+    Name="SgsARStatisticalDataVO1"
+    ViewObjectName="com.sgs.model.view.SgsARStatisticalDataVO"/>
+  <ViewUsage
     Name="RunAllocationEngineVO"
     ViewObjectName="com.sgs.model.view.RunAllocationEngineVO"/>
   <ViewUsage
