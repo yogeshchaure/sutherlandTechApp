@@ -466,7 +466,6 @@
   </ViewAttribute>
   <ViewAttribute
     Name="RadId"
-    IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="RadId"
     EntityUsage="SgsRevAllocatedData"

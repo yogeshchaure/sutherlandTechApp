@@ -167,7 +167,7 @@
   <ViewUsage
     Name="SgsARStatisticalDataVO1"
     ViewObjectName="com.sgs.model.view.SgsARStatisticalDataVO"/>
- <ViewUsage
+  <ViewUsage
     Name="RunAllocationEngineVO"
     ViewObjectName="com.sgs.model.view.RunAllocationEngineVO"/>
   <ViewUsage
