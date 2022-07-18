@@ -55,6 +55,10 @@
         <page path="/jsff/TPASetupForm.jsff" usageId="com_sgs_view_TPASetupFormPageDef"/>
         <page path="/jsff/ApproveAllocatedICoTransaction.jsff"
               usageId="com_sgs_view_ApproveAllocatedICoTransactionPageDef"/>
+        <page path="/jsff/statisticalData.jsff" usageId="com_sgs_view_statisticalDataPageDef"/>
+        <page path="/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF@ExecuteWithParams"
+              usageId="com_sgs_view_statisticalARDataBTF_statisticalARDataBTF_ExecuteWithParamsPageDef"/>
+        <page path="/jsff/statisticalDataAR.jsff" usageId="com_sgs_view_statisticalDataARPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="com_sgs_view_welcomePagePageDef" path="jsf.welcomePagePageDef"/>
@@ -106,6 +110,10 @@
         <page id="com_sgs_view_TPASetupFormPageDef" path="jsff.TPASetupFormPageDef"/>
         <page id="com_sgs_view_ApproveAllocatedICoTransactionPageDef"
               path="jsff.ApproveAllocatedICoTransactionPageDef"/>
+        <page id="com_sgs_view_statisticalDataPageDef" path="jsff.statisticalDataPageDef"/>
+        <page id="com_sgs_view_statisticalARDataBTF_statisticalARDataBTF_ExecuteWithParamsPageDef"
+              path="bTaskFlow.statisticalARDataBTF_statisticalARDataBTF_ExecuteWithParamsPageDef"/>
+        <page id="com_sgs_view_statisticalDataARPageDef" path="jsff.statisticalDataARPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="SGSAppModuleDataControl" Package="com.sgs.model.service"

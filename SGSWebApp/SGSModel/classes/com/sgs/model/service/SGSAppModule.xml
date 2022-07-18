@@ -161,6 +161,12 @@
   <ViewUsage
     Name="SgsRevAllocatedDataVO"
     ViewObjectName="com.sgs.model.view.SgsRevAllocatedDataVO"/>
+  <ViewUsage
+    Name="SgsStatisticalDataVO1"
+    ViewObjectName="com.sgs.model.view.SgsStatisticalDataVO"/>
+  <ViewUsage
+    Name="SgsARStatisticalDataVO1"
+    ViewObjectName="com.sgs.model.view.SgsARStatisticalDataVO"/>
   <ViewLinkUsage
     Name="SgsBUCustomersVL1"
     ViewLinkObjectName="com.sgs.model.viewLink.SgsBUCustomersVL"
