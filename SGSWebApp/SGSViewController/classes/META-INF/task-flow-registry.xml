@@ -72,6 +72,8 @@
       <input-parameter name="pARReceiptAddEdit"/>
    </task-flow-descriptor>
    <task-flow-descriptor path="bTaskFlow/reportMainBTF.xml" id="reportMainBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="bTaskFlow/runAllocationEngineBTF.xml" id="runAllocationEngineBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="bTaskFlow/runIntercompanyExtractionBTF.xml" id="runIntercompanyExtractionBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/securityMainBTF.xml" id="securityMainBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/servicesBTF.xml" id="servicesBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/servicesFormBTF.xml" id="servicesFormBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets">

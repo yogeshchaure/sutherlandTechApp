@@ -82,3 +82,10 @@ af|commandButton {
 .qLetPartSearch af|query::info{
     display:none
 }
+
+.headerText af|outputText {
+  font-weight: normal;
+  font-weight: bold;
+  font-weight: 900;
+}
+

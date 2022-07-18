@@ -167,6 +167,12 @@
   <ViewUsage
     Name="SgsARStatisticalDataVO1"
     ViewObjectName="com.sgs.model.view.SgsARStatisticalDataVO"/>
+  <ViewUsage
+    Name="RunAllocationEngineVO"
+    ViewObjectName="com.sgs.model.view.RunAllocationEngineVO"/>
+  <ViewUsage
+    Name="SgsRunIntercompanyExtractionVO"
+    ViewObjectName="com.sgs.model.view.SgsRunIntercompanyExtractionVO"/>
   <ViewLinkUsage
     Name="SgsBUCustomersVL1"
     ViewLinkObjectName="com.sgs.model.viewLink.SgsBUCustomersVL"

@@ -1180,17 +1180,20 @@
                             </permission>
                             <permission>
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
-
+<<<<<<< HEAD
                                 <name>/bTaskFlow/StatisticalBTF.xml#StatisticalBTF</name>
-
+=======
                                 <name>/bTaskFlow/runAllocationEngineBTF.xml#runAllocationEngineBTF</name>
+>>>>>>> 4768d4b71f50319b1d891e7f5a7a52b35079a699
                                 <actions>view</actions>
                             </permission>
                             <permission>
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
+<<<<<<< HEAD
                                 <name>/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF</name>
                                 <actions>view</actions>
                             </permission>
+=======
                                 <name>/bTaskFlow/runIntercompanyExtractionBTF.xml#runIntercompanyExtractionBTF</name>
                                 <actions>view</actions>
                             </permission>
@@ -1199,6 +1202,7 @@
                                 <name>com.sgs.model.entity.SgsRunIntercompanyExtraction</name>
                                 <actions>delete,update</actions>
                             </permission>
+>>>>>>> 4768d4b71f50319b1d891e7f5a7a52b35079a699
                         </permissions>
                     </grant>
                     <grant>
@@ -1512,15 +1516,20 @@
                             </permission>
                             <permission>
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
+<<<<<<< HEAD
                                 <name>/bTaskFlow/StatisticalBTF.xml#StatisticalBTF</name>
+=======
                                 <name>/bTaskFlow/runAllocationEngineBTF.xml#runAllocationEngineBTF</name>
+>>>>>>> 4768d4b71f50319b1d891e7f5a7a52b35079a699
                                 <actions>view</actions>
                             </permission>
                             <permission>
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
+<<<<<<< HEAD
                                 <name>/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF</name>
                                 <actions>view</actions>
                             </permission>
+=======
                                 <name>/bTaskFlow/runIntercompanyExtractionBTF.xml#runIntercompanyExtractionBTF</name>
                                 <actions>view</actions>
                             </permission>
@@ -1529,6 +1538,7 @@
                                 <name>com.sgs.model.entity.SgsRunIntercompanyExtraction</name>
                                 <actions>delete,update</actions>
                             </permission>
+>>>>>>> 4768d4b71f50319b1d891e7f5a7a52b35079a699
                         </permissions>
                     </grant>
                 </jazn-policy>

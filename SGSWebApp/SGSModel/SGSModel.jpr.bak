@@ -292,9 +292,11 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-
+<<<<<<< HEAD
             <url n="id" path="../../../../../Users/Venkat/AppData/Roaming/JDeveloper/system12.2.1.4.42.190911.2248/o.jdeveloper/Sqljdbc41.library"/>
-
+=======
+            <url n="id" path="../../../../../Users/Vikranth/AppData/Roaming/JDeveloper/system12.2.1.4.42.190911.2248/o.jdeveloper/Sqljdbc41.library"/>
+>>>>>>> 4768d4b71f50319b1d891e7f5a7a52b35079a699
             <value n="isJDK" v="false"/>
          </hash>
       </list>

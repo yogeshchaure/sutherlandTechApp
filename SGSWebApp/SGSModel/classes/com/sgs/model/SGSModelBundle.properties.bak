@@ -234,6 +234,7 @@ com.sgs.model.view.SgsRevAllocatedDataVO.bServiceCategory_LABEL=Service Category
 com.sgs.model.view.SgsRevAllocatedDataVO.bStatus_LABEL=Status
 com.sgs.model.view.SgsRevAllocatedDataVO.bTPAApplicability_LABEL=TPA Applicability
 com.sgs.model.view.SgsRevAllocatedDataVO.pTransactionCategory_LABEL=Inter/ Inter Transaction Type
+<<<<<<< HEAD
 com.sgs.model.view.SgsStatisticalDataVO.bMonth_LABEL=Month
 com.sgs.model.view.SgsStatisticalDataVO.bSgCat_LABEL=Statistical Data Category
 com.sgs.model.view.SgsStatisticalDataVO.bUnit_LABEL=Business Unit
@@ -257,6 +258,7 @@ com.sgs.model.view.SgsARStatisticalDataVO.OperationalUnit_LABEL=Operational Unit
 com.sgs.model.view.SgsARStatisticalDataVO.StatissticalData_LABEL=Statistical Data
 com.sgs.model.view.SgsARStatisticalDataVO.StatisticalDataCategory_LABEL=Statisstical Data Category
 com.sgs.model.view.SgsARStatisticalDataVO.UnitOfMeasure_LABEL=Unit pf Measure
+=======
 com.sgs.model.view.RunAllocationEngineVO_LABEL=Run Allocation Engine Vo
 com.sgs.model.view.SgsRunIntercompanyExtractionVO_LABEL=Sgs Run Intercompany Extraction Vo
-
+>>>>>>> 4768d4b71f50319b1d891e7f5a7a52b35079a699

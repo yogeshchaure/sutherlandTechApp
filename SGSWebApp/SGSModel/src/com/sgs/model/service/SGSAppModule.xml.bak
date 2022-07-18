@@ -162,17 +162,19 @@
     Name="SgsRevAllocatedDataVO"
     ViewObjectName="com.sgs.model.view.SgsRevAllocatedDataVO"/>
   <ViewUsage
+<<<<<<< HEAD
     Name="SgsStatisticalDataVO1"
     ViewObjectName="com.sgs.model.view.SgsStatisticalDataVO"/>
   <ViewUsage
     Name="SgsARStatisticalDataVO1"
     ViewObjectName="com.sgs.model.view.SgsARStatisticalDataVO"/>
- <ViewUsage
+=======
     Name="RunAllocationEngineVO"
     ViewObjectName="com.sgs.model.view.RunAllocationEngineVO"/>
   <ViewUsage
     Name="SgsRunIntercompanyExtractionVO"
     ViewObjectName="com.sgs.model.view.SgsRunIntercompanyExtractionVO"/>
+>>>>>>> 4768d4b71f50319b1d891e7f5a7a52b35079a699
   <ViewLinkUsage
     Name="SgsBUCustomersVL1"
     ViewLinkObjectName="com.sgs.model.viewLink.SgsBUCustomersVL"

@@ -55,12 +55,12 @@
         <page path="/jsff/TPASetupForm.jsff" usageId="com_sgs_view_TPASetupFormPageDef"/>
         <page path="/jsff/ApproveAllocatedICoTransaction.jsff"
               usageId="com_sgs_view_ApproveAllocatedICoTransactionPageDef"/>
-
+<<<<<<< HEAD
         <page path="/jsff/statisticalData.jsff" usageId="com_sgs_view_statisticalDataPageDef"/>
         <page path="/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF@ExecuteWithParams"
               usageId="com_sgs_view_statisticalARDataBTF_statisticalARDataBTF_ExecuteWithParamsPageDef"/>
         <page path="/jsff/statisticalDataAR.jsff" usageId="com_sgs_view_statisticalDataARPageDef"/>
-
+=======
         <page path="/jsff/runAllocationEngine.jsff" usageId="com_sgs_view_runAllocationEnginePageDef"/>
         <page path="/jsff/processMain.jsff" usageId="com_sgs_view_processMainPageDef"/>
         <page path="/bTaskFlow/runAllocationEngineBTF.xml#runAllocationEngineBTF@CreateInsert"
@@ -68,7 +68,7 @@
         <page path="/jsff/runIntercompanyExtraction.jsff" usageId="com_sgs_view_runIntercompanyExtractionPageDef"/>
         <page path="/bTaskFlow/runIntercompanyExtractionBTF.xml#runIntercompanyExtractionBTF@CreateInsert"
               usageId="com_sgs_view_runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"/>
-
+>>>>>>> 4768d4b71f50319b1d891e7f5a7a52b35079a699
     </pageMap>
     <pageDefinitionUsages>
         <page id="com_sgs_view_welcomePagePageDef" path="jsf.welcomePagePageDef"/>
@@ -120,12 +120,12 @@
         <page id="com_sgs_view_TPASetupFormPageDef" path="jsff.TPASetupFormPageDef"/>
         <page id="com_sgs_view_ApproveAllocatedICoTransactionPageDef"
               path="jsff.ApproveAllocatedICoTransactionPageDef"/>
-
+<<<<<<< HEAD
         <page id="com_sgs_view_statisticalDataPageDef" path="jsff.statisticalDataPageDef"/>
         <page id="com_sgs_view_statisticalARDataBTF_statisticalARDataBTF_ExecuteWithParamsPageDef"
               path="bTaskFlow.statisticalARDataBTF_statisticalARDataBTF_ExecuteWithParamsPageDef"/>
         <page id="com_sgs_view_statisticalDataARPageDef" path="jsff.statisticalDataARPageDef"/>
-
+=======
         <page id="com_sgs_view_runAllocationEnginePageDef" path="jsff.runAllocationEnginePageDef"/>
         <page id="com_sgs_view_processMainPageDef" path="jsff.processMainPageDef"/>
         <page id="com_sgs_view_runAllocationEngineBTF_runAllocationEngineBTF_CreateInsertPageDef"
@@ -133,6 +133,7 @@
         <page id="com_sgs_view_runIntercompanyExtractionPageDef" path="jsff.runIntercompanyExtractionPageDef"/>
         <page id="com_sgs_view_runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"
               path="bTaskFlow.runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"/>
+>>>>>>> 4768d4b71f50319b1d891e7f5a7a52b35079a699
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="SGSAppModuleDataControl" Package="com.sgs.model.service"
