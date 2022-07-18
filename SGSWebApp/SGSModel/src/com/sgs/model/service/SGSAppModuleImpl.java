@@ -702,5 +702,21 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl {
     public ViewObjectImpl getSgsRevAllocatedDataVO() {
         return (ViewObjectImpl) findViewObject("SgsRevAllocatedDataVO");
     }
+
+    /**
+     * Container's getter for RunAllocationEngineVO1.
+     * @return RunAllocationEngineVO1
+     */
+    public ViewObjectImpl getRunAllocationEngineVO() {
+        return (ViewObjectImpl) findViewObject("RunAllocationEngineVO");
+    }
+
+    /**
+     * Container's getter for SgsRunIntercompanyExtractionVO1.
+     * @return SgsRunIntercompanyExtractionVO1
+     */
+    public ViewObjectImpl getSgsRunIntercompanyExtractionVO() {
+        return (ViewObjectImpl) findViewObject("SgsRunIntercompanyExtractionVO");
+    }
 }
 
