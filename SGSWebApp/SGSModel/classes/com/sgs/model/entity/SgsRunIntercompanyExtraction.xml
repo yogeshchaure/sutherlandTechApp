@@ -12,7 +12,6 @@
   BindingStyle="JDBC">
   <Attribute
     Name="RieId"
-    IsNotNull="true"
     ColumnName="RIE_ID"
     SQLType="INTEGER"
     Type="java.lang.Integer"

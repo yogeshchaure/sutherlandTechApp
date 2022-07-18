@@ -347,7 +347,6 @@
   </ViewAttribute>
   <ViewAttribute
     Name="RieId"
-    IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="RieId"
     EntityUsage="SgsRunIntercompanyExtraction"
