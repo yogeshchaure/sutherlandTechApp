@@ -451,7 +451,9 @@
         </af:panelBox>
         <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
           <af:dialog id="d1" contentWidth="700" contentHeight="400" type="cancel">
-            <f:facet name="buttonBar"/>
+            <f:facet name="buttonBar">
+              <af:button text="Save" id="b4"/>
+            </f:facet>
             <af:region value="#{bindings.reversalRectificationDetailsBTF1.regionModel}" id="r1"/>
           </af:dialog>
         </af:popup>
