@@ -376,7 +376,14 @@
     PrecisionRule="true"
     EntityAttrName="TbcaId"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="TBCA_ID"/>
+    AliasName="TBCA_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="0.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CirId"
     PrecisionRule="true"
@@ -388,6 +395,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <FIELDORDER
+          Value="1.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -402,6 +411,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <FIELDORDER
+          Value="2.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -410,25 +421,53 @@
     PrecisionRule="true"
     EntityAttrName="ApprovalRequestType"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="APPROVAL_REQUEST_TYPE"/>
+    AliasName="APPROVAL_REQUEST_TYPE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="3.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ExtractId"
     PrecisionRule="true"
     EntityAttrName="ExtractId"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="EXTRACT_ID"/>
+    AliasName="EXTRACT_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="4.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="RectificationId"
     PrecisionRule="true"
     EntityAttrName="RectificationId"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="RECTIFICATION_ID"/>
+    AliasName="RECTIFICATION_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="5.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LeagalEntity"
     PrecisionRule="true"
     EntityAttrName="LeagalEntity"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="LEAGAL_ENTITY"/>
+    AliasName="LEAGAL_ENTITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="6.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="JobCode"
     PrecisionRule="true"
@@ -440,6 +479,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <FIELDORDER
+          Value="7.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -448,43 +489,92 @@
     PrecisionRule="true"
     EntityAttrName="GlAccount"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="GL_ACCOUNT"/>
+    AliasName="GL_ACCOUNT">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="8.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="OprationalUnit"
     PrecisionRule="true"
     EntityAttrName="OprationalUnit"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="OPRATIONAL_UNIT"/>
+    AliasName="OPRATIONAL_UNIT">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="9.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DepartmentId"
     PrecisionRule="true"
     EntityAttrName="DepartmentId"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="DEPARTMENT_ID"/>
+    AliasName="DEPARTMENT_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="10.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="AffilateCode"
     PrecisionRule="true"
     EntityAttrName="AffilateCode"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="AFFILATE_CODE"/>
+    AliasName="AFFILATE_CODE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="11.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="VerticalCode"
     PrecisionRule="true"
     EntityAttrName="VerticalCode"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="VERTICAL_CODE"/>
+    AliasName="VERTICAL_CODE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="12.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="HorizontalCode"
     PrecisionRule="true"
     EntityAttrName="HorizontalCode"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="HORIZONTAL_CODE"/>
+    AliasName="HORIZONTAL_CODE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="13.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="BookCode"
     PrecisionRule="true"
     EntityAttrName="BookCode"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="BOOK_CODE"/>
+    AliasName="BOOK_CODE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="14.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="SourceSystem"
     PrecisionRule="true"
@@ -496,6 +586,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <FIELDORDER
+          Value="15.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -510,6 +602,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <FIELDORDER
+          Value="17.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -518,37 +612,79 @@
     PrecisionRule="true"
     EntityAttrName="SourceTable"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="SOURCE_TABLE"/>
+    AliasName="SOURCE_TABLE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="18.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TransactinPeriod"
     PrecisionRule="true"
     EntityAttrName="TransactinPeriod"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="TRANSACTIN_PERIOD"/>
+    AliasName="TRANSACTIN_PERIOD">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="19.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="GlDate"
     PrecisionRule="true"
     EntityAttrName="GlDate"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="GL_DATE"/>
+    AliasName="GL_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="20.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TransactionDate"
     PrecisionRule="true"
     EntityAttrName="TransactionDate"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="TRANSACTION_DATE"/>
+    AliasName="TRANSACTION_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="21.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TransactionName"
     PrecisionRule="true"
     EntityAttrName="TransactionName"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="TRANSACTION_NAME"/>
+    AliasName="TRANSACTION_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="22.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TransactionType"
     PrecisionRule="true"
     EntityAttrName="TransactionType"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="TRANSACTION_TYPE"/>
+    AliasName="TRANSACTION_TYPE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="23.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TransactionCategory"
     PrecisionRule="true"
@@ -560,6 +696,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <FIELDORDER
+          Value="24.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -568,25 +706,53 @@
     PrecisionRule="true"
     EntityAttrName="TransactionCurrency"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="TRANSACTION_CURRENCY"/>
+    AliasName="TRANSACTION_CURRENCY">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="25.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TransactionAmount"
     PrecisionRule="true"
     EntityAttrName="TransactionAmount"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="TRANSACTION_AMOUNT"/>
+    AliasName="TRANSACTION_AMOUNT">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="26.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="FunctionalCurrency"
     PrecisionRule="true"
     EntityAttrName="FunctionalCurrency"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="FUNCTIONAL_CURRENCY"/>
+    AliasName="FUNCTIONAL_CURRENCY">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="27.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ForeignExchangeRate"
     PrecisionRule="true"
     EntityAttrName="ForeignExchangeRate"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="FOREIGN_EXCHANGE_RATE"/>
+    AliasName="FOREIGN_EXCHANGE_RATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="28.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ServiceCategory"
     PrecisionRule="true"
@@ -598,6 +764,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <FIELDORDER
+          Value="16.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -606,7 +774,14 @@
     PrecisionRule="true"
     EntityAttrName="AccountTreatment"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="ACCOUNT_TREATMENT"/>
+    AliasName="ACCOUNT_TREATMENT">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="29.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ExtractedBy"
     PrecisionRule="true"
@@ -618,6 +793,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <FIELDORDER
+          Value="30.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -626,7 +803,14 @@
     PrecisionRule="true"
     EntityAttrName="ExtractedDate"
     EntityUsage="SgsTransBCostAllocation"
-    AliasName="EXTRACTED_DATE"/>
+    AliasName="EXTRACTED_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="31.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TrasactionStatus"
     PrecisionRule="true"
@@ -638,6 +822,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <FIELDORDER
+          Value="32.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -647,28 +833,56 @@
     EntityAttrName="CreatedDate"
     EntityUsage="SgsTransBCostAllocation"
     AliasName="CREATED_DATE"
-    IsUpdateable="false"/>
+    IsUpdateable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="33.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="SgsTransBCostAllocation"
     AliasName="CREATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="34.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="UpdatedDate"
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="SgsTransBCostAllocation"
     AliasName="UPDATED_DATE"
-    IsUpdateable="false"/>
+    IsUpdateable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="35.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
     EntityUsage="SgsTransBCostAllocation"
     AliasName="UPDATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="36.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewCriteria
     Name="SgsTransBCostAllocationVOCriteria"
     ViewObjectName="com.sgs.model.view.SgsTransBCostAllocationVO"
@@ -701,22 +915,6 @@
         Operator="="
         Conjunction="AND"
         Value=":bCostRule"
-        IsBindVarValue="true"
-        Required="Optional"/>
-      <ViewCriteriaItem
-        Name="SourceSystem"
-        ViewAttribute="SourceSystem"
-        Operator="="
-        Conjunction="AND"
-        Value=":bSourceSystem"
-        IsBindVarValue="true"
-        Required="Optional"/>
-      <ViewCriteriaItem
-        Name="SourceModule"
-        ViewAttribute="SourceModule"
-        Operator="="
-        Conjunction="AND"
-        Value=":bTransSource"
         IsBindVarValue="true"
         Required="Optional"/>
       <ViewCriteriaItem
