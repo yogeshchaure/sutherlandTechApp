@@ -10,9 +10,9 @@
             <af:panelBox text="Run Intercompany Allocation" id="pb1">
                 <f:facet name="toolbar">
                     <af:toolbar id="t1">
-                        <af:button id="b1" disabled="true" text="Schedule" accessKey="S"/>
-                        <af:button id="b2" action="back" immediate="true" disabled="true" text="Submit" accessKey="C"/>
-                        <af:button disabled="true" id="b3" action="back" immediate="true" text="Close" accessKey="C"/>
+                        <af:button id="b1"  text="Schedule" accessKey="S"/>
+                        <af:button id="b2" action="back" immediate="true"  text="Submit" accessKey="C"/>
+                        <af:button  id="b3" action="back" immediate="true" text="Close" accessKey="C"/>
                     </af:toolbar>
                 </f:facet>
                 <af:outputText value="Allocation Parameters" id="ot1" inlineStyle="font-weight:bold;color:blue;"/>
@@ -67,14 +67,14 @@
                         </af:panelGroupLayout>
                     </af:panelLabelAndMessage>
                     <af:selectOneChoice value="#{bindings.SourceSystem.inputValue}"
-                                        label="Source System"
+                                        label="Source System" visible="false"
                                         required="#{bindings.SourceSystem.hints.mandatory}"
                                         shortDesc="#{bindings.SourceSystem.hints.tooltip}" id="soc5">
                         <f:selectItems value="#{bindings.SourceSystem.items}" id="si5"/>
                         <f:validator binding="#{bindings.SourceSystem.validator}"/>
                     </af:selectOneChoice>
                     <af:selectOneChoice value="#{bindings.TransationSource.inputValue}"
-                                        label="Transation Source"
+                                        label="Transation Source" visible="false"
                                         required="#{bindings.TransationSource.hints.mandatory}"
                                         shortDesc="#{bindings.TransationSource.hints.tooltip}" id="soc6">
                         <f:selectItems value="#{bindings.TransationSource.items}" id="si6"/>

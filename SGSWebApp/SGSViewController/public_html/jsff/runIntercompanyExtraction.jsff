@@ -10,9 +10,9 @@
             <af:panelBox text="Run Intercompany Extraction" id="pb1">
                 <f:facet name="toolbar">
                     <af:toolbar id="t1">
-                        <af:button id="b1" disabled="true" text="Schedule" accessKey="S"/>
-                        <af:button id="b2" action="back" immediate="true" disabled="true" text="Submit" accessKey="C"/>
-                        <af:button disabled="true" id="b3" action="back" immediate="true" text="Close" accessKey="C"/>
+                        <af:button id="b1"  text="Schedule" accessKey="S"/>
+                        <af:button id="b2" action="back" immediate="true"  text="Submit" accessKey="C"/>
+                        <af:button  id="b3" action="back" immediate="true" text="Close" accessKey="C"/>
                     </af:toolbar>
                 </f:facet>
                 <af:outputText value="Extraction Parameters" id="ot1" inlineStyle="font-weight:bold;color:blue;"/>
@@ -26,7 +26,7 @@
                         <f:validator binding="#{bindings.CostIdentificationId.validator}"/>
                     </af:selectOneChoice>
                     <af:selectOneChoice value="#{bindings.Geography.inputValue}" label="Geography"
-                                        required="#{bindings.Geography.hints.mandatory}"
+                                        required="#{bindings.Geography.hints.mandatory}" visible="false"
                                         shortDesc="#{bindings.Geography.hints.tooltip}" id="soc2">
                         <f:selectItems value="#{bindings.Geography.items}" id="si2"/>
                         <f:validator binding="#{bindings.Geography.validator}"/>
@@ -71,14 +71,14 @@
                     </af:panelGroupLayout>
                     </af:panelLabelAndMessage>
                     <af:selectOneChoice value="#{bindings.SourceSystem.inputValue}"
-                                        label="Source System "
+                                        label="Source System " visible="false"
                                         required="#{bindings.SourceSystem.hints.mandatory}"
                                         shortDesc="#{bindings.SourceSystem.hints.tooltip}" id="soc6">
                         <f:selectItems value="#{bindings.SourceSystem.items}" id="si6"/>
                         <f:validator binding="#{bindings.SourceSystem.validator}"/>
                     </af:selectOneChoice>
                     <af:selectOneChoice value="#{bindings.TransactionSource.inputValue}"
-                                        label="Transaction Source "
+                                        label="Transaction Source " visible="false"
                                         required="#{bindings.TransactionSource.hints.mandatory}"
                                         shortDesc="#{bindings.TransactionSource.hints.tooltip}" id="soc7">
                         <f:selectItems value="#{bindings.TransactionSource.items}" id="si7"/>
