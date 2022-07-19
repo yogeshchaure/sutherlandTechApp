@@ -579,6 +579,11 @@
                                 <name>/bTaskFlow/runIntercompanyExtractionBTF.xml#runIntercompanyExtractionBTF</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/MarkupMasterBTF.xml#MarkupMasterBTF</name>
+                                <actions>customize,grant,personalize,view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>
@@ -1199,6 +1204,11 @@
                                 <name>com.sgs.model.entity.SgsRunIntercompanyExtraction</name>
                                 <actions>delete,update</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/MarkupMasterBTF.xml#MarkupMasterBTF</name>
+                                <actions>customize,grant,personalize,view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>
@@ -1528,6 +1538,11 @@
                                 <class>oracle.adf.share.security.authorization.EntityPermission</class>
                                 <name>com.sgs.model.entity.SgsRunIntercompanyExtraction</name>
                                 <actions>delete,update</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/MarkupMasterBTF.xml#MarkupMasterBTF</name>
+                                <actions>customize,grant,personalize,view</actions>
                             </permission>
                         </permissions>
                     </grant>

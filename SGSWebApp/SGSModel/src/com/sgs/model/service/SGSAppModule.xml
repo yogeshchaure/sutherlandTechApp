@@ -173,6 +173,9 @@
   <ViewUsage
     Name="SgsRunIntercompanyExtractionVO"
     ViewObjectName="com.sgs.model.view.SgsRunIntercompanyExtractionVO"/>
+  <ViewUsage
+    Name="MarkUpRateMsterVO1"
+    ViewObjectName="com.sgs.model.view.MarkUpRateMsterVO"/>
   <ViewLinkUsage
     Name="SgsBUCustomersVL1"
     ViewLinkObjectName="com.sgs.model.viewLink.SgsBUCustomersVL"
