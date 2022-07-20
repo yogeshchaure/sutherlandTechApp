@@ -15,16 +15,16 @@
       <nodeDefinition DefName="com.sgs.model.view.SgsARStatisticalDataVO" Name="SgsARStatisticalDataVO10">
         <AttrNames>
           <Item Value="LineId"/>
-          <Item Value="Month"/>
           <Item Value="StatisticalDataCategory"/>
           <Item Value="BusinessUnit"/>
           <Item Value="JobCode"/>
           <Item Value="OperationalUnit"/>
           <Item Value="DepartmentId"/>
-          <Item Value="STATISTICALDATA"/>
           <Item Value="UnitOfMeasure"/>
           <Item Value="DataStatus"/>
           <Item Value="Status"/>
+          <Item Value="StatisticalData"/>
+          <Item Value="Month"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

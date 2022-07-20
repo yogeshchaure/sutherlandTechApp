@@ -354,18 +354,11 @@ where SgsStatisticalData.STATUS = 'Submitted for Approval']]></SQLQuery>
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="STATISTICALDATA"
+    Name="StatisticalData"
     PrecisionRule="true"
-    EntityAttrName="STATISTICALDATA"
+    EntityAttrName="StatisticalData"
     EntityUsage="SgsStatisticalData"
-    AliasName="STATISTICAL_DATA">
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="com.sgs.model.view.SgsARStatisticalDataVO.STATISTICALDATA_LABEL"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="STATISTICAL_DATA"/>
   <ViewCriteria
     Name="SgsARStatisticalDataVOCriteria"
     ViewObjectName="com.sgs.model.view.SgsARStatisticalDataVO"

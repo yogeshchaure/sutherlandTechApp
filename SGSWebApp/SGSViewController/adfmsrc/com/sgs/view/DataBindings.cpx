@@ -139,7 +139,6 @@
 
         <page id="com_sgs_view_editReversalRectificationDetailsPageDef"
               path="jsff.editReversalRectificationDetailsPageDef"/>
-
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="SGSAppModuleDataControl" Package="com.sgs.model.service"

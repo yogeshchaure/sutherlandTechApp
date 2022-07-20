@@ -70,9 +70,9 @@
         <af:outputText value="#{row.OperationalUnit}"
                        shortDesc="#{bindings.SgsStatisticalDataVO1.hints.OperationalUnit.tooltip}" id="ot3"/>
       </af:column>
-        <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.STATISTICALDATA.label}" id="c1">
-          <af:outputText value="#{row.STATISTICALDATA}"
-                         shortDesc="#{bindings.SgsStatisticalDataVO1.hints.STATISTICALDATA.tooltip}" id="ot1"/>
+        <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.label}" id="c1">
+          <af:outputText value="#{row.StatisticalData}"
+                         shortDesc="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.tooltip}" id="ot1"/>
         </af:column>
         <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.UnitOfMeasure.label}" id="resId1c8">
         <af:outputText value="#{row.UnitOfMeasure}"

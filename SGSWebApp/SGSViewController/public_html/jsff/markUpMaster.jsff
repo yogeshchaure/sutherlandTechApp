@@ -30,7 +30,8 @@
                 emptyText="#{bindings.MarkUpRateMsterVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
                 rowBandingInterval="0" selectedRowKeys="#{bindings.MarkUpRateMsterVO1.collectionModel.selectedRow}"
                 selectionListener="#{bindings.MarkUpRateMsterVO1.collectionModel.makeCurrent}" rowSelection="single"
-                fetchSize="#{bindings.MarkUpRateMsterVO1.rangeSize}" id="t1" partialTriggers="::b1 ::b2">
+                fetchSize="#{bindings.MarkUpRateMsterVO1.rangeSize}" id="t1" partialTriggers="::b1 ::b2"
+                columnStretching="column:c2">
         <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.Geography.label}" id="c1">
           <af:selectOneChoice value="#{row.bindings.Geography.inputValue}" label="#{row.bindings.Geography.label}"
                               required="#{bindings.MarkUpRateMsterVO1.hints.Geography.mandatory}"
