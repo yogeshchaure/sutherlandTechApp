@@ -15,10 +15,10 @@
             <f:facet name="toolbar">
              <af:toolbar id="t1">
                 
-                <af:button text="Copy From Previous Month" id="b3" disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
-                <af:button text="Upload Data" id="b4" disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
-                <af:button text="Delete Data" id="b5" disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
-                <af:button text="Submit for Approval" id="b6" disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
+                <af:button text="Copy From Previous Month" id="b3"/>
+                <af:button text="Upload Data" id="b4"/>
+                <af:button text="Delete Data" id="b5" />
+                <af:button text="Submit for Approval" id="b6"/>
               </af:toolbar>
             
             </f:facet>
@@ -70,11 +70,11 @@
         <af:outputText value="#{row.OperationalUnit}"
                        shortDesc="#{bindings.SgsStatisticalDataVO1.hints.OperationalUnit.tooltip}" id="ot3"/>
       </af:column>
-      <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.StatissticalData.label}" id="resId1c7">
-        <af:outputText value="#{row.StatissticalData}"
-                       shortDesc="#{bindings.SgsStatisticalDataVO1.hints.StatissticalData.tooltip}" id="ot4"/>
-      </af:column>
-      <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.UnitOfMeasure.label}" id="resId1c8">
+        <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.STATISTICALDATA.label}" id="c1">
+          <af:outputText value="#{row.STATISTICALDATA}"
+                         shortDesc="#{bindings.SgsStatisticalDataVO1.hints.STATISTICALDATA.tooltip}" id="ot1"/>
+        </af:column>
+        <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.UnitOfMeasure.label}" id="resId1c8">
         <af:outputText value="#{row.UnitOfMeasure}"
                        shortDesc="#{bindings.SgsStatisticalDataVO1.hints.UnitOfMeasure.tooltip}" id="ot5"/>
       </af:column>
