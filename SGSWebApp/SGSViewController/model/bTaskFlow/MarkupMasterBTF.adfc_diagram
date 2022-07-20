@@ -9,13 +9,13 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">435.41992</property>
+         name="x">733.4199</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>markUpMaster&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">274.09766</property>
+         name="y">316.64355</property>
       <property
          name="page">/jsff/markUpMaster.jsff</property>
       <property
