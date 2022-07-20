@@ -12,14 +12,8 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  RowClass="com.sgs.model.view.MarkUpRateMsterVORowImpl"
-  ComponentClass="com.sgs.model.view.MarkUpRateMsterVOImpl"
   PageIterMode="Full"
   AccessMode="DEFAULT">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll"/>
-    <Attr Name="_isCodegen" Value="true"/>
-  </DesignTime>
   <Properties>
     <SchemaBasedProperties>
       <LABEL
