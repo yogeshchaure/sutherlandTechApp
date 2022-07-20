@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="SGS_STATISTICAL_DATA"
   AliasName="SgsStatisticalData"
-  BindingStyle="JDBC">
+  BindingStyle="JDBC"
+  RowClass="com.sgs.model.entity.SgsStatisticalDataImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="SgsStatId"
     IsNotNull="true"
@@ -173,7 +178,7 @@
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="STATISTICALDATA"
+    Name="StatisticalData"
     Precision="80"
     ColumnName="STATISTICAL_DATA"
     SQLType="VARCHAR"
