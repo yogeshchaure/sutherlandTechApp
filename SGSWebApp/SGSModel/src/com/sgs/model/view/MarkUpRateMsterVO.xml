@@ -6,14 +6,21 @@
   Name="MarkUpRateMsterVO"
   Version="12.2.1.22.48"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="JDBC"
   CustomQuery="false"
-  SelectAllAttributes="false"
   PageIterMode="Full"
-  AccessMode="DEFAULT">
+  AccessMode="DEFAULT"
+  SelectList="MarkUpRateMaster.RATE_ID, 
+       MarkUpRateMaster.GEOGRAPHY, 
+       MarkUpRateMaster.SERVICE_CATEGORY, 
+       MarkUpRateMaster.MARKUP_RATE, 
+       MarkUpRateMaster.EFFECTIVE_ROM, 
+       MarkUpRateMaster.EFFECTIVE_TILL, 
+       MarkUpRateMaster.CREATED_DATE, 
+       MarkUpRateMaster.CREATED_BY, 
+       MarkUpRateMaster.UPDATED_DATE, 
+       MarkUpRateMaster.UPDATED_BY"
+  FromList="SGS_MARKUP_RATE_MASTER MarkUpRateMaster">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
@@ -259,7 +266,7 @@
       <ViewCriteriaItem
         Name="EffectiveTill"
         ViewAttribute="EffectiveTill"
-        Operator="ONORAFTER"
+        Operator="="
         Conjunction="AND"
         Value=":bEndDate"
         IsBindVarValue="true"
