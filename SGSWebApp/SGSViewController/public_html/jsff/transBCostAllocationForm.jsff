@@ -449,10 +449,14 @@
             </af:panelLabelAndMessage>
           </af:panelFormLayout>
         </af:panelBox>
-        <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
-          <af:dialog id="d1" contentWidth="700" contentHeight="400" type="cancel">
+        <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                  binding="#{pageFlowScope.transBCostAllocationFormBean.revRecDetailPopup}">
+          <af:dialog id="d1" contentWidth="1000" contentHeight="300" type="none">
             <f:facet name="buttonBar">
-              <af:button text="Save" id="b4"/>
+              <af:button text="Save" id="b4"
+                         actionListener="#{pageFlowScope.transBCostAllocationFormBean.saveRectificationDetails}"/>
+            <af:button text="Close" id="b6"
+                         actionListener="#{pageFlowScope.transBCostAllocationFormBean.closeRectificationDetails}"/>
             </f:facet>
             <af:region value="#{bindings.reversalRectificationDetailsBTF1.regionModel}" id="r1"/>
           </af:dialog>

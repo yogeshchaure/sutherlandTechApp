@@ -18,7 +18,7 @@
         <f:facet name="center">
             <af:panelGroupLayout id="pgl2">
                 <af:panelGroupLayout id="pgl3" halign="center">
-                 <af:spacer id="s11" width="350"/>
+                 <af:spacer id="s11" width="400"/>
                 <af:outputText value="Reversal / Rectification Details" id="ot1" inlineStyle="font-weight:bold;font-size:20px;"/>
                 </af:panelGroupLayout>
                  <af:spacer id="s1" height="20"/>
@@ -29,14 +29,14 @@
                           selectedRowKeys="#{bindings.RectificationEntryDetailsVO.collectionModel.selectedRow}"
                           selectionListener="#{bindings.RectificationEntryDetailsVO.collectionModel.makeCurrent}"
                           rowSelection="single" fetchSize="#{bindings.RectificationEntryDetailsVO.rangeSize}" id="t2">
-                    <af:column headerText="S.No." id="c1">
+                    <af:column headerText="S.No." id="c1" width="25">
                         <af:outputText value="#{row.SNo}"
                                        shortDesc="#{bindings.RectificationEntryDetailsVO.hints.SNo.tooltip}" id="ot2">
                             <af:convertNumber groupingUsed="false"
                                               pattern="#{bindings.RectificationEntryDetailsVO.hints.SNo.format}"/>
                         </af:outputText>
                     </af:column>
-                    <af:column headerText="Legal Entity" id="c2">
+                    <af:column headerText="Legal Entity" id="c2" width="250">
                         <af:outputText value="#{row.LegalEntity}"
                                        shortDesc="#{bindings.RectificationEntryDetailsVO.hints.LegalEntity.tooltip}"
                                        id="ot3"/>
@@ -110,7 +110,8 @@
                                       shortDesc="#{bindings.RectificationEntryDetailsVO.hints.Amount.tooltip}" id="it1">
                             <f:validator binding="#{row.bindings.Amount.validator}"/>
                             <af:convertNumber groupingUsed="false"
-                                              pattern="#{bindings.RectificationEntryDetailsVO.hints.Amount.format}"/>
+                                              pattern="#{bindings.RectificationEntryDetailsVO.hints.Amount.format}"
+                                              type="currency"/>
                         </af:inputText>
                     </af:column>
                 </af:table>
