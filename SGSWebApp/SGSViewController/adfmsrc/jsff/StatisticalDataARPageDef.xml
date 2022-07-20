@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="statisticalDataARPageDef"
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="StatisticalDataARPageDef"
                 Package="jsff">
   <parameters/>
   <executables>
@@ -21,7 +21,7 @@
           <Item Value="JobCode"/>
           <Item Value="OperationalUnit"/>
           <Item Value="DepartmentId"/>
-          <Item Value="StatissticalData"/>
+          <Item Value="STATISTICALDATA"/>
           <Item Value="UnitOfMeasure"/>
           <Item Value="DataStatus"/>
           <Item Value="Status"/>

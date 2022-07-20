@@ -57,10 +57,7 @@
               usageId="com_sgs_view_ApproveAllocatedICoTransactionPageDef"/>
 
         <page path="/jsff/statisticalData.jsff" usageId="com_sgs_view_statisticalDataPageDef"/>
-        <page path="/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF@ExecuteWithParams"
-              usageId="com_sgs_view_statisticalARDataBTF_statisticalARDataBTF_ExecuteWithParamsPageDef"/>
-        <page path="/jsff/statisticalDataAR.jsff" usageId="com_sgs_view_statisticalDataARPageDef"/>
-
+        
         <page path="/jsff/runAllocationEngine.jsff" usageId="com_sgs_view_runAllocationEnginePageDef"/>
         <page path="/jsff/processMain.jsff" usageId="com_sgs_view_processMainPageDef"/>
         <page path="/bTaskFlow/runAllocationEngineBTF.xml#runAllocationEngineBTF@CreateInsert"
@@ -68,8 +65,13 @@
         <page path="/jsff/runIntercompanyExtraction.jsff" usageId="com_sgs_view_runIntercompanyExtractionPageDef"/>
         <page path="/bTaskFlow/runIntercompanyExtractionBTF.xml#runIntercompanyExtractionBTF@CreateInsert"
               usageId="com_sgs_view_runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"/>
+
+        <page path="/jsff/markUpMaster.jsff" usageId="com_sgs_view_markUpMasterPageDef"/>
+        <page path="/jsff/StatisticalDataAR.jsff" usageId="com_sgs_view_StatisticalDataARPageDef"/>
+
         <page path="/jsff/editReversalRectificationDetails.jsff"
               usageId="com_sgs_view_editReversalRectificationDetailsPageDef"/>
+
     </pageMap>
     <pageDefinitionUsages>
         <page id="com_sgs_view_welcomePagePageDef" path="jsf.welcomePagePageDef"/>
@@ -123,9 +125,13 @@
               path="jsff.ApproveAllocatedICoTransactionPageDef"/>
 
         <page id="com_sgs_view_statisticalDataPageDef" path="jsff.statisticalDataPageDef"/>
+
+        
+
         <page id="com_sgs_view_statisticalARDataBTF_statisticalARDataBTF_ExecuteWithParamsPageDef"
               path="bTaskFlow.statisticalARDataBTF_statisticalARDataBTF_ExecuteWithParamsPageDef"/>
         <page id="com_sgs_view_statisticalDataARPageDef" path="jsff.statisticalDataARPageDef"/>
+
 
         <page id="com_sgs_view_runAllocationEnginePageDef" path="jsff.runAllocationEnginePageDef"/>
         <page id="com_sgs_view_processMainPageDef" path="jsff.processMainPageDef"/>
@@ -134,8 +140,13 @@
         <page id="com_sgs_view_runIntercompanyExtractionPageDef" path="jsff.runIntercompanyExtractionPageDef"/>
         <page id="com_sgs_view_runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"
               path="bTaskFlow.runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"/>
+
+        <page id="com_sgs_view_markUpMasterPageDef" path="jsff.markUpMasterPageDef"/>
+        <page id="com_sgs_view_StatisticalDataARPageDef" path="jsff.StatisticalDataARPageDef"/>
+
         <page id="com_sgs_view_editReversalRectificationDetailsPageDef"
               path="jsff.editReversalRectificationDetailsPageDef"/>
+
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="SGSAppModuleDataControl" Package="com.sgs.model.service"

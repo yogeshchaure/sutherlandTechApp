@@ -578,6 +578,11 @@
                             </permission>
                             <permission>
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/MarkupMasterBTF.xml#MarkupMasterBTF</name>
+                                <actions>customize,grant,personalize,view</actions>                            
+                            </permission>
+							<permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
                                 <name>/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF</name>
                                 <actions>view</actions>
                             </permission>
@@ -1210,11 +1215,7 @@
                                 <name>com.sgs.model.entity.SgsRunIntercompanyExtraction</name>
                                 <actions>delete,update</actions>
                             </permission>
-                            <permission>
-                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
-                                <name>/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF</name>
-                                <actions>view</actions>
-                            </permission>
+                            
                             <permission>
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
                                 <name>/bTaskFlow/StatisticalBTF.xml#StatisticalBTF</name>
@@ -1244,6 +1245,17 @@
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
                                 <name>/bTaskFlow/reversalRectificationDetailsBTF.xml#reversalRectificationDetailsBTF</name>
                                 <actions>view</actions>
+
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/MarkupMasterBTF.xml#MarkupMasterBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.EntityPermission</class>
+                                <name>com.sgs.model.entity.MarkUpRateMaster</name>
+                                <actions>delete,update</actions>
                             </permission>
                         </permissions>
                     </grant>
@@ -1571,16 +1583,7 @@
                                 <name>com.sgs.model.entity.SgsRunIntercompanyExtraction</name>
                                 <actions>delete,update</actions>
                             </permission>
-                            <permission>
-                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
-                                <name>/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF</name>
-                                <actions>view</actions>
-                            </permission>
-                            <permission>
-                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
-                                <name>/bTaskFlow/StatisticalBTF.xml#StatisticalBTF</name>
-                                <actions>view</actions>
-                            </permission>
+                           
                             <permission>
                                 <class>oracle.adf.share.security.authorization.EntityPermission</class>
                                 <name>com.sgs.model.entity.RunAllocationEngine</name>
@@ -1605,6 +1608,17 @@
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
                                 <name>/bTaskFlow/reversalRectificationDetailsBTF.xml#reversalRectificationDetailsBTF</name>
                                 <actions>view</actions>
+
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/MarkupMasterBTF.xml#MarkupMasterBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.EntityPermission</class>
+                                <name>com.sgs.model.entity.MarkUpRateMaster</name>
+                                <actions>delete,update</actions>
                             </permission>
                         </permissions>
                     </grant>

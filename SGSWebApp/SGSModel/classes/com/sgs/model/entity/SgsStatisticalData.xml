@@ -35,7 +35,7 @@
     Name="Month"
     ColumnName="MONTH"
     SQLType="DATE"
-    Type="java.lang.String"
+    Type="java.sql.Date"
     ColumnType="DATE"
     TableName="SGS_STATISTICAL_DATA"/>
   <Attribute
@@ -90,18 +90,6 @@
     Name="DepartmentId"
     Precision="80"
     ColumnName="DEPARTMENT_ID"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"
-    TableName="SGS_STATISTICAL_DATA">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="80"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
-    Name="StatissticalData"
-    Precision="80"
-    ColumnName="STATISSTICAL_DATA"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
@@ -176,6 +164,18 @@
     Name="UpdatedBy"
     Precision="80"
     ColumnName="UPDATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_STATISTICAL_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="STATISTICALDATA"
+    Precision="80"
+    ColumnName="STATISTICAL_DATA"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
