@@ -174,6 +174,9 @@
     Name="SgsRunIntercompanyExtractionVO"
     ViewObjectName="com.sgs.model.view.SgsRunIntercompanyExtractionVO"/>
   <ViewUsage
+    Name="MarkUpRateMsterVO1"
+    ViewObjectName="com.sgs.model.view.MarkUpRateMsterVO"/>
+  <ViewUsage
     Name="RectificationEntryDetailsVO"
     ViewObjectName="com.sgs.model.view.RectificationEntryDetailsVO"/>
   <ViewLinkUsage

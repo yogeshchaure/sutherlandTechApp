@@ -743,5 +743,21 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl {
     public ViewObjectImpl getRectificationEntryDetailsVO() {
         return (ViewObjectImpl) findViewObject("RectificationEntryDetailsVO");
     }
+
+    /**
+     * Container's getter for MarkUpRateMsterVO1.
+     * @return MarkUpRateMsterVO1
+     */
+    public ViewObjectImpl getMarkUpRateMsterVO1() {
+        return (ViewObjectImpl) findViewObject("MarkUpRateMsterVO1");
+    }
+
+    /**
+     * Container's getter for sgsMarkUpmaster1.
+     * @return sgsMarkUpmaster1
+     */
+    public ViewObjectImpl getsgsMarkUpmaster1() {
+        return (ViewObjectImpl) findViewObject("sgsMarkUpmaster1");
+    }
 }
 

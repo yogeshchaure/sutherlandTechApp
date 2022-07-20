@@ -17,7 +17,6 @@
        SgsStatisticalData.BUSINESS_UNIT, 
        SgsStatisticalData.JOB_CODE, 
        SgsStatisticalData.OPERATIONAL_UNIT, 
-       SgsStatisticalData.STATISSTICAL_DATA, 
        SgsStatisticalData.UNIT_OF_MEASURE, 
        SgsStatisticalData.DATA_STATUS, 
        SgsStatisticalData.DEPARTMENT_ID, 
@@ -25,7 +24,8 @@
        SgsStatisticalData.CREATED_DATE, 
        SgsStatisticalData.CREATED_BY, 
        SgsStatisticalData.UPDATED_BY, 
-       SgsStatisticalData.UPDATED_DATE"
+       SgsStatisticalData.UPDATED_DATE, 
+       SgsStatisticalData.STATISTICAL_DATA"
   FromList="SGS_STATISTICAL_DATA SgsStatisticalData">
   <Properties>
     <SchemaBasedProperties>
@@ -36,7 +36,7 @@
   <Variable
     Name="bMonth"
     Kind="viewcriteria"
-    Type="java.lang.String">
+    Type="java.sql.Date">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -195,24 +195,6 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
-  <ListBinding
-    Name="LOV_Month"
-    ListVOName="MonthLOV"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Month"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Discription"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
   <EntityUsage
     Name="SgsStatisticalData"
     Entity="com.sgs.model.entity.SgsStatisticalData"/>
@@ -250,14 +232,15 @@
     PrecisionRule="true"
     EntityAttrName="Month"
     EntityUsage="SgsStatisticalData"
-    AliasName="MONTH"
-    LOVName="LOV_Month">
+    AliasName="MONTH">
     <Properties>
       <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
         <FIELDORDER
           Value="2.0"/>
+        <FMT_FORMAT
+          ResId="com.sgs.model.view.SgsStatisticalDataVO.Month_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="com.sgs.model.view.SgsStatisticalDataVO.Month_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -324,21 +307,6 @@
           Value="7.0"/>
         <LABEL
           ResId="com.sgs.model.view.SgsStatisticalDataVO.OperationalUnit_LABEL"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="StatissticalData"
-    PrecisionRule="true"
-    EntityAttrName="StatissticalData"
-    EntityUsage="SgsStatisticalData"
-    AliasName="STATISSTICAL_DATA">
-    <Properties>
-      <SchemaBasedProperties>
-        <FIELDORDER
-          Value="8.0"/>
-        <LABEL
-          ResId="com.sgs.model.view.SgsStatisticalDataVO.StatissticalData_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -455,6 +423,12 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="StatisticalData"
+    PrecisionRule="true"
+    EntityAttrName="StatisticalData"
+    EntityUsage="SgsStatisticalData"
+    AliasName="STATISTICAL_DATA"/>
   <ViewCriteria
     Name="SgsStatisticalDataVOCriteria"
     ViewObjectName="com.sgs.model.view.SgsStatisticalDataVO"

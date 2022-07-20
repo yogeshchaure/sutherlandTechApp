@@ -20,11 +20,11 @@
           <Item Value="BusinessUnit"/>
           <Item Value="JobCode"/>
           <Item Value="OperationalUnit"/>
-          <Item Value="StatissticalData"/>
           <Item Value="UnitOfMeasure"/>
           <Item Value="DataStatus"/>
           <Item Value="DepartmentId"/>
           <Item Value="Status"/>
+          <Item Value="StatisticalData"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

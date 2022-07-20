@@ -26,7 +26,7 @@
   <Variable
     Name="bMonth"
     Kind="viewcriteria"
-    Type="java.lang.String"/>
+    Type="java.sql.Date"/>
   <Variable
     Name="bBunit"
     Kind="viewcriteria"
@@ -98,24 +98,6 @@
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
-    Name="LOV_Month"
-    ListVOName="SgsMonthLOV"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Month"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Discription"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
     Name="LOV_BusinessUnit"
     ListVOName="SgsBusinessUnitLOV"
     NullValueFlag="start"
@@ -142,8 +124,7 @@
        SgsStatisticalData.LINE_ID,      
        SgsStatisticalData.MONTH,      
        SgsStatisticalData.OPERATIONAL_UNIT,      
-       SgsStatisticalData.SGS_STAT_ID,      
-       SgsStatisticalData.STATISSTICAL_DATA,      
+       SgsStatisticalData.SGS_STAT_ID,           
        SgsStatisticalData.STATISTICAL_DATA_CATEGORY,      
        SgsStatisticalData.STATUS,      
        SgsStatisticalData.UNIT_OF_MEASURE,      
@@ -263,14 +244,11 @@ where SgsStatisticalData.STATUS = 'Submitted for Approval']]></SQLQuery>
     PrecisionRule="true"
     EntityAttrName="Month"
     EntityUsage="SgsStatisticalData"
-    AliasName="MONTH"
-    LOVName="LOV_Month">
+    AliasName="MONTH">
     <Properties>
       <SchemaBasedProperties>
         <FIELDORDER
           Value="2.0"/>
-        <CONTROLTYPE
-          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -300,21 +278,6 @@ where SgsStatisticalData.STATUS = 'Submitted for Approval']]></SQLQuery>
       <SchemaBasedProperties>
         <FIELDORDER
           Value="10.0"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="StatissticalData"
-    PrecisionRule="true"
-    EntityAttrName="StatissticalData"
-    EntityUsage="SgsStatisticalData"
-    AliasName="STATISSTICAL_DATA">
-    <Properties>
-      <SchemaBasedProperties>
-        <FIELDORDER
-          Value="11.0"/>
-        <LABEL
-          ResId="com.sgs.model.view.SgsARStatisticalDataVO.StatissticalData_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -390,6 +353,12 @@ where SgsStatisticalData.STATUS = 'Submitted for Approval']]></SQLQuery>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="StatisticalData"
+    PrecisionRule="true"
+    EntityAttrName="StatisticalData"
+    EntityUsage="SgsStatisticalData"
+    AliasName="STATISTICAL_DATA"/>
   <ViewCriteria
     Name="SgsARStatisticalDataVOCriteria"
     ViewObjectName="com.sgs.model.view.SgsARStatisticalDataVO"
@@ -398,7 +367,7 @@ where SgsStatisticalData.STATUS = 'Submitted for Approval']]></SQLQuery>
       <CustomProperties>
         <Property
           Name="autoExecute"
-          Value="false"/>
+          Value="true"/>
         <Property
           Name="mode"
           Value="Basic"/>
