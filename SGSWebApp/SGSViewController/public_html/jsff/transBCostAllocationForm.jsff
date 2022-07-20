@@ -224,11 +224,11 @@
             <af:inputText value="#{bindings.TransactionAmount.inputValue}"
                           label="Transaction Amount"
                           required="#{bindings.TransactionAmount.hints.mandatory}"
-                          columns="#{bindings.TransactionAmount.hints.displayWidth}"
+                          columns="10"
                           maximumLength="#{bindings.TransactionAmount.hints.precision}"
                           shortDesc="#{bindings.TransactionAmount.hints.tooltip}" id="it19">
               <f:validator binding="#{bindings.TransactionAmount.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.TransactionAmount.format}"/>
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.TransactionAmount.format}" type="currency"/>
             </af:inputText>
             <af:inputText value="#{bindings.FunctionalCurrency.inputValue}"
                           label="Functional Currency"
