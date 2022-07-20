@@ -12,11 +12,16 @@
         <af:panelGroupLayout id="pgl2" >
          <af:spacer id="s5" width="20"/>
         <af:outputText value="View: Review I/Co Transaction before Allocation" id="ot1" inlineStyle="font-weight:bold;font-size:15px;"/>
-         <af:spacer id="s1" width="700" rendered="#{pageFlowScope.pStatus eq 'Unprocessed' or pageFlowScope.pStatus eq 'Pending Approval for Rectification'}"/>
+         <af:spacer id="s1" width="700" rendered="#{pageFlowScope.pStatus eq 'Pending Approval for Rectification'}"/>
          <af:spacer id="s41" width="800" rendered="#{pageFlowScope.pStatus ne 'Unprocessed' and pageFlowScope.pStatus ne 'Pending Approval for Rectification'}"/>
+          <af:spacer id="s43" width="400" rendered="#{pageFlowScope.pStatus eq 'Unprocessed' }"/>
         <af:button id="b1"  text="Rectification" accessKey="S" rendered="#{pageFlowScope.pStatus eq 'Unprocessed'}">
             <af:showPopupBehavior popupId="p1"/>
           </af:button>
+          <af:spacer id="s37" width="10"/>
+           <af:button text="Hold/Release" id="b14" rendered="#{pageFlowScope.pStatus eq 'Unprocessed'}"/>
+            <af:spacer id="s34" width="10"/>
+                <af:button text="Action On Other Receivables" id="b13" rendered="#{pageFlowScope.pStatus eq 'Unprocessed'}"/>
         <af:button id="b12" action="back" immediate="true" text="Approve" accessKey="C" rendered="#{pageFlowScope.pStatus eq 'Pending Approval for Rectification'}"/>
          <af:spacer id="s3" width="10"/>
          <af:button  id="b3"  immediate="true" text="Submit for Allocation" accessKey="C"/>       
@@ -55,13 +60,17 @@
          
           <af:inputText value="#{bindings.RectificationId.inputValue}" label="Source Transaction ID"
                         required="#{bindings.RectificationId.hints.mandatory}"
+                        rendered="#{pageFlowScope.pStatus ne 'Rectified Transaction'}"
                         columns="#{bindings.RectificationId.hints.displayWidth}"
                         maximumLength="#{bindings.RectificationId.hints.precision}"
                         shortDesc="#{bindings.RectificationId.hints.tooltip}" id="it4">
             <f:validator binding="#{bindings.RectificationId.validator}"/>
           </af:inputText>
-         
-        </af:panelFormLayout>
+            <af:panelLabelAndMessage label="Source Transaction ID" id="plam6" 
+            rendered="#{pageFlowScope.pStatus eq 'Rectified Transaction'}">
+              <af:link text="#{bindings.RectificationId.inputValue}" id="l2"/>
+            </af:panelLabelAndMessage>
+          </af:panelFormLayout>
         <af:spacer id="s11" width="25"/>
         <af:outputText value="(Applicable in case rectified)" id="ot13"/>
         <af:panelBox text="Chart Fields" id="pb2">

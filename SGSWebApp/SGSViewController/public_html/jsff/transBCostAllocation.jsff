@@ -36,7 +36,7 @@
                                        id="b2" shortDesc="Delete Business Unit" icon="/resources/icons/delete.png"
                                        action="#{pageFlowScope.TransBCostAllocationBean.deleteTransBCostAllocation}"/>
                   <af:button text="Hold/Release" id="b4" />
-                <af:button text="Action On Another Receivables" id="b3" />
+                <af:button text="Action On Other Receivables" id="b3" />
               <af:button text="Submit for Allocation" id="b6" />
                 <af:button text="Approval" id="b5" disabled="true"/>
                 
