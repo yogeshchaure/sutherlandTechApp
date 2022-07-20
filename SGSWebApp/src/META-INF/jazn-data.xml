@@ -576,6 +576,26 @@
                                 <name>/bTaskFlow/runIntercompanyExtractionBTF.xml#runIntercompanyExtractionBTF</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/StatisticalBTF.xml#StatisticalBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/reversalRectificationDetailsBTF.xml#reversalRectificationDetailsBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/reversalRectificationDetailsBTF.xml#reversalRectificationDetailsBTF</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>
@@ -1190,6 +1210,41 @@
                                 <name>com.sgs.model.entity.SgsRunIntercompanyExtraction</name>
                                 <actions>delete,update</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/StatisticalBTF.xml#StatisticalBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.EntityPermission</class>
+                                <name>com.sgs.model.entity.RunAllocationEngine</name>
+                                <actions>delete,update</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.EntityPermission</class>
+                                <name>com.sgs.model.entity.SgsStatisticalData</name>
+                                <actions>delete,update</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.EntityPermission</class>
+                                <name>com.sgs.model.entity.SgsRed</name>
+                                <actions>delete,update</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/reversalRectificationDetailsBTF.xml#reversalRectificationDetailsBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/reversalRectificationDetailsBTF.xml#reversalRectificationDetailsBTF</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>
@@ -1515,6 +1570,41 @@
                                 <class>oracle.adf.share.security.authorization.EntityPermission</class>
                                 <name>com.sgs.model.entity.SgsRunIntercompanyExtraction</name>
                                 <actions>delete,update</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/StatisticalBTF.xml#StatisticalBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.EntityPermission</class>
+                                <name>com.sgs.model.entity.RunAllocationEngine</name>
+                                <actions>delete,update</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.EntityPermission</class>
+                                <name>com.sgs.model.entity.SgsStatisticalData</name>
+                                <actions>delete,update</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.EntityPermission</class>
+                                <name>com.sgs.model.entity.SgsRed</name>
+                                <actions>delete,update</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/reversalRectificationDetailsBTF.xml#reversalRectificationDetailsBTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/bTaskFlow/reversalRectificationDetailsBTF.xml#reversalRectificationDetailsBTF</name>
+                                <actions>view</actions>
                             </permission>
                         </permissions>
                     </grant>

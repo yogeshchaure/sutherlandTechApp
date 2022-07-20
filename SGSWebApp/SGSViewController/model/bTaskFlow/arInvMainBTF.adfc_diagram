@@ -17,7 +17,7 @@
       <property
          name="y">228.89648</property>
       <property
-         name="page">/arInvMain.jsff</property>
+         name="page">/jsff/arInvMain.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

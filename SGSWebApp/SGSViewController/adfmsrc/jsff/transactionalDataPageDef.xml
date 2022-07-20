@@ -10,6 +10,10 @@
     <taskFlow id="approveallocatedICoTransactionBTF1"
               taskFlowId="/bTaskFlow/approveallocatedICoTransactionBTF.xml#approveallocatedICoTransactionBTF"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="StatisticalBTF1" taskFlowId="/bTaskFlow/StatisticalBTF.xml#StatisticalBTF" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="statisticalARDataBTF1" taskFlowId="/bTaskFlow/statisticalARDataBTF.xml#statisticalARDataBTF"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>

@@ -1,6 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
    <task-flow-descriptor path="META-INF/adfc-config.xml" id="" type="" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="unspecified"/>
+   <task-flow-descriptor path="bTaskFlow/StatisticalBTF.xml" id="StatisticalBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/TPASetupBTF.xml" id="TPASetupBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/TPASetupFormBTF.xml" id="TPASetupFormBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets">
       <input-parameter name="pTPAAddEdit"/>
@@ -71,6 +72,7 @@
       <input-parameter name="pARReceiptAddEdit"/>
    </task-flow-descriptor>
    <task-flow-descriptor path="bTaskFlow/reportMainBTF.xml" id="reportMainBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="bTaskFlow/reversalRectificationDetailsBTF.xml" id="reversalRectificationDetailsBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/runAllocationEngineBTF.xml" id="runAllocationEngineBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/runIntercompanyExtractionBTF.xml" id="runIntercompanyExtractionBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/securityMainBTF.xml" id="securityMainBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
@@ -83,6 +85,7 @@
    <task-flow-descriptor path="bTaskFlow/standardSetupRuleFormBTF.xml" id="standardSetupRuleFormBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets">
       <input-parameter name="pSRAddEdit"/>
    </task-flow-descriptor>
+   <task-flow-descriptor path="bTaskFlow/statisticalARDataBTF.xml" id="statisticalARDataBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/suppliersBTF.xml" id="suppliersBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/suppliersFormBTF.xml" id="suppliersFormBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets">
       <input-parameter name="pAddEdit"/>
