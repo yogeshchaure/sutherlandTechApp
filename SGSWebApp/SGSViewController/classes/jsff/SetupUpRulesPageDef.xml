@@ -15,6 +15,8 @@
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="TPASetupBTF1" taskFlowId="/bTaskFlow/TPASetupBTF.xml#TPASetupBTF" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="MarkupMasterBTF1" taskFlowId="/bTaskFlow/MarkupMasterBTF.xml#MarkupMasterBTF" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>
