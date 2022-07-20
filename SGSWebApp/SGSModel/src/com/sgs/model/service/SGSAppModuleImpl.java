@@ -735,5 +735,13 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl {
         return (ViewObjectImpl) findViewObject("SgsRunIntercompanyExtractionVO");
 
     }
+
+    /**
+     * Container's getter for RectificationEntryDetailsVO1.
+     * @return RectificationEntryDetailsVO1
+     */
+    public ViewObjectImpl getRectificationEntryDetailsVO() {
+        return (ViewObjectImpl) findViewObject("RectificationEntryDetailsVO");
+    }
 }
 
