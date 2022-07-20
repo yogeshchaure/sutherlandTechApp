@@ -7,7 +7,7 @@
     <f:facet name="top"/>
     <f:facet name="bottom"/>
     <f:facet name="center">
-      <af:panelBox text="IC Transaction Before Cost Allocation" id="pb1">
+      <af:panelBox text="Review IC Transaction before Cost Allocation" id="pb1">
         <f:facet name="toolbar"/>
         <af:panelGroupLayout id="pgl1" layout="vertical">
           <af:panelHeader text=" " id="ph1">
@@ -16,7 +16,7 @@
                       model="#{bindings.SgsTransBCostAllocationVOCriteriaQuery.queryModel}"
                       queryListener="#{bindings.SgsTransBCostAllocationVOCriteriaQuery.processQuery}"
                       queryOperationListener="#{bindings.SgsTransBCostAllocationVOCriteriaQuery.processQueryOperation}"
-                      resultComponentId="::pc1:resId1" saveQueryMode="hidden" rows="3" maxColumns="2"/>
+                      resultComponentId="::pc1:resId1" saveQueryMode="hidden" rows="2" maxColumns="2"/>
           </af:panelHeader>
           <af:panelCollection id="pc1" styleClass="AFStretchWidth">
             <f:facet name="menus"/>
@@ -35,10 +35,11 @@
                                        disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"
                                        id="b2" shortDesc="Delete Business Unit" icon="/resources/icons/delete.png"
                                        action="#{pageFlowScope.TransBCostAllocationBean.deleteTransBCostAllocation}"/>
-                <af:button text="Rectification" id="b3" disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
-                <af:button text="Hold/Release" id="b4" disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
-                <af:button text="Other Receivables" id="b5" disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
-                <af:button text="Submit for Allocation" id="b6" disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
+                  <af:button text="Hold/Release" id="b4" />
+                <af:button text="Action On Another Receivables" id="b3" />
+              <af:button text="Submit for Allocation" id="b6" />
+                <af:button text="Approval" id="b5" disabled="true"/>
+                
               </af:toolbar>
             
             </f:facet>
@@ -54,7 +55,7 @@
               <af:column id="c2" align="center" headerText="Select">
                 <af:selectBooleanCheckbox id="sbc1"/>
               </af:column>
-              <af:column headerText="Extract ID" id="resId1c1">
+              <af:column headerText="Transaction ID" id="resId1c1">
                 <!--<af:outputText value="#{row.ExtractId}"
                                shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.ExtractId.tooltip}" id="ot1"/>-->
               <af:link text="#{row.ExtractId}" id="l1" action="EDIT" inlineStyle="font-weight:bold;"/>
@@ -65,6 +66,15 @@
                                shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.TransactinPeriod.tooltip}"
                                id="ot2"/>
               </af:column>
+              <af:column headerText="Cost Identification ID" id="c1">
+                <af:selectOneChoice value="#{row.bindings.CirId.inputValue}" label="#{row.bindings.CirId.label}"
+                                    required="#{bindings.SgsTransBCostAllocationView1.hints.CirId.mandatory}"
+                                    shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.CirId.tooltip}" id="soc1"
+                                    readOnly="true">
+                  <f:selectItems value="#{row.bindings.CirId.items}" id="si1"/>
+                  <f:validator binding="#{row.bindings.CirId.validator}"/>
+                </af:selectOneChoice>
+              </af:column>
               <af:column headerText="Business Unit" id="resId1c4">
                 <af:selectOneChoice value="#{row.bindings.BuId.inputValue}" label="#{row.bindings.BuId.label}"
                                     required="#{bindings.SgsTransBCostAllocationView1.hints.BuId.mandatory}"
@@ -74,28 +84,9 @@
                   <f:validator binding="#{row.bindings.BuId.validator}"/>
                 </af:selectOneChoice>
               </af:column>
-              <af:column headerText="Cost Identification Rule ID" id="c1">
-                <af:selectOneChoice value="#{row.bindings.CirId.inputValue}" label="#{row.bindings.CirId.label}"
-                                    required="#{bindings.SgsTransBCostAllocationView1.hints.CirId.mandatory}"
-                                    shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.CirId.tooltip}" id="soc1"
-                                    readOnly="true">
-                  <f:selectItems value="#{row.bindings.CirId.items}" id="si1"/>
-                  <f:validator binding="#{row.bindings.CirId.validator}"/>
-                </af:selectOneChoice>
-              </af:column>
               <af:column headerText="GL Account" id="resId1c5">
                 <af:outputText value="#{row.GlAccount}"
                                shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.GlAccount.tooltip}" id="ot3"/>
-              </af:column>
-              <af:column headerText="Transaction Category" id="c3">
-                <af:selectOneChoice value="#{row.bindings.TransactionCategory.inputValue}"
-                                    label="#{row.bindings.TransactionCategory.label}"
-                                    required="#{bindings.SgsTransBCostAllocationView1.hints.TransactionCategory.mandatory}"
-                                    shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.TransactionCategory.tooltip}"
-                                    id="soc7" readOnly="true">
-                  <f:selectItems value="#{row.bindings.TransactionCategory.items}" id="si7"/>
-                  <f:validator binding="#{row.bindings.TransactionCategory.validator}"/>
-                </af:selectOneChoice>
               </af:column>
               <af:column headerText="Job Code" id="resId1c6">
                 <af:selectOneChoice value="#{row.bindings.JobCode.inputValue}" label="#{row.bindings.JobCode.label}"
@@ -104,6 +95,53 @@
                                     readOnly="true" id="soc3">
                   <f:selectItems value="#{row.bindings.JobCode.items}" id="si3"/>
                   <f:validator binding="#{row.bindings.JobCode.validator}"/>
+                </af:selectOneChoice>
+              </af:column>
+              <af:column headerText="Amount" id="resId1c9">
+                <af:outputText value="#{row.TransactionAmount}"
+                               shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.TransactionAmount.tooltip}"
+                               id="ot4">
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.SgsTransBCostAllocationView1.hints.TransactionAmount.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column headerText="Service Category" id="c4">
+                <af:selectOneChoice value="#{row.bindings.ServiceCategory.inputValue}"
+                                    label="#{row.bindings.ServiceCategory.label}"
+                                    required="#{bindings.SgsTransBCostAllocationView1.hints.ServiceCategory.mandatory}"
+                                    shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.ServiceCategory.tooltip}"
+                                    id="soc8" readOnly="true">
+                  <f:selectItems value="#{row.bindings.ServiceCategory.items}" id="si8"/>
+                  <f:validator binding="#{row.bindings.ServiceCategory.validator}"/>
+                </af:selectOneChoice>
+              </af:column>
+              <af:column headerText="Accounting Treatment" id="resId1c11">
+                <af:outputText value="#{row.AccountTreatment}"
+                               shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.AccountTreatment.tooltip}"
+                               id="ot6"/>
+              </af:column>
+              <af:column headerText="Action Pending with" id="resId1c12">
+                <af:outputText value="#{row.ExtractedBy}"
+                               shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.ExtractedBy.tooltip}" id="ot7"/>
+              </af:column>
+              <af:column headerText="Status" id="resId1c13">
+                <af:selectOneChoice value="#{row.bindings.TrasactionStatus.inputValue}"
+                                    label="#{row.bindings.TrasactionStatus.label}"
+                                    required="#{bindings.SgsTransBCostAllocationView1.hints.TrasactionStatus.mandatory}"
+                                    shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.TrasactionStatus.tooltip}"
+                                    readOnly="true" id="soc6">
+                  <f:selectItems value="#{row.bindings.TrasactionStatus.items}" id="si6"/>
+                  <f:validator binding="#{row.bindings.TrasactionStatus.validator}"/>
+                </af:selectOneChoice>
+              </af:column>
+              <af:column headerText="Transaction Category" id="c3" visible="false">
+                <af:selectOneChoice value="#{row.bindings.TransactionCategory.inputValue}"
+                                    label="#{row.bindings.TransactionCategory.label}"
+                                    required="#{bindings.SgsTransBCostAllocationView1.hints.TransactionCategory.mandatory}"
+                                    shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.TransactionCategory.tooltip}"
+                                    id="soc7" readOnly="true">
+                  <f:selectItems value="#{row.bindings.TransactionCategory.items}" id="si7"/>
+                  <f:validator binding="#{row.bindings.TransactionCategory.validator}"/>
                 </af:selectOneChoice>
               </af:column>
               <af:column headerText="Source System" id="resId1c7" visible="false">
@@ -124,46 +162,6 @@
                                     readOnly="true" id="soc5">
                   <f:selectItems value="#{row.bindings.SourceModule.items}" id="si5"/>
                   <f:validator binding="#{row.bindings.SourceModule.validator}"/>
-                </af:selectOneChoice>
-              </af:column>
-              <af:column headerText="Amount"
-                         id="resId1c9">
-                <af:outputText value="#{row.TransactionAmount}"
-                               shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.TransactionAmount.tooltip}"
-                               id="ot4">
-                  <af:convertNumber groupingUsed="false"
-                                    pattern="#{bindings.SgsTransBCostAllocationView1.hints.TransactionAmount.format}"/>
-                </af:outputText>
-              </af:column>
-              <af:column headerText="#{bindings.SgsTransBCostAllocationView1.hints.ServiceCategory.label}" id="c4">
-                <af:selectOneChoice value="#{row.bindings.ServiceCategory.inputValue}"
-                                    label="#{row.bindings.ServiceCategory.label}"
-                                    required="#{bindings.SgsTransBCostAllocationView1.hints.ServiceCategory.mandatory}"
-                                    shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.ServiceCategory.tooltip}"
-                                    id="soc8" readOnly="true">
-                  <f:selectItems value="#{row.bindings.ServiceCategory.items}" id="si8"/>
-                  <f:validator binding="#{row.bindings.ServiceCategory.validator}"/>
-                </af:selectOneChoice>
-              </af:column>
-              <af:column headerText="Accounting Treatment"
-                         id="resId1c11">
-                <af:outputText value="#{row.AccountTreatment}"
-                               shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.AccountTreatment.tooltip}"
-                               id="ot6"/>
-              </af:column>
-              <af:column headerText="Action Pending with" id="resId1c12">
-                <af:outputText value="#{row.ExtractedBy}"
-                               shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.ExtractedBy.tooltip}" id="ot7"/>
-              </af:column>
-              <af:column headerText="Status"
-                         id="resId1c13">
-                <af:selectOneChoice value="#{row.bindings.TrasactionStatus.inputValue}"
-                                    label="#{row.bindings.TrasactionStatus.label}"
-                                    required="#{bindings.SgsTransBCostAllocationView1.hints.TrasactionStatus.mandatory}"
-                                    shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.TrasactionStatus.tooltip}"
-                                    readOnly="true" id="soc6">
-                  <f:selectItems value="#{row.bindings.TrasactionStatus.items}" id="si6"/>
-                  <f:validator binding="#{row.bindings.TrasactionStatus.validator}"/>
                 </af:selectOneChoice>
               </af:column>
             </af:table>

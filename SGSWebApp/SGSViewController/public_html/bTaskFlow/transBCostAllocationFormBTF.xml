@@ -10,6 +10,11 @@
       <value>#{pageFlowScope.pTransBCAAddEdit}</value>
       <class>java.lang.String</class>
     </input-parameter-definition>
+    <managed-bean id="__4">
+      <managed-bean-name>transBCostAllocationFormBean</managed-bean-name>
+      <managed-bean-class>com.sgs.managedBean.TransBCostAllocationFormBean</managed-bean-class>
+      <managed-bean-scope>pageFlow</managed-bean-scope>
+    </managed-bean>
     <view id="transBCostAllocationForm">
       <page>/jsff/transBCostAllocationForm.jsff</page>
     </view>
