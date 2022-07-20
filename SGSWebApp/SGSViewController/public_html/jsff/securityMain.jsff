@@ -17,16 +17,18 @@
                                                  inlineStyle="background-color:white; min-height:100%;">
                                 <af:showDetailItem text="Access for Transactional/Setup Screens" id="sdi6"
                                                    rendered="#{securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=View']}"
-                                                   inlineStyle="min-height:500px;" icon="/resources/icons/fingerprint.png">
-                                </af:showDetailItem>
+                                                   inlineStyle="min-height:500px;"
+                                                   icon="/resources/icons/fingerprint.png"></af:showDetailItem>
                                 <af:showDetailItem id="sdi7" text="Access for Set-Up Screens"
                                                    rendered="#{securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=View']}"
-                                                   inlineStyle="min-height:500px;" icon="/resources/icons/checked.png">
-                                </af:showDetailItem>
+                                                   inlineStyle="min-height:500px;" icon="/resources/icons/checked.png"></af:showDetailItem>
                                 <af:showDetailItem id="sdi1" text="Data Access for BU's"
                                                    rendered="#{securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=View']}"
-                                                   inlineStyle="min-height:500px;" icon="/resources/icons/BU.png">
-                                </af:showDetailItem>
+                                                   inlineStyle="min-height:500px;" icon="/resources/icons/BU.png"></af:showDetailItem>
+                                <af:showDetailItem id="sdi11" text="User Access Masters"
+                                                   rendered="#{securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=View']}"
+                                                   inlineStyle="min-height:500px;"
+                                                   icon="/resources/icons/useraccess.png"></af:showDetailItem>
                             </af:panelSpringboard>
                         </f:facet>
                     </af:decorativeBox>

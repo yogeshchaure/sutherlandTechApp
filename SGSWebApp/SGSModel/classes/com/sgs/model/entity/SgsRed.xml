@@ -3,45 +3,41 @@
 <!---->
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="SgsRunIntercompanyExtraction"
+  Name="SgsRed"
   Version="12.2.1.22.48"
   InheritPersonalization="merge"
   DBObjectType="table"
-  DBObjectName="SGS_RIE"
-  AliasName="SgsRunIntercompanyExtraction"
+  DBObjectName="SGS_RED"
+  AliasName="SgsRed"
   BindingStyle="JDBC">
   <Attribute
-    Name="RieId"
-    ColumnName="RIE_ID"
+    Name="RedId"
+    IsNotNull="true"
+    ColumnName="RED_ID"
     SQLType="INTEGER"
     Type="java.lang.Integer"
     ColumnType="INT"
-    TableName="SGS_RIE"
+    TableName="SGS_RED"
     PrimaryKey="true"/>
   <Attribute
-    Name="CostIdentificationId"
+    Name="RectificationId"
     Precision="100"
-    ColumnName="COST_IDENTIFICATION_ID"
+    ColumnName="RECTIFICATION_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="SGS_RIE">
+    TableName="SGS_RED">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="Geography"
-    Precision="100"
-    ColumnName="GEOGRAPHY"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"
-    TableName="SGS_RIE">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="100"/>
-    </DesignTime>
-  </Attribute>
+    Name="SNo"
+    ColumnName="S_NO"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="SGS_RED"/>
   <Attribute
     Name="LegalEntity"
     Precision="100"
@@ -49,71 +45,102 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="SGS_RIE">
+    TableName="SGS_RED">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
   </Attribute>
   <Attribute
     Name="BusinessUnit"
-    Precision="100"
+    Precision="50"
     ColumnName="BUSINESS_UNIT"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="SGS_RIE">
+    TableName="SGS_RED">
     <DesignTime>
-      <Attr Name="_DisplaySize" Value="100"/>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="OperationUnit"
+    Precision="50"
+    ColumnName="OPERATION_UNIT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_RED">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DepartmentId"
+    Precision="50"
+    ColumnName="DEPARTMENT_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_RED">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="GlAccount"
+    Precision="50"
+    ColumnName="GL_ACCOUNT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_RED">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
   </Attribute>
   <Attribute
     Name="JobCode"
-    Precision="100"
+    Precision="50"
     ColumnName="JOB_CODE"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="SGS_RIE">
+    TableName="SGS_RED">
     <DesignTime>
-      <Attr Name="_DisplaySize" Value="100"/>
+      <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="TransactionDataFrom"
-    ColumnName="TRANSACTION_DATA_FROM"
-    SQLType="DATE"
-    Type="java.sql.Date"
-    ColumnType="DATE"
-    TableName="SGS_RIE"/>
-  <Attribute
-    Name="TransactionDataTo"
-    ColumnName="TRANSACTION_DATA_TO"
-    SQLType="DATE"
-    Type="java.sql.Date"
-    ColumnType="DATE"
-    TableName="SGS_RIE"/>
-  <Attribute
-    Name="SourceSystem"
-    Precision="100"
-    ColumnName="SOURCE_SYSTEM"
+    Name="AffiliateUnit"
+    Precision="50"
+    ColumnName="AFFILIATE_UNIT"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="SGS_RIE">
+    TableName="SGS_RED">
     <DesignTime>
-      <Attr Name="_DisplaySize" Value="100"/>
+      <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="TransactionSource"
-    Precision="100"
-    ColumnName="TRANSACTION_SOURCE"
+    Name="Amount"
+    Precision="10"
+    Scale="2"
+    ColumnName="AMOUNT"
+    SQLType="DECIMAL"
+    Type="java.math.BigDecimal"
+    ColumnType="DECIMAL"
+    TableName="SGS_RED"/>
+  <Attribute
+    Name="Status"
+    Precision="20"
+    ColumnName="STATUS"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="SGS_RIE">
+    TableName="SGS_RED">
     <DesignTime>
-      <Attr Name="_DisplaySize" Value="100"/>
+      <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
   </Attribute>
   <Attribute
@@ -122,7 +149,7 @@
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="SGS_RIE"
+    TableName="SGS_RED"
     IsUpdateable="while_insert"
     HistoryColumn="DateHistory"/>
   <Attribute
@@ -132,7 +159,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="SGS_RIE"
+    TableName="SGS_RED"
     IsUpdateable="while_insert"
     HistoryColumn="UserHistory">
     <DesignTime>
@@ -145,7 +172,7 @@
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="SGS_RIE"
+    TableName="SGS_RED"
     HistoryColumn="DateHistory"/>
   <Attribute
     Name="UpdatedBy"
@@ -154,24 +181,24 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="SGS_RIE"
+    TableName="SGS_RED"
     HistoryColumn="UserHistory">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="80"/>
     </DesignTime>
   </Attribute>
   <Key
-    Name="PKSGSRIE"
+    Name="PKSGSRED"
     PrimaryKey="true">
     <DesignTime>
-      <Attr Name="_DBObjectName" Value="PK_SGS_RIE"/>
+      <Attr Name="_DBObjectName" Value="PK_SGS_RED"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="com.sgs.model.entity.SgsRunIntercompanyExtraction.RieId"/>
+      <Item Value="com.sgs.model.entity.SgsRed.RedId"/>
     </AttrArray>
   </Key>
   <Permission
-    target="com.sgs.model.entity.SgsRunIntercompanyExtraction"
+    target="com.sgs.model.entity.SgsRed"
     permissionClass="oracle.adf.share.security.authorization.EntityPermission">
     <privilege-map
       operation="update"

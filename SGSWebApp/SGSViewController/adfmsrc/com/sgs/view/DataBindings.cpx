@@ -65,8 +65,12 @@
         <page path="/jsff/runIntercompanyExtraction.jsff" usageId="com_sgs_view_runIntercompanyExtractionPageDef"/>
         <page path="/bTaskFlow/runIntercompanyExtractionBTF.xml#runIntercompanyExtractionBTF@CreateInsert"
               usageId="com_sgs_view_runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"/>
+
         <page path="/jsff/markUpMaster.jsff" usageId="com_sgs_view_markUpMasterPageDef"/>
         <page path="/jsff/StatisticalDataAR.jsff" usageId="com_sgs_view_StatisticalDataARPageDef"/>
+
+        <page path="/jsff/editReversalRectificationDetails.jsff"
+              usageId="com_sgs_view_editReversalRectificationDetailsPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="com_sgs_view_welcomePagePageDef" path="jsf.welcomePagePageDef"/>
@@ -129,8 +133,13 @@
         <page id="com_sgs_view_runIntercompanyExtractionPageDef" path="jsff.runIntercompanyExtractionPageDef"/>
         <page id="com_sgs_view_runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"
               path="bTaskFlow.runIntercompanyExtractionBTF_runIntercompanyExtractionBTF_CreateInsertPageDef"/>
+
         <page id="com_sgs_view_markUpMasterPageDef" path="jsff.markUpMasterPageDef"/>
         <page id="com_sgs_view_StatisticalDataARPageDef" path="jsff.StatisticalDataARPageDef"/>
+
+        <page id="com_sgs_view_editReversalRectificationDetailsPageDef"
+              path="jsff.editReversalRectificationDetailsPageDef"/>
+
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="SGSAppModuleDataControl" Package="com.sgs.model.service"
