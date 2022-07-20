@@ -58,10 +58,12 @@
               <af:column headerText="Transaction ID" id="resId1c1">
                 <!--<af:outputText value="#{row.ExtractId}"
                                shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.ExtractId.tooltip}" id="ot1"/>-->
-              <af:link text="#{row.ExtractId}" id="l1" action="EDIT" inlineStyle="font-weight:bold;"/>
+                <af:link text="#{row.ExtractId}" id="l1" action="EDIT" inlineStyle="font-weight:bold;">
+                  <af:setPropertyListener from="#{row.TrasactionStatus}"
+                                          to="#{pageFlowScope.status}" type="action"/>
+                </af:link>
               </af:column>
-              <af:column headerText="Period"
-                         id="resId1c2">
+              <af:column headerText="Period" id="resId1c2">
                 <af:outputText value="#{row.TransactinPeriod}"
                                shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.TransactinPeriod.tooltip}"
                                id="ot2"/>
@@ -163,6 +165,11 @@
                   <f:selectItems value="#{row.bindings.SourceModule.items}" id="si5"/>
                   <f:validator binding="#{row.bindings.SourceModule.validator}"/>
                 </af:selectOneChoice>
+              </af:column>
+              <af:column headerText="#{bindings.SgsTransBCostAllocationView1.hints.TrasactionStatus.label}" id="c5" visible="false">
+                <af:outputText value="#{row.TrasactionStatus}"
+                               shortDesc="#{bindings.SgsTransBCostAllocationView1.hints.TrasactionStatus.tooltip}"
+                               id="ot1"/>
               </af:column>
             </af:table>
           </af:panelCollection>

@@ -14,20 +14,20 @@
     <tree IterBinding="SgsTransBCostAllocationView1Iterator" id="SgsTransBCostAllocationView1">
       <nodeDefinition DefName="com.sgs.model.view.SgsTransBCostAllocationVO" Name="SgsTransBCostAllocationView10">
         <AttrNames>
-          <Item Value="ExtractId"/>
           <Item Value="TransactinPeriod"/>
+          <Item Value="CirId"/>
           <Item Value="BuId"/>
           <Item Value="GlAccount"/>
           <Item Value="JobCode"/>
-          <Item Value="SourceSystem"/>
-          <Item Value="SourceModule"/>
           <Item Value="TransactionAmount"/>
           <Item Value="ServiceCategory"/>
           <Item Value="AccountTreatment"/>
           <Item Value="ExtractedBy"/>
           <Item Value="TrasactionStatus"/>
-          <Item Value="CirId"/>
           <Item Value="TransactionCategory"/>
+          <Item Value="SourceSystem"/>
+          <Item Value="SourceModule"/>
+          <Item Value="ExtractId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
