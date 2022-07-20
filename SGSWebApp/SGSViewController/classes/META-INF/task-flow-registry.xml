@@ -93,6 +93,7 @@
    </task-flow-descriptor>
    <task-flow-descriptor path="bTaskFlow/transBCostAllocationFormBTF.xml" id="transBCostAllocationEditBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets">
       <input-parameter name="pTransBCAAddEdit"/>
+      <input-parameter name="pStatus"/>
    </task-flow-descriptor>
    <task-flow-descriptor path="bTaskFlow/transBCostAllocationMainBTF.xml" id="transBCostAllocationMainBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/transactionalDataBTF.xml" id="transactionalDataBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
