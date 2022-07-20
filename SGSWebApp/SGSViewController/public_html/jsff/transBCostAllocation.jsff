@@ -28,11 +28,11 @@
                                                                    filename="TransactionBeforeCostAllocation.xls"/>
                             </af:button>
                             <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                       disabled="#{!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']}"
+                                      disabled="#{securityContext.userName == 'SUPER'?false:true}" 
                                        id="b1" action="ADD" icon="/resources/icons/plus.png"
                                        shortDesc="Create/Add Cost Identification Rule"/>
                             <af:button
-                                       disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"
+                                       disabled="#{securityContext.userName == 'SUPER'?false:true}"
                                        id="b2" shortDesc="Delete Business Unit" icon="/resources/icons/delete.png"
                                        action="#{pageFlowScope.TransBCostAllocationBean.deleteTransBCostAllocation}"/>
                   <af:button text="Hold/Release" id="b4" />
