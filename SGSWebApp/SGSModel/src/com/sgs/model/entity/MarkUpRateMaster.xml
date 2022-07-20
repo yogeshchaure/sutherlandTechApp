@@ -132,9 +132,6 @@
     target="com.sgs.model.entity.MarkUpRateMaster"
     permissionClass="oracle.adf.share.security.authorization.EntityPermission">
     <privilege-map
-      operation="read"
-      privilege="read"/>
-    <privilege-map
       operation="update"
       privilege="update"/>
     <privilege-map
