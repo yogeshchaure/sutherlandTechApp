@@ -36,13 +36,14 @@
                        <af:link text="#{row.LineId}" id="l1" action="EDIT" inlineStyle="font-weight:bold;"/>
       </af:column>
       <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.Month.label}" id="resId1c2">
-        <af:selectOneChoice value="#{row.bindings.Month.inputValue}" label="#{row.bindings.Month.label}"
-                            required="#{bindings.SgsStatisticalDataVO1.hints.Month.mandatory}"
-                            shortDesc="#{bindings.SgsStatisticalDataVO1.hints.Month.tooltip}" readOnly="true" id="soc1">
-          <f:selectItems value="#{row.bindings.Month.items}" id="si1"/>
-          <f:validator binding="#{row.bindings.Month.validator}"/>
-        </af:selectOneChoice>
-      </af:column>
+          <af:inputDate value="#{row.bindings.Month.inputValue}"
+                        required="#{bindings.SgsStatisticalDataVO1.hints.Month.mandatory}"
+                        columns="#{bindings.SgsStatisticalDataVO1.hints.Month.displayWidth}"
+                        shortDesc="#{bindings.SgsStatisticalDataVO1.hints.Month.tooltip}" id="id1" readOnly="true">
+            <f:validator binding="#{row.bindings.Month.validator}"/>
+            <af:convertDateTime pattern="#{bindings.SgsStatisticalDataVO1.hints.Month.format}"/>
+          </af:inputDate>
+        </af:column>
       <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.StatisticalDataCategory.label}" id="resId1c3">
         <af:selectOneChoice value="#{row.bindings.StatisticalDataCategory.inputValue}"
                             label="#{row.bindings.StatisticalDataCategory.label}"
