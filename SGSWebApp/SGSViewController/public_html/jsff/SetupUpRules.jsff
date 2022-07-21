@@ -58,7 +58,10 @@
                                                    inlineStyle="min-height:500px;" icon="/resources/icons/VATTAX.png"></af:showDetailItem>
                                 <af:showDetailItem id="sdi9" text="Withholding Tax (WHT) / TDS Set-Up"
                                                    rendered="#{securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=View']}"
-                                                   inlineStyle="min-height:500px;" icon="/resources/icons/WHTtax.png"></af:showDetailItem>
+                                                   inlineStyle="min-height:500px;" icon="/resources/icons/WHTtax.png">
+                                    <af:region value="#{bindings.withholdingTaxDeductedTaxMainBTF1.regionModel}"
+                                               id="r7"/>
+                                </af:showDetailItem>
                                 <af:showDetailItem id="sdi10" text="Global Settings Set-Up"
                                                    rendered="#{securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=View']}"
                                                    inlineStyle="min-height:500px;" icon="/resources/icons/globalSetting.png"></af:showDetailItem>
