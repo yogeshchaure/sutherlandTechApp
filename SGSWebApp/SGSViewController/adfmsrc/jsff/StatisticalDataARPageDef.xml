@@ -15,7 +15,6 @@
       <nodeDefinition DefName="com.sgs.model.view.SgsStatisticalDataVO" Name="SgsStatisticalDataVO20">
         <AttrNames>
           <Item Value="LineId"/>
-          <Item Value="Month"/>
           <Item Value="StatisticalDataCategory"/>
           <Item Value="BusinessUnit"/>
           <Item Value="JobCode"/>
@@ -25,6 +24,8 @@
           <Item Value="UnitOfMeasure"/>
           <Item Value="DataStatus"/>
           <Item Value="Status"/>
+          <Item Value="StatisticalData"/>
+          <Item Value="Month"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

@@ -36,7 +36,8 @@
         </af:column>
         <af:column headerText="#{bindings.SgsStatisticalDataVO2.hints.Month.label}" id="resId1c2">
           <af:outputText value="#{row.Month}" shortDesc="#{bindings.SgsStatisticalDataVO2.hints.Month.tooltip}"
-                         id="ot2">
+        <af:column headerText="#{bindings.SgsARStatisticalDataVO1.hints.Month.label}" id="c3">
+          <af:outputText value="#{row.Month}" shortDesc="#{bindings.SgsARStatisticalDataVO1.hints.Month.tooltip}"
             <af:convertDateTime pattern="#{bindings.SgsStatisticalDataVO2.hints.Month.format}"/>
           </af:outputText>
         </af:column>
@@ -68,14 +69,22 @@
                          shortDesc="#{bindings.SgsStatisticalDataVO2.hints.OperationalUnit.tooltip}" id="ot4"/>
         </af:column>
         <af:column headerText="#{bindings.SgsStatisticalDataVO2.hints.DepartmentId.label}" id="resId1c7">
+        <af:column headerText="#{bindings.SgsARStatisticalDataVO1.hints.StatisticalData.label}" id="c1">
+          <af:outputText value="#{row.StatisticalData}"
+                         shortDesc="#{bindings.SgsARStatisticalDataVO1.hints.StatisticalData.tooltip}" id="ot1"/>
+        </af:column>
+        <af:column headerText="#{bindings.SgsARStatisticalDataVO1.hints.DepartmentId.label}" id="resId1c7">
+
           <af:outputText value="#{row.DepartmentId}"
                          shortDesc="#{bindings.SgsStatisticalDataVO2.hints.DepartmentId.tooltip}" id="ot5"/>
         </af:column>
+
         <af:column headerText="#{bindings.SgsStatisticalDataVO2.hints.StatisticalData.label}" id="resId1c8">
           <af:outputText value="#{row.StatisticalData}"
                          shortDesc="#{bindings.SgsStatisticalDataVO2.hints.StatisticalData.tooltip}" id="ot6"/>
         </af:column>
         <af:column headerText="#{bindings.SgsStatisticalDataVO2.hints.UnitOfMeasure.label}" id="resId1c9">
+        <af:column headerText="#{bindings.SgsARStatisticalDataVO1.hints.UnitOfMeasure.label}" id="resId1c9">
           <af:outputText value="#{row.UnitOfMeasure}"
                          shortDesc="#{bindings.SgsStatisticalDataVO2.hints.UnitOfMeasure.tooltip}" id="ot7"/>
         </af:column>

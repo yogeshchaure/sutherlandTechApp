@@ -25,6 +25,7 @@
           <Item Value="DataStatus"/>
           <Item Value="DepartmentId"/>
           <Item Value="Status"/>
+          <Item Value="StatisticalData"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

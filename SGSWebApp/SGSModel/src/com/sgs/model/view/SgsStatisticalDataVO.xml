@@ -403,6 +403,7 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
+
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
@@ -412,6 +413,19 @@
       <SchemaBasedProperties>
         <FIELDORDER
           Value="15.0"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+<ViewAttribute
+    Name="StatisticalData"
+    PrecisionRule="true"
+    EntityAttrName="StatisticalData"
+    EntityUsage="SgsStatisticalData"
+    AliasName="STATISTICAL_DATA"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <FIELDORDER
+          Value="16.0"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

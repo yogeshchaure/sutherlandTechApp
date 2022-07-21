@@ -22,6 +22,10 @@
         <name>pTransBCAAddEdit</name>
         <value>ADD</value>
       </input-parameter>
+      <input-parameter id="__7">
+        <name>pStatus</name>
+        <value>#{pageFlowScope.status}</value>
+      </input-parameter>
     </task-flow-call>
     <task-flow-call id="transBCostAllocationEDIT">
       <task-flow-reference>
@@ -31,6 +35,10 @@
       <input-parameter id="__5">
         <name>pTransBCAAddEdit</name>
         <value>EDIT</value>
+      </input-parameter>
+      <input-parameter id="__8">
+        <name>pStatus</name>
+        <value>#{pageFlowScope.status}</value>
       </input-parameter>
     </task-flow-call>
     <control-flow-rule id="__1">

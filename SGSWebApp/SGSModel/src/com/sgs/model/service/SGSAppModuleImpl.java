@@ -749,6 +749,7 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl implements SGSAppMod
     }
 
 
+
     /**
      * Container's getter for SgsStatisticalDataVO2.
      * @return SgsStatisticalDataVO2
@@ -767,6 +768,13 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl implements SGSAppMod
         VO.setApplyViewCriteriaName("SgsStatisticalDataVOCriteria");
         VO.setNamedWhereClauseParam("btsts", "Submitted for Approval");
         VO.executeQuery();      
+
+    /**
+     * Container's getter for sgsMarkUpmaster1.
+     * @return sgsMarkUpmaster1
+     */
+    public ViewObjectImpl getsgsMarkUpmaster1() {
+        return (ViewObjectImpl) findViewObject("sgsMarkUpmaster1");
     }
 }
 
