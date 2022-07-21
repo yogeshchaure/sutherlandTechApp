@@ -43,7 +43,12 @@ public class SgsRevAllocatedDataImpl extends EntityImpl {
         CreatedDate,
         CreatedBy,
         UpdatedDate,
-        UpdatedBy;
+        UpdatedBy,
+        CONSOLIDATEDINVAMOUNTYEARLY,
+        GSTAMOUNT,
+        GSTRATE,
+        WHTAMOUNT,
+        WHTRATE;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -66,6 +71,7 @@ public class SgsRevAllocatedDataImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int RADID = AttributesEnum.RadId.index();
     public static final int ALLOCATIONID = AttributesEnum.AllocationId.index();
     public static final int COSTIDENTIFICATIONID = AttributesEnum.CostIdentificationId.index();
@@ -92,11 +98,23 @@ public class SgsRevAllocatedDataImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int CONSOLIDATEDINVAMOUNTYEARLY = AttributesEnum.CONSOLIDATEDINVAMOUNTYEARLY.index();
+    public static final int GSTAMOUNT = AttributesEnum.GSTAMOUNT.index();
+    public static final int GSTRATE = AttributesEnum.GSTRATE.index();
+    public static final int WHTAMOUNT = AttributesEnum.WHTAMOUNT.index();
+    public static final int WHTRATE = AttributesEnum.WHTRATE.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public SgsRevAllocatedDataImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("com.sgs.model.entity.SgsRevAllocatedData");
     }
 
     /**
@@ -516,6 +534,86 @@ public class SgsRevAllocatedDataImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for CONSOLIDATEDINVAMOUNTYEARLY, using the alias name CONSOLIDATEDINVAMOUNTYEARLY.
+     * @return the value of CONSOLIDATEDINVAMOUNTYEARLY
+     */
+    public BigDecimal getCONSOLIDATEDINVAMOUNTYEARLY() {
+        return (BigDecimal) getAttributeInternal(CONSOLIDATEDINVAMOUNTYEARLY);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for CONSOLIDATEDINVAMOUNTYEARLY.
+     * @param value value to set the CONSOLIDATEDINVAMOUNTYEARLY
+     */
+    public void setCONSOLIDATEDINVAMOUNTYEARLY(BigDecimal value) {
+        setAttributeInternal(CONSOLIDATEDINVAMOUNTYEARLY, value);
+    }
+
+    /**
+     * Gets the attribute value for GSTAMOUNT, using the alias name GSTAMOUNT.
+     * @return the value of GSTAMOUNT
+     */
+    public BigDecimal getGSTAMOUNT() {
+        return (BigDecimal) getAttributeInternal(GSTAMOUNT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for GSTAMOUNT.
+     * @param value value to set the GSTAMOUNT
+     */
+    public void setGSTAMOUNT(BigDecimal value) {
+        setAttributeInternal(GSTAMOUNT, value);
+    }
+
+    /**
+     * Gets the attribute value for GSTRATE, using the alias name GSTRATE.
+     * @return the value of GSTRATE
+     */
+    public Integer getGSTRATE() {
+        return (Integer) getAttributeInternal(GSTRATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for GSTRATE.
+     * @param value value to set the GSTRATE
+     */
+    public void setGSTRATE(Integer value) {
+        setAttributeInternal(GSTRATE, value);
+    }
+
+    /**
+     * Gets the attribute value for WHTAMOUNT, using the alias name WHTAMOUNT.
+     * @return the value of WHTAMOUNT
+     */
+    public BigDecimal getWHTAMOUNT() {
+        return (BigDecimal) getAttributeInternal(WHTAMOUNT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for WHTAMOUNT.
+     * @param value value to set the WHTAMOUNT
+     */
+    public void setWHTAMOUNT(BigDecimal value) {
+        setAttributeInternal(WHTAMOUNT, value);
+    }
+
+    /**
+     * Gets the attribute value for WHTRATE, using the alias name WHTRATE.
+     * @return the value of WHTRATE
+     */
+    public Integer getWHTRATE() {
+        return (Integer) getAttributeInternal(WHTRATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for WHTRATE.
+     * @param value value to set the WHTRATE
+     */
+    public void setWHTRATE(Integer value) {
+        setAttributeInternal(WHTRATE, value);
+    }
+
+    /**
      * @param radId key constituent
 
      * @return a Key object based on given key constituents.
@@ -524,11 +622,5 @@ public class SgsRevAllocatedDataImpl extends EntityImpl {
         return new Key(new Object[] { radId });
     }
 
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("com.sgs.model.entity.SgsRevAllocatedData");
-    }
 }
 

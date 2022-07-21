@@ -14,7 +14,6 @@
     <tree IterBinding="SgsRevAllocatedDataVOIterator" id="SgsRevAllocatedDataVO">
       <nodeDefinition DefName="com.sgs.model.view.SgsRevAllocatedDataVO" Name="SgsRevAllocatedDataVO0">
         <AttrNames>
-          <Item Value="SelectInd"/>
           <Item Value="AllocationId"/>
           <Item Value="CostIdentificationId"/>
           <Item Value="TpaApplicability"/>
@@ -35,6 +34,11 @@
           <Item Value="TotalAmount"/>
           <Item Value="TargetTransaction"/>
           <Item Value="Status"/>
+          <Item Value="CONSOLIDATEDINVAMOUNTYEARLY"/>
+          <Item Value="GSTAMOUNT"/>
+          <Item Value="GSTRATE"/>
+          <Item Value="WHTAMOUNT"/>
+          <Item Value="WHTRATE"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

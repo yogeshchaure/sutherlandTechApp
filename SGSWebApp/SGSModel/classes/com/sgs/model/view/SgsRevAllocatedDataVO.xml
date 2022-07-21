@@ -699,6 +699,36 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="CONSOLIDATEDINVAMOUNTYEARLY"
+    PrecisionRule="true"
+    EntityAttrName="CONSOLIDATEDINVAMOUNTYEARLY"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="CONSOLIDATED_INV_AMOUNT_YEARLY"/>
+  <ViewAttribute
+    Name="GSTAMOUNT"
+    PrecisionRule="true"
+    EntityAttrName="GSTAMOUNT"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="GST_AMOUNT"/>
+  <ViewAttribute
+    Name="GSTRATE"
+    PrecisionRule="true"
+    EntityAttrName="GSTRATE"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="GST_RATE"/>
+  <ViewAttribute
+    Name="WHTAMOUNT"
+    PrecisionRule="true"
+    EntityAttrName="WHTAMOUNT"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="WHT_AMOUNT"/>
+  <ViewAttribute
+    Name="WHTRATE"
+    PrecisionRule="true"
+    EntityAttrName="WHTRATE"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="WHT_RATE"/>
   <ViewCriteria
     Name="SgsRevAllocatedDataVOCriteria"
     ViewObjectName="com.sgs.model.view.SgsRevAllocatedDataVO"

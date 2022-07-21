@@ -286,6 +286,47 @@
       <Attr Name="_DisplaySize" Value="80"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="CONSOLIDATEDINVAMOUNTYEARLY"
+    Precision="10"
+    Scale="2"
+    ColumnName="CONSOLIDATED_INV_AMOUNT_YEARLY"
+    SQLType="DECIMAL"
+    Type="java.math.BigDecimal"
+    ColumnType="DECIMAL"
+    TableName="SGS_REV_ALLOCATED_DATA"/>
+  <Attribute
+    Name="GSTAMOUNT"
+    Precision="10"
+    Scale="2"
+    ColumnName="GST_AMOUNT"
+    SQLType="DECIMAL"
+    Type="java.math.BigDecimal"
+    ColumnType="DECIMAL"
+    TableName="SGS_REV_ALLOCATED_DATA"/>
+  <Attribute
+    Name="GSTRATE"
+    ColumnName="GST_RATE"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="SGS_REV_ALLOCATED_DATA"/>
+  <Attribute
+    Name="WHTAMOUNT"
+    Precision="10"
+    Scale="2"
+    ColumnName="WHT_AMOUNT"
+    SQLType="DECIMAL"
+    Type="java.math.BigDecimal"
+    ColumnType="DECIMAL"
+    TableName="SGS_REV_ALLOCATED_DATA"/>
+  <Attribute
+    Name="WHTRATE"
+    ColumnName="WHT_RATE"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="SGS_REV_ALLOCATED_DATA"/>
   <Key
     Name="PKSGSREVALLOCATEDDATA"
     PrimaryKey="true">
