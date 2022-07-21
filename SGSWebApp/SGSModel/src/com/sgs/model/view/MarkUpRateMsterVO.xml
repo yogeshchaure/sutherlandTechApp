@@ -27,7 +27,14 @@
   <Variable
     Name="bSrCatg"
     Kind="viewcriteria"
-    Type="java.lang.String"/>
+    Type="java.lang.String">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.sgs.model.view.MarkUpRateMsterVO.bSrCatg_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Variable>
   <Variable
     Name="bEndDate"
     Kind="viewcriteria"
@@ -222,7 +229,7 @@
       <CustomProperties>
         <Property
           Name="autoExecute"
-          Value="false"/>
+          Value="true"/>
         <Property
           Name="mode"
           Value="Basic"/>
@@ -259,7 +266,7 @@
       <ViewCriteriaItem
         Name="EffectiveTill"
         ViewAttribute="EffectiveTill"
-        Operator="ONORAFTER"
+        Operator="="
         Conjunction="AND"
         Value=":bEndDate"
         IsBindVarValue="true"

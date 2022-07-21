@@ -2,20 +2,18 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelGroupLayout layout="vertical" id="pgl1">
-    <af:panelHeader text="Mark-Up Rate Master" id="ph1">
-      <af:query id="qryId1" headerText="Search" disclosed="true" saveQueryMode="hidden" rows="2" maxColumns="2"
-                value="#{bindings.MarkUpRateMsterVOCriteriaQuery.queryDescriptor}"
-                model="#{bindings.MarkUpRateMsterVOCriteriaQuery.queryModel}"
-                queryListener="#{bindings.MarkUpRateMsterVOCriteriaQuery.processQuery}"
-                queryOperationListener="#{bindings.MarkUpRateMsterVOCriteriaQuery.processQueryOperation}"
-                resultComponentId="::pc1:t1"/>
+    <af:panelHeader text="MarkUpRateMaster" id="ph1">
+      <af:query id="qryId1" headerText="Search" disclosed="true"
+                value="#{bindings.MarkUpRateMsterVOCriteriaQuery1.queryDescriptor}"
+                model="#{bindings.MarkUpRateMsterVOCriteriaQuery1.queryModel}" saveQueryMode="hidden" rows="2" maxColumns="2"
+                queryListener="#{bindings.MarkUpRateMsterVOCriteriaQuery1.processQuery}"
+                queryOperationListener="#{bindings.MarkUpRateMsterVOCriteriaQuery1.processQueryOperation}"
+                resultComponentId="::pc1:resId1"/>
     </af:panelHeader>
     <af:panelCollection id="pc1" styleClass="AFStretchWidth">
-      <f:facet name="menus">
-      
-      </f:facet>
+      <f:facet name="menus"/>
       <f:facet name="toolbar">
-        <af:toolbar id="t2">
+       <af:toolbar id="t2">
           <af:button actionListener="#{bindings.CreateInsert.execute}" text="Create"
                       id="b1"/>
           <af:button actionListener="#{bindings.Delete.execute}" text="Discard" 
@@ -26,57 +24,45 @@
       </f:facet>
       <f:facet name="statusbar"/>
       <af:table value="#{bindings.MarkUpRateMsterVO1.collectionModel}" var="row"
-                rows="#{bindings.MarkUpRateMsterVO1.rangeSize}" styleClass="AFStretchWidth"
+                rows="#{bindings.MarkUpRateMsterVO1.rangeSize}"
                 emptyText="#{bindings.MarkUpRateMsterVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
                 rowBandingInterval="0" selectedRowKeys="#{bindings.MarkUpRateMsterVO1.collectionModel.selectedRow}"
                 selectionListener="#{bindings.MarkUpRateMsterVO1.collectionModel.makeCurrent}" rowSelection="single"
-                fetchSize="#{bindings.MarkUpRateMsterVO1.rangeSize}" id="t1" partialTriggers="::b1 ::b2">
-        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.Geography.label}" id="c1">
+                fetchSize="#{bindings.MarkUpRateMsterVO1.rangeSize}" id="resId1" partialTriggers="::b1 ::b2">
+        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.Geography.label}" id="resId1c1">
           <af:selectOneChoice value="#{row.bindings.Geography.inputValue}" label="#{row.bindings.Geography.label}"
                               required="#{bindings.MarkUpRateMsterVO1.hints.Geography.mandatory}"
-                              shortDesc="#{bindings.MarkUpRateMsterVO1.hints.Geography.tooltip}" id="soc1">
+                              shortDesc="#{bindings.MarkUpRateMsterVO1.hints.Geography.tooltip}" readOnly="true"
+                              id="soc1">
             <f:selectItems value="#{row.bindings.Geography.items}" id="si1"/>
             <f:validator binding="#{row.bindings.Geography.validator}"/>
           </af:selectOneChoice>
         </af:column>
-        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.ServiceCategory.label}" id="c2">
+        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.ServiceCategory.label}" id="resId1c2">
           <af:selectOneChoice value="#{row.bindings.ServiceCategory.inputValue}"
                               label="#{row.bindings.ServiceCategory.label}"
                               required="#{bindings.MarkUpRateMsterVO1.hints.ServiceCategory.mandatory}"
-                              shortDesc="#{bindings.MarkUpRateMsterVO1.hints.ServiceCategory.tooltip}" id="soc2">
+                              shortDesc="#{bindings.MarkUpRateMsterVO1.hints.ServiceCategory.tooltip}" readOnly="true"
+                              id="soc2">
             <f:selectItems value="#{row.bindings.ServiceCategory.items}" id="si2"/>
             <f:validator binding="#{row.bindings.ServiceCategory.validator}"/>
           </af:selectOneChoice>
         </af:column>
-        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.MarkupRate.label}" id="c3">
-          <af:inputText value="#{row.bindings.MarkupRate.inputValue}"
-                        label="#{bindings.MarkUpRateMsterVO1.hints.MarkupRate.label}"
-                        required="#{bindings.MarkUpRateMsterVO1.hints.MarkupRate.mandatory}"
-                        columns="#{bindings.MarkUpRateMsterVO1.hints.MarkupRate.displayWidth}"
-                        maximumLength="#{bindings.MarkUpRateMsterVO1.hints.MarkupRate.precision}"
-                        shortDesc="#{bindings.MarkUpRateMsterVO1.hints.MarkupRate.tooltip}" id="it1">
-            <f:validator binding="#{row.bindings.MarkupRate.validator}"/>
-          </af:inputText>
+        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.MarkupRate.label}" id="resId1c3">
+          <af:outputText value="#{row.MarkupRate}" shortDesc="#{bindings.MarkUpRateMsterVO1.hints.MarkupRate.tooltip}"
+                         id="ot1"/>
         </af:column>
-        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.label}" id="c4">
-          <af:inputDate value="#{row.bindings.EffectiveRom.inputValue}"
-                        label="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.label}"
-                        required="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.mandatory}"
-                        columns="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.displayWidth}"
-                        shortDesc="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.tooltip}" id="id1">
-            <f:validator binding="#{row.bindings.EffectiveRom.validator}"/>
+        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.label}" id="resId1c4">
+          <af:outputText value="#{row.EffectiveRom}"
+                         shortDesc="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.tooltip}" id="ot2">
             <af:convertDateTime pattern="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.format}"/>
-          </af:inputDate>
+          </af:outputText>
         </af:column>
-        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.EffectiveTill.label}" id="c5">
-          <af:inputDate value="#{row.bindings.EffectiveTill.inputValue}"
-                        label="#{bindings.MarkUpRateMsterVO1.hints.EffectiveTill.label}"
-                        required="#{bindings.MarkUpRateMsterVO1.hints.EffectiveTill.mandatory}"
-                        columns="#{bindings.MarkUpRateMsterVO1.hints.EffectiveTill.displayWidth}"
-                        shortDesc="#{bindings.MarkUpRateMsterVO1.hints.EffectiveTill.tooltip}" id="id2">
-            <f:validator binding="#{row.bindings.EffectiveTill.validator}"/>
+        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.EffectiveTill.label}" id="resId1c5">
+          <af:outputText value="#{row.EffectiveTill}"
+                         shortDesc="#{bindings.MarkUpRateMsterVO1.hints.EffectiveTill.tooltip}" id="ot3">
             <af:convertDateTime pattern="#{bindings.MarkUpRateMsterVO1.hints.EffectiveTill.format}"/>
-          </af:inputDate>
+          </af:outputText>
         </af:column>
       </af:table>
     </af:panelCollection>

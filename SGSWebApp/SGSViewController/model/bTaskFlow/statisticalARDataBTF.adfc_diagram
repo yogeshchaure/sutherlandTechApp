@@ -9,16 +9,41 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">430.68457</property>
+         name="x">511.68457</property>
       <property
-         name="start">true</property>
+         name="start">false</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>StatisticalDataAR&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>StatisticalDataAR&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">254.09766</property>
+         name="y">170.39648</property>
       <property
          name="page">/jsff/StatisticalDataAR.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
+   <MethodCall
+      id="MethodCall3">
+      <property
+         name="activityId">executeViewCriteria</property>
+      <property
+         name="x">297.35547</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>executeViewCriteria&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">252.14941</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="MethodCall3"
+      to="View5">
+      <property
+         name="fromOutcome">executeViewCriteria</property>
+      <property
+         name="sdm:polyPoints">R22,L53</property>
+   </ControlFlowCase>
 </SDM>

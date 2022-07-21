@@ -99,6 +99,18 @@
     </DesignTime>
   </Attribute>
   <Attribute
+    Name="StatisticalData"
+    Precision="80"
+    ColumnName="STATISTICAL_DATA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_STATISTICAL_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
     Name="UnitOfMeasure"
     Precision="80"
     ColumnName="UNIT_OF_MEASURE"
@@ -172,18 +184,6 @@
       <Attr Name="_DisplaySize" Value="80"/>
     </DesignTime>
   </Attribute>
-  <Attribute
-    Name="STATISTICALDATA"
-    Precision="80"
-    ColumnName="STATISTICAL_DATA"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"
-    TableName="SGS_STATISTICAL_DATA">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="80"/>
-    </DesignTime>
-  </Attribute>
   <Key
     Name="PKSGSSTATISTICALDATA"
     PrimaryKey="true">
@@ -194,14 +194,4 @@
       <Item Value="com.sgs.model.entity.SgsStatisticalData.SgsStatId"/>
     </AttrArray>
   </Key>
-  <Permission
-    target="com.sgs.model.entity.SgsStatisticalData"
-    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
-    <privilege-map
-      operation="update"
-      privilege="update"/>
-    <privilege-map
-      operation="removeCurrentRow"
-      privilege="delete"/>
-  </Permission>
 </Entity>

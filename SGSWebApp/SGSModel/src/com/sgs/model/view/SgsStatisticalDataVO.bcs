@@ -11,13 +11,6 @@ def pType_BSUnitLOV_BindVariable_BoundParameter()
 }
 
 
-@AccessorParameterExpression(accessorName="MonthLOV", name="pType")
-def pType_MonthLOV_BindVariable_BoundParameter()
-{
-'Month'
-}
-
-
 @AccessorParameterExpression(accessorName="StatisticalDataCatgLOV", name="pType")
 def pType_StatisticalDataCatgLOV_BindVariable_BoundParameter()
 {

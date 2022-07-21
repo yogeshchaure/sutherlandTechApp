@@ -7,7 +7,8 @@
   Version="12.2.1.22.48"
   InheritPersonalization="merge"
   ClearCacheOnRollback="true"
-  ComponentClass="com.sgs.model.service.SGSAppModuleImpl">
+  ComponentClass="com.sgs.model.service.SGSAppModuleImpl"
+  ComponentInterface="com.sgs.model.service.common.SGSAppModule">
   <DesignTime>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
@@ -165,9 +166,6 @@
     Name="SgsStatisticalDataVO1"
     ViewObjectName="com.sgs.model.view.SgsStatisticalDataVO"/>
   <ViewUsage
-    Name="SgsARStatisticalDataVO1"
-    ViewObjectName="com.sgs.model.view.SgsARStatisticalDataVO"/>
-  <ViewUsage
     Name="RunAllocationEngineVO"
     ViewObjectName="com.sgs.model.view.RunAllocationEngineVO"/>
   <ViewUsage
@@ -180,7 +178,9 @@
 <ViewUsage
     Name="RectificationEntryDetailsVO"
     ViewObjectName="com.sgs.model.view.RectificationEntryDetailsVO"/>
-
+  <ViewUsage
+    Name="SgsStatisticalDataVO2"
+    ViewObjectName="com.sgs.model.view.SgsStatisticalDataVO"/>
   <ViewLinkUsage
     Name="SgsBUCustomersVL1"
     ViewLinkObjectName="com.sgs.model.viewLink.SgsBUCustomersVL"
@@ -361,4 +361,14 @@
     SrcViewUsageName="com.sgs.model.service.SGSAppModule.SgsArReceiptVO1"
     DstViewUsageName="com.sgs.model.service.SGSAppModule.SgsArReceiptDtlVO2"
     Reversed="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="executeViewCriteria"
+      MethodName="executeViewCriteria">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+  </ClientInterface>
 </AppModule>

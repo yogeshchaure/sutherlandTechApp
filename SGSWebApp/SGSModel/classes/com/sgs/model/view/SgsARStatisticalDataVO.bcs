@@ -11,13 +11,6 @@ def pType_SgsStatisticalDataLOV_BindVariable_BoundParameter()
 }
 
 
-@AccessorParameterExpression(accessorName="SgsMonthLOV", name="pType")
-def pType_SgsMonthLOV_BindVariable_BoundParameter()
-{
-'Month'
-}
-
-
 @AccessorParameterExpression(accessorName="SgsBusinessUnitLOV", name="pType")
 def pType_SgsBusinessUnitLOV_BindVariable_BoundParameter()
 {

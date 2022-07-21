@@ -1,6 +1,7 @@
 package com.sgs.model.service;
 
 
+import com.sgs.model.service.common.SGSAppModule;
 import com.sgs.model.view.SgsCustomersVOImpl;
 
 import java.sql.Connection;
@@ -12,6 +13,8 @@ import java.sql.SQLException;
 
 import oracle.adf.share.logging.ADFLogger;
 
+import oracle.jbo.ViewCriteria;
+import oracle.jbo.ViewObject;
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewLinkImpl;
 import oracle.jbo.server.ViewObjectImpl;
@@ -21,7 +24,7 @@ import oracle.jbo.server.ViewObjectImpl;
 // ---    Custom code may be added to this class.
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
-public class SGSAppModuleImpl extends ApplicationModuleImpl {
+public class SGSAppModuleImpl extends ApplicationModuleImpl implements SGSAppModule {
     /**
      * This is the default constructor (do not remove).
      */
@@ -713,13 +716,6 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl {
     }
 
     /**
-     * Container's getter for SgsARStatisticalDataVO1.
-     * @return SgsARStatisticalDataVO1
-     */
-    public ViewObjectImpl getSgsARStatisticalDataVO1() {
-        return (ViewObjectImpl) findViewObject("SgsARStatisticalDataVO1");
-	}
-	/**
      * Container's getter for RunAllocationEngineVO1.
      * @return RunAllocationEngineVO1
      */
@@ -742,6 +738,35 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl {
      */
     public ViewObjectImpl getRectificationEntryDetailsVO() {
         return (ViewObjectImpl) findViewObject("RectificationEntryDetailsVO");
+    }
+
+    /**
+     * Container's getter for MarkUpRateMsterVO1.
+     * @return MarkUpRateMsterVO1
+     */
+    public ViewObjectImpl getMarkUpRateMsterVO1() {
+        return (ViewObjectImpl) findViewObject("MarkUpRateMsterVO1");
+    }
+
+
+    /**
+     * Container's getter for SgsStatisticalDataVO2.
+     * @return SgsStatisticalDataVO2
+     */
+    public ViewObjectImpl getSgsStatisticalDataVO2() {
+        return (ViewObjectImpl) findViewObject("SgsStatisticalDataVO2");
+    }
+    
+    
+    public void executeViewCriteria(){
+        ViewObjectImpl VO = this.getSgsStatisticalDataVO2();
+        ViewCriteria vc = VO.getViewCriteria("SgsStatisticalDataVOCriteria");
+        VO.removeViewCriteria("SgsStatisticalDataVOCriteria");
+        vc.resetCriteria();
+           //View Criteria with bind variable 'btsts'
+        VO.setApplyViewCriteriaName("SgsStatisticalDataVOCriteria");
+        VO.setNamedWhereClauseParam("btsts", "Submitted for Approval");
+        VO.executeQuery();      
     }
 }
 

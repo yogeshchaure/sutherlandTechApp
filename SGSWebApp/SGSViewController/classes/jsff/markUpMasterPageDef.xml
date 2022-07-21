@@ -8,8 +8,14 @@
               id="MarkUpRateMsterVO1Iterator"/>
     <searchRegion Criteria="MarkUpRateMsterVOCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="MarkUpRateMsterVO1Iterator" id="MarkUpRateMsterVOCriteriaQuery"/>
+    <searchRegion Criteria="MarkUpRateMsterVOCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="MarkUpRateMsterVO1Iterator" id="MarkUpRateMsterVOCriteriaQuery1"/>
   </executables>
   <bindings>
+    <action IterBinding="MarkUpRateMsterVO1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="MarkUpRateMsterVO1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="SGSAppModuleDataControl"/>
     <tree IterBinding="MarkUpRateMsterVO1Iterator" id="MarkUpRateMsterVO1">
       <nodeDefinition DefName="com.sgs.model.view.MarkUpRateMsterVO" Name="MarkUpRateMsterVO10">
         <AttrNames>
@@ -21,9 +27,5 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="MarkUpRateMsterVO1Iterator" id="CreateInsert" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
-    <action IterBinding="MarkUpRateMsterVO1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="SGSAppModuleDataControl"/>
   </bindings>
 </pageDefinition>

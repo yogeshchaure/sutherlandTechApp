@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
+                id="statisticalARDataBTF_statisticalARDataBTF_executeViewCriteriaPageDef" Package="bTaskFlow"
+                SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <methodAction id="executeViewCriteria" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="executeViewCriteria" IsViewObjectMethod="false" DataControl="SGSAppModuleDataControl"
+                  InstanceName="bindings.executeViewCriteria.dataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>

@@ -35,15 +35,13 @@
       <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.LineId.label}" id="resId1c1">
                        <af:link text="#{row.LineId}" id="l1" action="EDIT" inlineStyle="font-weight:bold;"/>
       </af:column>
-      <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.Month.label}" id="resId1c2">
-        <af:selectOneChoice value="#{row.bindings.Month.inputValue}" label="#{row.bindings.Month.label}"
-                            required="#{bindings.SgsStatisticalDataVO1.hints.Month.mandatory}"
-                            shortDesc="#{bindings.SgsStatisticalDataVO1.hints.Month.tooltip}" readOnly="true" id="soc1">
-          <f:selectItems value="#{row.bindings.Month.items}" id="si1"/>
-          <f:validator binding="#{row.bindings.Month.validator}"/>
-        </af:selectOneChoice>
-      </af:column>
-      <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.StatisticalDataCategory.label}" id="resId1c3">
+        <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.Month.label}" id="c3">
+          <af:outputText value="#{row.Month}" shortDesc="#{bindings.SgsStatisticalDataVO1.hints.Month.tooltip}"
+                         id="ot4">
+            <af:convertDateTime pattern="#{bindings.SgsStatisticalDataVO1.hints.Month.format}"/>
+          </af:outputText>
+        </af:column>
+        <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.StatisticalDataCategory.label}" id="resId1c3">
         <af:selectOneChoice value="#{row.bindings.StatisticalDataCategory.inputValue}"
                             label="#{row.bindings.StatisticalDataCategory.label}"
                             required="#{bindings.SgsStatisticalDataVO1.hints.StatisticalDataCategory.mandatory}"
@@ -70,9 +68,9 @@
         <af:outputText value="#{row.OperationalUnit}"
                        shortDesc="#{bindings.SgsStatisticalDataVO1.hints.OperationalUnit.tooltip}" id="ot3"/>
       </af:column>
-        <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.STATISTICALDATA.label}" id="c1">
-          <af:outputText value="#{row.STATISTICALDATA}"
-                         shortDesc="#{bindings.SgsStatisticalDataVO1.hints.STATISTICALDATA.tooltip}" id="ot1"/>
+        <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.label}" id="c1">
+          <af:outputText value="#{row.StatisticalData}"
+                         shortDesc="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.tooltip}" id="ot1"/>
         </af:column>
         <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.UnitOfMeasure.label}" id="resId1c8">
         <af:outputText value="#{row.UnitOfMeasure}"
