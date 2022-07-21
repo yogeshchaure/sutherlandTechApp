@@ -180,6 +180,9 @@
 <ViewUsage
     Name="RectificationEntryDetailsVO"
     ViewObjectName="com.sgs.model.view.RectificationEntryDetailsVO"/>
+  <ViewUsage
+    Name="SgsTdsWhtVO"
+    ViewObjectName="com.sgs.model.view.SgsTdsWhtVO"/>
   <ViewLinkUsage
     Name="SgsBUCustomersVL1"
     ViewLinkObjectName="com.sgs.model.viewLink.SgsBUCustomersVL"

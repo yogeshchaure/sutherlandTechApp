@@ -71,6 +71,9 @@
 
         <page path="/jsff/editReversalRectificationDetails.jsff"
               usageId="com_sgs_view_editReversalRectificationDetailsPageDef"/>
+        <page path="/jsff/withholdingTaxDeductedTax.jsff" usageId="com_sgs_view_withholdingTaxDeductedTaxPageDef"/>
+        <page path="/jsff/withholdingTaxDeductedTaxForm.jsff"
+              usageId="com_sgs_view_withholdingTaxDeductedTaxFormPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="com_sgs_view_welcomePagePageDef" path="jsf.welcomePagePageDef"/>
@@ -139,7 +142,8 @@
 
         <page id="com_sgs_view_editReversalRectificationDetailsPageDef"
               path="jsff.editReversalRectificationDetailsPageDef"/>
-
+        <page id="com_sgs_view_withholdingTaxDeductedTaxPageDef" path="jsff.withholdingTaxDeductedTaxPageDef"/>
+        <page id="com_sgs_view_withholdingTaxDeductedTaxFormPageDef" path="jsff.withholdingTaxDeductedTaxFormPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="SGSAppModuleDataControl" Package="com.sgs.model.service"

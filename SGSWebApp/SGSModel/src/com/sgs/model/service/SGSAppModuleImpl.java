@@ -759,5 +759,13 @@ public class SGSAppModuleImpl extends ApplicationModuleImpl {
     public ViewObjectImpl getsgsMarkUpmaster1() {
         return (ViewObjectImpl) findViewObject("sgsMarkUpmaster1");
     }
+
+    /**
+     * Container's getter for SgsTdsWhtVO1.
+     * @return SgsTdsWhtVO1
+     */
+    public ViewObjectImpl getSgsTdsWhtVO() {
+        return (ViewObjectImpl) findViewObject("SgsTdsWhtVO");
+    }
 }
 

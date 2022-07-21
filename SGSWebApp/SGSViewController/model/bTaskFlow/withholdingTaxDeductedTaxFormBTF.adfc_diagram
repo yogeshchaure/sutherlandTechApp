@@ -5,19 +5,19 @@
    <View
       id="View2">
       <property
-         name="activityId">costIdentificationRuleForm</property>
+         name="activityId">withholdingTaxDeductedTaxForm</property>
       <property
          name="pageFragment">true</property>
       <property
-         name="x">435.03027</property>
+         name="x">318.70703</property>
       <property
          name="start">true</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>costIdentificationRuleForm&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>withholdingTaxDeductedTaxForm&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">266.74707</property>
+         name="y">199.99414</property>
       <property
-         name="page">/jsff/costIdentificationRuleForm.jsff</property>
+         name="page">/jsff/withholdingTaxDeductedTaxForm.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -26,11 +26,11 @@
       <property
          name="activityId">taskFlowReturn1</property>
       <property
-         name="x">764.0</property>
+         name="x">641.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
       <property
-         name="y">258.5459</property>
+         name="y">222.69531</property>
       <property
          name="finish">true</property>
       <property
@@ -44,6 +44,6 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">R50,476.03027,266.39648,723.0,258.1953,L50</property>
+         name="sdm:polyPoints">R50,359.70703,199.64355,600.5,222.34473,L50</property>
    </ControlFlowCase>
 </SDM>

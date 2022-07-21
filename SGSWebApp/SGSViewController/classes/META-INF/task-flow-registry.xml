@@ -97,4 +97,8 @@
    </task-flow-descriptor>
    <task-flow-descriptor path="bTaskFlow/transBCostAllocationMainBTF.xml" id="transBCostAllocationMainBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="bTaskFlow/transactionalDataBTF.xml" id="transactionalDataBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="bTaskFlow/withholdingTaxDeductedTaxFormBTF.xml" id="withholdingTaxDeductedTaxFormBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets">
+      <input-parameter name="pAddEdit"/>
+   </task-flow-descriptor>
+   <task-flow-descriptor path="bTaskFlow/withholdingTaxDeductedTaxMainBTF.xml" id="withholdingTaxDeductedTaxMainBTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
 </task-flow-registry>
