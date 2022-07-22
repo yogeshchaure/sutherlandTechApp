@@ -32,5 +32,7 @@
           id="SourceSystem" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="SgsRunIntercompanyExtractionVOIterator" StaticList="false" Uses="LOV_TransactionSource"
           id="TransactionSource" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="SgsRunIntercompanyExtractionVOIterator" StaticList="false" Uses="LOV_OperationUnit"
+          id="OperationUnit" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

@@ -60,8 +60,10 @@ public class SgsTransBCostAllocationImpl extends EntityImpl {
         CreatedDate,
         CreatedBy,
         UpdatedDate,
-        UpdatedBy;
+        UpdatedBy,
+        OperationUnit;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -86,6 +88,7 @@ public class SgsTransBCostAllocationImpl extends EntityImpl {
 
 
     private static final ADFLogger LOG = ADFLogger.createADFLogger(SgsTransBCostAllocationImpl.class);
+
 
     public static final int TBCAID = AttributesEnum.TbcaId.index();
     public static final int CIRID = AttributesEnum.CirId.index();
@@ -124,20 +127,13 @@ public class SgsTransBCostAllocationImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int OPERATIONUNIT = AttributesEnum.OperationUnit.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public SgsTransBCostAllocationImpl() {
     }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("com.sgs.model.entity.SgsTransBCostAllocation");
-    }
-
 
     /**
      * Gets the attribute value for TbcaId, using the alias name TbcaId.
@@ -675,7 +671,6 @@ public class SgsTransBCostAllocationImpl extends EntityImpl {
         return (Date) getAttributeInternal(CREATEDDATE);
     }
 
-
     /**
      * Gets the attribute value for CreatedBy, using the alias name CreatedBy.
      * @return the value of CreatedBy
@@ -683,7 +678,6 @@ public class SgsTransBCostAllocationImpl extends EntityImpl {
     public String getCreatedBy() {
         return (String) getAttributeInternal(CREATEDBY);
     }
-
 
     /**
      * Gets the attribute value for UpdatedDate, using the alias name UpdatedDate.
@@ -693,7 +687,6 @@ public class SgsTransBCostAllocationImpl extends EntityImpl {
         return (Date) getAttributeInternal(UPDATEDDATE);
     }
 
-
     /**
      * Gets the attribute value for UpdatedBy, using the alias name UpdatedBy.
      * @return the value of UpdatedBy
@@ -702,6 +695,21 @@ public class SgsTransBCostAllocationImpl extends EntityImpl {
         return (String) getAttributeInternal(UPDATEDBY);
     }
 
+    /**
+     * Gets the attribute value for OperationUnit, using the alias name OperationUnit.
+     * @return the value of OperationUnit
+     */
+    public String getOperationUnit() {
+        return (String) getAttributeInternal(OPERATIONUNIT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for OperationUnit.
+     * @param value value to set the OperationUnit
+     */
+    public void setOperationUnit(String value) {
+        setAttributeInternal(OPERATIONUNIT, value);
+    }
 
     /**
      * @param tbcaId key constituent
@@ -711,6 +719,14 @@ public class SgsTransBCostAllocationImpl extends EntityImpl {
     public static Key createPrimaryKey(Integer tbcaId) {
         return new Key(new Object[] { tbcaId });
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("com.sgs.model.entity.SgsTransBCostAllocation");
+    }
+
 
     /**
      * Add attribute defaulting logic in this method.

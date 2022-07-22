@@ -21,6 +21,8 @@
           <Item Value="NettingApplicability"/>
           <Item Value="SubLedgerApplicability"/>
           <Item Value="EffectiveEndDate"/>
+          <Item Value="Opration_Unit"/>
+          <Item Value="GstRegNum"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

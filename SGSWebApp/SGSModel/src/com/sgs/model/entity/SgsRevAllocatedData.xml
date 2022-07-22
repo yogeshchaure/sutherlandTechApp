@@ -12,7 +12,6 @@
   BindingStyle="JDBC"
   RowClass="com.sgs.model.entity.SgsRevAllocatedDataImpl">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access"/>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <Attribute
@@ -278,6 +277,90 @@
     Name="UpdatedBy"
     Precision="80"
     ColumnName="UPDATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_REV_ALLOCATED_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ConsolidatedInvAmount"
+    Precision="80"
+    ColumnName="CONSOLIDATED_INV_AMOUNT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_REV_ALLOCATED_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="GstAmount"
+    Precision="80"
+    ColumnName="GST_AMOUNT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_REV_ALLOCATED_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="GstRate"
+    Precision="80"
+    ColumnName="GST_RATE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_REV_ALLOCATED_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="WhtAmount"
+    Precision="80"
+    ColumnName="WHT_AMOUNT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_REV_ALLOCATED_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="WhtRate"
+    Precision="80"
+    ColumnName="WHT_RATE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_REV_ALLOCATED_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SourceOu"
+    Precision="80"
+    ColumnName="SOURCE_OU"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_REV_ALLOCATED_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TargetOu"
+    Precision="80"
+    ColumnName="TARGET_OU"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"

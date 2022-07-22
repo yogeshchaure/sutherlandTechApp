@@ -70,5 +70,12 @@
             RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <list IterBinding="SgsBusinessUnitMasterVO1Iterator" StaticList="false" Uses="LOV_Currency" id="Currency1"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="SgsBusinessUnitMasterVO1Iterator" StaticList="false" Uses="LOV_Opration_Unit"
+          id="Opration_Unit" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SgsBusinessUnitMasterVO1Iterator" id="GstRegNum">
+      <AttrNames>
+        <Item Value="GstRegNum"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

@@ -160,6 +160,18 @@
       <Attr Name="_DisplaySize" Value="80"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="OperationUnit"
+    Precision="80"
+    ColumnName="OPRATION_UNIT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_RIE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
   <Key
     Name="PKSGSRIE"
     PrimaryKey="true">

@@ -25,10 +25,8 @@
                         <f:facet name="toolbar">
                             <af:toolbar id="t1">
                                 
-                                <af:button text="Approve" id="b3"
-                                           disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
-                                <af:button text="Reject" id="b4"
-                                           disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"/>
+                                <af:button text="Approve" id="b3"/>
+                                <af:button text="Reject" id="b4"/>
                                </af:toolbar>
                         </f:facet>
                         <f:facet name="statusbar"/>
@@ -99,6 +97,16 @@
                                         <f:validator binding="#{row.bindings.TransactionCategory.validator}"/>
                                     </af:selectOneChoice>
                                 </af:column>
+                                <af:column headerText="Target Transaction" id="resId1c21">
+                                    <af:selectOneChoice value="#{row.bindings.TargetTransaction.inputValue}"
+                                                        label="#{row.bindings.TargetTransaction.label}"
+                                                        required="#{bindings.SgsRevAllocatedDataVO.hints.TargetTransaction.mandatory}"
+                                                        shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.TargetTransaction.tooltip}"
+                                                        id="soc10" readOnly="true">
+                                        <f:selectItems value="#{row.bindings.TargetTransaction.items}" id="si10"/>
+                                        <f:validator binding="#{row.bindings.TargetTransaction.validator}"/>
+                                    </af:selectOneChoice>
+                                </af:column>
                                 <af:column headerText="Source GL Account"
                                            id="resId1c15">
                                     <af:outputText value="#{row.SourceGlAccount}"
@@ -113,6 +121,16 @@
                                     <af:outputText value="#{row.SourceBu}"
                                                    shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.SourceBu.tooltip}"
                                                    id="ot10"/>
+                                </af:column>
+                                <af:column headerText="Source OU" id="c1">
+                                    <af:selectOneChoice value="#{row.bindings.SourceOu.inputValue}"
+                                                        label="#{row.bindings.SourceOu.label}" readOnly="true"
+                                                        required="#{bindings.SgsRevAllocatedDataVO.hints.SourceOu.mandatory}"
+                                                        shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.SourceOu.tooltip}"
+                                                        id="soc8">
+                                        <f:selectItems value="#{row.bindings.SourceOu.items}" id="si8"/>
+                                        <f:validator binding="#{row.bindings.SourceOu.validator}"/>
+                                    </af:selectOneChoice>
                                 </af:column>
                                 <af:column headerText="Source Job Code"
                                            id="resId1c16">
@@ -147,6 +165,16 @@
                                                    shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.TargetBu.tooltip}"
                                                    id="ot14"/>
                                 </af:column>
+                                <af:column headerText="Target OU" id="c3">
+                                    <af:selectOneChoice value="#{row.bindings.TargetOu.inputValue}"
+                                                        label="#{row.bindings.TargetOu.label}" readOnly="true"
+                                                        required="#{bindings.SgsRevAllocatedDataVO.hints.TargetOu.mandatory}"
+                                                        shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.TargetOu.tooltip}"
+                                                        id="soc9">
+                                        <f:selectItems value="#{row.bindings.TargetOu.items}" id="si9"/>
+                                        <f:validator binding="#{row.bindings.TargetOu.validator}"/>
+                                    </af:selectOneChoice>
+                                </af:column>
                                 <af:column headerText="Target Job Code"
                                            id="resId1c20">
                                     <af:outputText value="#{row.TargetJobCode}"
@@ -178,7 +206,7 @@
                                         <f:validator binding="#{row.bindings.AccountingTreatment.validator}"/>
                                     </af:selectOneChoice>
                                 </af:column>
-                                <af:column headerText="Mark-Up Rate"
+                                <af:column headerText="Mark-Up Rate(%)"
                                            id="resId1c9">
                                     <af:outputText value="#{row.MarkUpRage}"
                                                    shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.MarkUpRage.tooltip}"
@@ -201,7 +229,7 @@
                                                    shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.MarkUpAmount.tooltip}"
                                                    id="ot5"/>
                                 </af:column>
-                                <af:column headerText="Total Amount"
+                                <af:column headerText="Base Amount (Before Tax)"
                                            id="resId1c22">
                                     <af:outputText value="#{row.TotalAmount}"
                                                    shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.TotalAmount.tooltip}"
@@ -210,11 +238,30 @@
                                                           pattern="#{bindings.SgsRevAllocatedDataVO.hints.TotalAmount.format}"/>
                                     </af:outputText>
                                 </af:column>
-                                <af:column headerText="Target Transaction"
-                                           id="resId1c21">
-                                    <af:outputText value="#{row.TargetTransaction}"
-                                                   shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.TargetTransaction.tooltip}"
-                                                   id="ot16"/>
+                                <af:column headerText="GST Rate" id="c6">
+                                    <af:outputText value="#{row.GstRate}"
+                                                   shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.GstRate.tooltip}"
+                                                   id="ot7"/>
+                                </af:column>
+                                <af:column headerText="GST Amount" id="c7">
+                                    <af:outputText value="#{row.GstAmount}"
+                                                   shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.GstAmount.tooltip}"
+                                                   id="ot8"/>
+                                </af:column>
+                                <af:column headerText="Consolidated Inv. Amount (Yearly)" id="c8">
+                                    <af:outputText value="#{row.ConsolidatedInvAmount}"
+                                                   shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.ConsolidatedInvAmount.tooltip}"
+                                                   id="ot18"/>
+                                </af:column>
+                                <af:column headerText="WHT Rate" id="c4">
+                                    <af:outputText value="#{row.WhtRate}"
+                                                   shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.WhtRate.tooltip}"
+                                                   id="ot3"/>
+                                </af:column>
+                                <af:column headerText="WHT Amount" id="c5">
+                                    <af:outputText value="#{row.WhtAmount}"
+                                                   shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.WhtAmount.tooltip}"
+                                                   id="ot4"/>
                                 </af:column>
                                 <af:column headerText="Status"
                                            id="resId1c17">

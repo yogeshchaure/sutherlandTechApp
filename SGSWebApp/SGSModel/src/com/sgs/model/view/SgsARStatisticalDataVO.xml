@@ -79,6 +79,22 @@
       </PIMap>
     </ParameterMap>
   </ViewAccessor>
+  <ViewAccessor
+    Name="OUList"
+    ViewObjectName="com.sgs.model.view.SgsListVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="SgsListVOCriteria"
+      FullName="com.sgs.model.view.SgsListVO.SgsListVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="pType">
+        <TransientExpression
+          Name="ExpressionScript"
+          trustMode="untrusted"
+          CodeSourceName="SgsARStatisticalDataVO"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_StatisticalDataCategory"
     ListVOName="SgsStatisticalDataLOV"
@@ -115,6 +131,24 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_OperationalUnit"
+    ListVOName="OUList"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="OperationalUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Discription"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <SQLQuery><![CDATA[SELECT SgsStatisticalData.BUSINESS_UNIT,      
        SgsStatisticalData.CREATED_BY,      
        SgsStatisticalData.CREATED_DATE,      
@@ -129,7 +163,8 @@
        SgsStatisticalData.STATUS,      
        SgsStatisticalData.UNIT_OF_MEASURE,      
        SgsStatisticalData.UPDATED_BY,      
-       SgsStatisticalData.UPDATED_DATE     
+       SgsStatisticalData.UPDATED_DATE   ,
+       SgsStatisticalData.STATISTICAL_DATA
 FROM  SGS_STATISTICAL_DATA SgsStatisticalData   
 where SgsStatisticalData.STATUS = 'Submitted for Approval']]></SQLQuery>
   <EntityUsage
@@ -257,13 +292,16 @@ where SgsStatisticalData.STATUS = 'Submitted for Approval']]></SQLQuery>
     PrecisionRule="true"
     EntityAttrName="OperationalUnit"
     EntityUsage="SgsStatisticalData"
-    AliasName="OPERATIONAL_UNIT">
+    AliasName="OPERATIONAL_UNIT"
+    LOVName="LOV_OperationalUnit">
     <Properties>
       <SchemaBasedProperties>
         <FIELDORDER
           Value="9.0"/>
         <LABEL
           ResId="com.sgs.model.view.SgsARStatisticalDataVO.OperationalUnit_LABEL"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

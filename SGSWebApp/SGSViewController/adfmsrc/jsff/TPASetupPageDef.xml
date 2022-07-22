@@ -18,6 +18,7 @@
           <Item Value="PassThrough"/>
           <Item Value="PassThroughBu"/>
           <Item Value="EffectiveEndDate"/>
+          <Item Value="OperationUnit"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

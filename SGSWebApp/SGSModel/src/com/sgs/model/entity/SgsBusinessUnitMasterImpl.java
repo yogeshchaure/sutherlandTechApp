@@ -39,8 +39,11 @@ public class SgsBusinessUnitMasterImpl extends EntityImpl {
         CreatedDate,
         CreatedBy,
         UpdatedDate,
-        UpdatedBy;
+        UpdatedBy,
+        GstRegNum,
+        Opration_Unit;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -84,6 +87,8 @@ public class SgsBusinessUnitMasterImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int GSTREGNUM = AttributesEnum.GstRegNum.index();
+    public static final int OPRATION_UNIT = AttributesEnum.Opration_Unit.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -393,6 +398,38 @@ public class SgsBusinessUnitMasterImpl extends EntityImpl {
      */
     public void setUpdatedBy(String value) {
         setAttributeInternal(UPDATEDBY, value);
+    }
+
+    /**
+     * Gets the attribute value for GstRegNum, using the alias name GstRegNum.
+     * @return the value of GstRegNum
+     */
+    public String getGstRegNum() {
+        return (String) getAttributeInternal(GSTREGNUM);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for GstRegNum.
+     * @param value value to set the GstRegNum
+     */
+    public void setGstRegNum(String value) {
+        setAttributeInternal(GSTREGNUM, value);
+    }
+
+    /**
+     * Gets the attribute value for Opration_Unit, using the alias name Opration_Unit.
+     * @return the value of Opration_Unit
+     */
+    public String getOpration_Unit() {
+        return (String) getAttributeInternal(OPRATION_UNIT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Opration_Unit.
+     * @param value value to set the Opration_Unit
+     */
+    public void setOpration_Unit(String value) {
+        setAttributeInternal(OPRATION_UNIT, value);
     }
 
     /**

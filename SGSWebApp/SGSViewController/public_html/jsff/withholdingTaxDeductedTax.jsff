@@ -106,7 +106,7 @@
                                         <f:validator binding="#{row.bindings.SectionApplicability.validator}"/>
                                     </af:selectOneChoice>
                                 </af:column>
-                                <af:column headerText="Is PAN/TRC Available"
+                                <af:column headerText="Tax Identification Number"
                                            id="resId1c9">
                                     <af:selectOneChoice value="#{row.bindings.IsPanTrcAvailable.inputValue}"
                                                         label="#{row.bindings.IsPanTrcAvailable.label}"

@@ -42,7 +42,7 @@ def pType_ServiceReceiverLOV_BindVariable_BoundParameter()
 @AccessorParameterExpression(accessorName="IsPANTRCAvailableLOV", name="pType")
 def pType_IsPANTRCAvailableLOV_BindVariable_BoundParameter()
 {
-'YES_NO'
+'PAN_TRC'
 }
 
 

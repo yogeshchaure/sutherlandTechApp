@@ -72,8 +72,13 @@
                        shortDesc="#{bindings.SgsStatisticalDataVO1.hints.OperationalUnit.tooltip}" id="ot3"/>
       </af:column>
         <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.label}" id="c1">
-          <af:outputText value="#{row.StatisticalData}"
-                         shortDesc="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.tooltip}" id="ot1"/>
+          <af:inputText value="#{row.bindings.StatisticalData.inputValue}" simple="true"
+                        required="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.mandatory}"
+                        columns="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.displayWidth}"
+                        maximumLength="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.precision}"
+                        shortDesc="#{bindings.SgsStatisticalDataVO1.hints.StatisticalData.tooltip}" id="it1">
+            <f:validator binding="#{row.bindings.StatisticalData.validator}"/>
+          </af:inputText>
         </af:column>
         <af:column headerText="#{bindings.SgsStatisticalDataVO1.hints.UnitOfMeasure.label}" id="resId1c8">
         <af:outputText value="#{row.UnitOfMeasure}"

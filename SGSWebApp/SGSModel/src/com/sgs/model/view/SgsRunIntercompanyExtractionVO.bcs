@@ -52,3 +52,10 @@ def pType_TransactionSourceLOV_BindVariable_BoundParameter()
 'TRANS_SOURCE'
 }
 
+
+@AccessorParameterExpression(accessorName="OUList", name="pType")
+def pType_OUList_BindVariable_BoundParameter()
+{
+'OPR_UNIT'
+}
+

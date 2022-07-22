@@ -90,7 +90,14 @@
               <f:selectItems value="#{bindings.BuId.items}" id="si2"/>
               <f:validator binding="#{bindings.BuId.validator}"/>
             </af:selectOneChoice>
-            <af:inputText value="#{bindings.GlAccount.inputValue}" label="GL Account"
+              <af:inputText value="#{bindings.OprationalUnit.inputValue}" label="Operating Unit"
+                            required="#{bindings.OprationalUnit.hints.mandatory}"
+                            columns="#{bindings.OprationalUnit.hints.displayWidth}"
+                            maximumLength="#{bindings.OprationalUnit.hints.precision}"
+                            shortDesc="#{bindings.OprationalUnit.hints.tooltip}" id="it7">
+                <f:validator binding="#{bindings.OprationalUnit.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.GlAccount.inputValue}" label="GL Account"
                           required="#{bindings.GlAccount.hints.mandatory}"
                           columns="#{bindings.GlAccount.hints.displayWidth}"
                           maximumLength="#{bindings.GlAccount.hints.precision}"
@@ -103,13 +110,6 @@
               <f:selectItems value="#{bindings.JobCode.items}" id="si3"/>
               <f:validator binding="#{bindings.JobCode.validator}"/>
             </af:selectOneChoice>
-            <af:inputText value="#{bindings.OprationalUnit.inputValue}" label="Operational Unit"
-                          required="#{bindings.OprationalUnit.hints.mandatory}"
-                          columns="#{bindings.OprationalUnit.hints.displayWidth}"
-                          maximumLength="#{bindings.OprationalUnit.hints.precision}"
-                          shortDesc="#{bindings.OprationalUnit.hints.tooltip}" id="it7">
-              <f:validator binding="#{bindings.OprationalUnit.validator}"/>
-            </af:inputText>
             <af:inputText value="#{bindings.DepartmentId.inputValue}" label="Department ID"
                           required="#{bindings.DepartmentId.hints.mandatory}"
                           columns="#{bindings.DepartmentId.hints.displayWidth}"
@@ -377,7 +377,7 @@
                   <f:validator binding="#{row.bindings.BusinessUnit.validator}"/>
                 </af:selectOneChoice>
               </af:column>
-              <af:column headerText="Operation Unit" id="c4">
+              <af:column headerText="Operating Unit" id="c4">
                 <af:selectOneChoice value="#{row.bindings.OperationUnit.inputValue}"
                                     label="#{row.bindings.OperationUnit.label}"
                                     required="#{bindings.RectificationEntryDetailsVO.hints.OperationUnit.mandatory}"

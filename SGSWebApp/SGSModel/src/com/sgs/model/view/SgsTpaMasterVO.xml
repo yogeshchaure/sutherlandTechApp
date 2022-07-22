@@ -90,6 +90,38 @@
       </PIMap>
     </ParameterMap>
   </ViewAccessor>
+  <ViewAccessor
+    Name="OUList"
+    ViewObjectName="com.sgs.model.view.SgsListVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="SgsListVOCriteria"
+      FullName="com.sgs.model.view.SgsListVO.SgsListVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="pType">
+        <TransientExpression
+          Name="ExpressionScript"
+          trustMode="untrusted"
+          CodeSourceName="SgsTpaMasterVO"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="BUList"
+    ViewObjectName="com.sgs.model.view.SgsListVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="SgsListVOCriteria"
+      FullName="com.sgs.model.view.SgsListVO.SgsListVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="pType">
+        <TransientExpression
+          Name="ExpressionScript"
+          trustMode="untrusted"
+          CodeSourceName="SgsTpaMasterVO"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_LeServiceProvider"
     ListVOName="LegalEntityList"
@@ -146,12 +178,30 @@
   </ListBinding>
   <ListBinding
     Name="LOV_PassThroughBu"
-    ListVOName="YesNoList"
+    ListVOName="BUList"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="PassThroughBu"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Discription"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_OperationUnit"
+    ListVOName="OUList"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="OperationUnit"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
@@ -227,6 +277,20 @@
     EntityUsage="SgsTpaMaster"
     AliasName="PASS_THROUGH_BU"
     LOVName="LOV_PassThroughBu">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="OperationUnit"
+    PrecisionRule="true"
+    EntityAttrName="OperationUnit"
+    EntityUsage="SgsTpaMaster"
+    AliasName="OPRATION_UNIT"
+    LOVName="LOV_OperationUnit">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

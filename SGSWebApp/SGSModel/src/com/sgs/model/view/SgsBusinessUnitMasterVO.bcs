@@ -45,3 +45,10 @@ def pType_YesNoList_BindVariable_BoundParameter()
 'YES_NO'
 }
 
+
+@AccessorParameterExpression(accessorName="OUList", name="pType")
+def pType_OUList_BindVariable_BoundParameter()
+{
+'OPR_UNIT'
+}
+

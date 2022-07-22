@@ -88,6 +88,16 @@
                                     <f:validator binding="#{row.bindings.PassThroughBu.validator}"/>
                                 </af:selectOneChoice>
                             </af:column>
+                            <af:column headerText="Pass- Through OU" id="c1">
+                                <af:selectOneChoice value="#{row.bindings.OperationUnit.inputValue}"
+                                                    label="#{row.bindings.OperationUnit.label}"
+                                                    required="#{bindings.SgsTpaMasterVO1.hints.OperationUnit.mandatory}"
+                                                    shortDesc="#{bindings.SgsTpaMasterVO1.hints.OperationUnit.tooltip}"
+                                                    id="soc5" readOnly="true">
+                                    <f:selectItems value="#{row.bindings.OperationUnit.items}" id="si5"/>
+                                    <f:validator binding="#{row.bindings.OperationUnit.validator}"/>
+                                </af:selectOneChoice>
+                            </af:column>
                             <af:column headerText="Effective End Date" id="resId1c6">
                                 <af:outputText value="#{row.EffectiveEndDate}"
                                                shortDesc="#{bindings.SgsTpaMasterVO1.hints.EffectiveEndDate.tooltip}"

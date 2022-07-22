@@ -220,7 +220,30 @@
       <Attr Name="_DisplaySize" Value="80"/>
     </DesignTime>
   </Attribute>
-  
+  <Attribute
+    Name="GstRegNum"
+    Precision="80"
+    ColumnName="GST_REG_NUM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_BUSINESS_UNIT_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Opration_Unit"
+    Precision="80"
+    ColumnName="OPRATION_UNIT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_BUSINESS_UNIT_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
   <Key
     Name="PKSGSBUSINESSUNITMASTER"
     PrimaryKey="true">

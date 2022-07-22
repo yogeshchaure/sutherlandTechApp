@@ -209,6 +209,38 @@
       </PIMap>
     </ParameterMap>
   </ViewAccessor>
+  <ViewAccessor
+    Name="OUList"
+    ViewObjectName="com.sgs.model.view.SgsListVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="SgsListVOCriteria"
+      FullName="com.sgs.model.view.SgsListVO.SgsListVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="pType">
+        <TransientExpression
+          Name="ExpressionScript"
+          trustMode="untrusted"
+          CodeSourceName="SgsRevAllocatedDataVO"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="TargetTransList"
+    ViewObjectName="com.sgs.model.view.SgsListVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="SgsListVOCriteria"
+      FullName="com.sgs.model.view.SgsListVO.SgsListVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="pType">
+        <TransientExpression
+          Name="ExpressionScript"
+          trustMode="untrusted"
+          CodeSourceName="SgsRevAllocatedDataVO"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Status"
     ListVOName="StatusLOV"
@@ -325,6 +357,60 @@
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="TransactionCategory"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Discription"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_SourceOu"
+    ListVOName="OUList"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="SourceOu"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Discription"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TargetOu"
+    ListVOName="OUList"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TargetOu"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Discription"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TargetTransaction"
+    ListVOName="TargetTransList"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TargetTransaction"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
@@ -533,6 +619,20 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
+    Name="SourceOu"
+    PrecisionRule="true"
+    EntityAttrName="SourceOu"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="SOURCE_OU"
+    LOVName="LOV_SourceOu">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
     Name="SourceGlAccount"
     IsNotNull="true"
     PrecisionRule="true"
@@ -603,6 +703,20 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
+    Name="TargetOu"
+    PrecisionRule="true"
+    EntityAttrName="TargetOu"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="TARGET_OU"
+    LOVName="LOV_TargetOu">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
     Name="TargetJobCode"
     PrecisionRule="true"
     EntityAttrName="TargetJobCode"
@@ -620,11 +734,14 @@
     PrecisionRule="true"
     EntityAttrName="TargetTransaction"
     EntityUsage="SgsRevAllocatedData"
-    AliasName="TARGET_TRANSACTION">
+    AliasName="TARGET_TRANSACTION"
+    LOVName="LOV_TargetTransaction">
     <Properties>
       <SchemaBasedProperties>
         <FIELDORDER
           Value="22.0"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -699,6 +816,36 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="WhtRate"
+    PrecisionRule="true"
+    EntityAttrName="WhtRate"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="WHT_RATE"/>
+  <ViewAttribute
+    Name="WhtAmount"
+    PrecisionRule="true"
+    EntityAttrName="WhtAmount"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="WHT_AMOUNT"/>
+  <ViewAttribute
+    Name="GstRate"
+    PrecisionRule="true"
+    EntityAttrName="GstRate"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="GST_RATE"/>
+  <ViewAttribute
+    Name="GstAmount"
+    PrecisionRule="true"
+    EntityAttrName="GstAmount"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="GST_AMOUNT"/>
+  <ViewAttribute
+    Name="ConsolidatedInvAmount"
+    PrecisionRule="true"
+    EntityAttrName="ConsolidatedInvAmount"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="CONSOLIDATED_INV_AMOUNT"/>
   <ViewCriteria
     Name="SgsRevAllocatedDataVOCriteria"
     ViewObjectName="com.sgs.model.view.SgsRevAllocatedDataVO"

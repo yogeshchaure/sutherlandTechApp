@@ -34,5 +34,7 @@
                   id="TransationSource1"/>
     <list IterBinding="RunAllocationEngineVOIterator" StaticList="false" Uses="LOV_CostIdentificationId12"
           id="CostIdentificationId1" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="RunAllocationEngineVOIterator" StaticList="false" Uses="LOV_OperationUnit" id="OperationUnit"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

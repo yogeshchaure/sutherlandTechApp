@@ -84,7 +84,7 @@
               <f:validator binding="#{bindings.SectionApplicability.validator}"/>
             </af:selectOneChoice>
             <af:selectOneChoice value="#{bindings.IsPanTrcAvailable.inputValue}"
-                                label="Is PAN/TRC Available"
+                                label="Tax Identification Number"
                                 required="#{bindings.IsPanTrcAvailable.hints.mandatory}"
                                 shortDesc="#{bindings.IsPanTrcAvailable.hints.tooltip}" id="soc7">
               <f:selectItems value="#{bindings.IsPanTrcAvailable.items}" id="si7"/>
@@ -143,7 +143,7 @@
               <af:convertNumber groupingUsed="false" pattern="#{bindings.RecoveryRate.format}"/>
             </af:inputText>
              <af:spacer id="s2" width="2"/>
-                <af:outputText value="%" id="ot2"/>
+                <af:outputText value="(Foreign Tax Credit)" id="ot2"/>
             </af:panelGroupLayout>
             </af:panelLabelAndMessage>
             <af:selectOneChoice value="#{bindings.Currency.inputValue}" label="Currency"

@@ -23,13 +23,19 @@
                        accessKey="C"/>
           </af:toolbar>
         </f:facet>
-        <af:panelFormLayout id="pfl1" rows="8">
+        <af:panelFormLayout id="pfl1" rows="9">
           <af:inputText value="#{bindings.BuName.inputValue}" label="Business Unit"
                         required="#{bindings.BuName.hints.mandatory}" columns="#{bindings.BuName.hints.displayWidth}"
                         maximumLength="#{bindings.BuName.hints.precision}" shortDesc="#{bindings.BuName.hints.tooltip}"
                         id="it1">
             <f:validator binding="#{bindings.BuName.validator}"/>
           </af:inputText>
+          <af:selectOneChoice value="#{bindings.Opration_Unit.inputValue}" label="Operating Unit"
+                              required="#{bindings.Opration_Unit.hints.mandatory}"
+                              shortDesc="#{bindings.Opration_Unit.hints.tooltip}" id="soc9">
+            <f:selectItems value="#{bindings.Opration_Unit.items}" id="si9"/>
+            <f:validator binding="#{bindings.Opration_Unit.validator}"/>
+          </af:selectOneChoice>
           <af:selectOneChoice value="#{bindings.LeagalEntity.inputValue}" label="Legal Entity"
                               required="#{bindings.LeagalEntity.hints.mandatory}"
                               shortDesc="#{bindings.LeagalEntity.hints.tooltip}" id="soc1">
@@ -116,6 +122,13 @@
                         maximumLength="#{bindings.ICoCustomerName.hints.precision}"
                         shortDesc="#{bindings.ICoCustomerName.hints.tooltip}" id="it5">
             <f:validator binding="#{bindings.ICoCustomerName.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.GstRegNum.inputValue}" label="GST Registration Number"
+                        required="#{bindings.GstRegNum.hints.mandatory}"
+                        columns="#{bindings.GstRegNum.hints.displayWidth}"
+                        maximumLength="#{bindings.GstRegNum.hints.precision}"
+                        shortDesc="#{bindings.GstRegNum.hints.tooltip}" id="it3">
+            <f:validator binding="#{bindings.GstRegNum.validator}"/>
           </af:inputText>
           <af:inputDate value="#{bindings.UpdatedDate.inputValue}" label="#{bindings.UpdatedDate.hints.label}"
                         required="#{bindings.UpdatedDate.hints.mandatory}"

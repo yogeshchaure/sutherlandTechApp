@@ -44,6 +44,13 @@
                         <f:selectItems value="#{bindings.BusinessUnit.items}" id="si4"/>
                         <f:validator binding="#{bindings.BusinessUnit.validator}"/>
                     </af:selectOneChoice>
+                    <af:selectOneChoice value="#{bindings.OperationUnit.inputValue}"
+                                        label="Operating Unit"
+                                        required="#{bindings.OperationUnit.hints.mandatory}"
+                                        shortDesc="#{bindings.OperationUnit.hints.tooltip}" id="soc8">
+                        <f:selectItems value="#{bindings.OperationUnit.items}" id="si8"/>
+                        <f:validator binding="#{bindings.OperationUnit.validator}"/>
+                    </af:selectOneChoice>
                     <af:selectOneChoice value="#{bindings.JobCode.inputValue}" label="Job Code"
                                         required="#{bindings.JobCode.hints.mandatory}"
                                         shortDesc="#{bindings.JobCode.hints.tooltip}" id="soc5">

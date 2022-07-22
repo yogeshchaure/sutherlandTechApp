@@ -59,7 +59,7 @@
             <f:validator binding="#{row.bindings.MarkupRate.validator}"/>
           </af:inputText>
         </af:column>
-        <af:column headerText="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.label}" id="c4">
+        <af:column headerText="Effective From" id="c4">
           <af:inputDate value="#{row.bindings.EffectiveRom.inputValue}"
                         label="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.label}"
                         required="#{bindings.MarkUpRateMsterVO1.hints.EffectiveRom.mandatory}"

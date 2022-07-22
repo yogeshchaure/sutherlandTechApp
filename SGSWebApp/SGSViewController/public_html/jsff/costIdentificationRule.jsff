@@ -34,7 +34,7 @@
                                        shortDesc="Create/Add Cost Identification Rule"/>
                   <af:button
                                        disabled="#{(!securityContext.userGrantedResource['resourceType=UIViewUpdateSecurity;resourceName=ButtonTest;action=Update']) ? true : (!bindings.Delete.enabled)}"
-                                       id="b2" shortDesc="Delete Business Unit" icon="/resources/icons/delete.png"
+                                       id="b2" shortDesc="Delete Cost Identification Rule" icon="/resources/icons/delete.png"
                                        action="#{pageFlowScope.CostIdentificationRuleBean.deleteCostIdentificationRule}"/>
                 </af:toolbar>
               </f:facet>

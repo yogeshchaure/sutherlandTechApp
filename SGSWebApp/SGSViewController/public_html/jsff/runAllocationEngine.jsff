@@ -28,18 +28,11 @@
                         <f:validator binding="#{bindings.CostIdentificationId1.validator}"/>
                     </af:selectOneChoice>
                     <af:selectOneChoice value="#{bindings.AllocationRange.inputValue}"
-                                        label="Allocation Range"
+                                        label="Legal Entity"
                                         required="#{bindings.AllocationRange.hints.mandatory}"
                                         shortDesc="#{bindings.AllocationRange.hints.tooltip}" id="soc2">
                         <f:selectItems value="#{bindings.AllocationRange.items}" id="si2"/>
                         <f:validator binding="#{bindings.AllocationRange.validator}"/>
-                    </af:selectOneChoice>
-                    <af:selectOneChoice value="#{bindings.AllocationBasis.inputValue}"
-                                        label="Allocation Basis"
-                                        required="#{bindings.AllocationBasis.hints.mandatory}"
-                                        shortDesc="#{bindings.AllocationBasis.hints.tooltip}" id="soc1">
-                        <f:selectItems value="#{bindings.AllocationBasis.items}" id="si1"/>
-                        <f:validator binding="#{bindings.AllocationBasis.validator}"/>
                     </af:selectOneChoice>
                     <af:selectOneChoice value="#{bindings.BusinessUnit.inputValue}"
                                         label="Business Unit"
@@ -47,6 +40,19 @@
                                         shortDesc="#{bindings.BusinessUnit.hints.tooltip}" id="soc3">
                         <f:selectItems value="#{bindings.BusinessUnit.items}" id="si3"/>
                         <f:validator binding="#{bindings.BusinessUnit.validator}"/>
+                    </af:selectOneChoice>
+                    <af:selectOneChoice value="#{bindings.OperationUnit.inputValue}"
+                                        label="Operating Unit"
+                                        required="#{bindings.OperationUnit.hints.mandatory}"
+                                        shortDesc="#{bindings.OperationUnit.hints.tooltip}" id="soc7">
+                        <f:selectItems value="#{bindings.OperationUnit.items}" id="si7"/>
+                        <f:validator binding="#{bindings.OperationUnit.validator}"/>
+                    </af:selectOneChoice>
+                    <af:selectOneChoice value="#{bindings.AllocationBasis.inputValue}" label="Allocation Basis"
+                                        required="#{bindings.AllocationBasis.hints.mandatory}"
+                                        shortDesc="#{bindings.AllocationBasis.hints.tooltip}" id="soc1">
+                        <f:selectItems value="#{bindings.AllocationBasis.items}" id="si1"/>
+                        <f:validator binding="#{bindings.AllocationBasis.validator}"/>
                     </af:selectOneChoice>
                     <af:panelLabelAndMessage label="Transaction Data" id="plam1">
                         <af:panelGroupLayout id="pgl1" layout="horizontal">

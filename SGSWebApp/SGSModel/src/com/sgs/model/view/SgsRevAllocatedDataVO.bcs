@@ -52,3 +52,17 @@ def pType_AccountingTreatmentLOV_BindVariable_BoundParameter()
 'ACC_TREAT'
 }
 
+
+@AccessorParameterExpression(accessorName="OUList", name="pType")
+def pType_OUList_BindVariable_BoundParameter()
+{
+'OPR_UNIT'
+}
+
+
+@AccessorParameterExpression(accessorName="TargetTransList", name="pType")
+def pType_TargetTransList_BindVariable_BoundParameter()
+{
+'TARGET_TRANS'
+}
+

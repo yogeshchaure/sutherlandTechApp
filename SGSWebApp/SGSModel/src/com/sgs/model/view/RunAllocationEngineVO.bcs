@@ -14,7 +14,7 @@ def pType_CostIdentificationLOV_BindVariable_BoundParameter()
 @AccessorParameterExpression(accessorName="AllocationRangeLOV", name="pType")
 def pType_AllocationRangeLOV_BindVariable_BoundParameter()
 {
-'ALLOCATION_RANGE'
+'LEGAL_ENTITY'
 }
 
 
@@ -43,5 +43,12 @@ def pType_SourceSystemLOV_BindVariable_BoundParameter()
 def pType_TransationSourceLOV_BindVariable_BoundParameter()
 {
 'TRANS_SOURCE'
+}
+
+
+@AccessorParameterExpression(accessorName="OUList", name="pType")
+def pType_OUList_BindVariable_BoundParameter()
+{
+'OPR_UNIT'
 }
 

@@ -24,3 +24,10 @@ def pType_SgsBusinessUnitLOV_BindVariable_BoundParameter()
 'BS_UNIT'
 }
 
+
+@AccessorParameterExpression(accessorName="OUList", name="pType")
+def pType_OUList_BindVariable_BoundParameter()
+{
+'OPR_UNIT'
+}
+

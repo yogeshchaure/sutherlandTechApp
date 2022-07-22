@@ -43,7 +43,14 @@ public class SgsRevAllocatedDataImpl extends EntityImpl {
         CreatedDate,
         CreatedBy,
         UpdatedDate,
-        UpdatedBy;
+        UpdatedBy,
+        ConsolidatedInvAmount,
+        GstAmount,
+        GstRate,
+        WhtAmount,
+        WhtRate,
+        SOURCEOU,
+        TARGETOU;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -66,6 +73,8 @@ public class SgsRevAllocatedDataImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int RADID = AttributesEnum.RadId.index();
     public static final int ALLOCATIONID = AttributesEnum.AllocationId.index();
     public static final int COSTIDENTIFICATIONID = AttributesEnum.CostIdentificationId.index();
@@ -92,427 +101,18 @@ public class SgsRevAllocatedDataImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int CONSOLIDATEDINVAMOUNT = AttributesEnum.ConsolidatedInvAmount.index();
+    public static final int GSTAMOUNT = AttributesEnum.GstAmount.index();
+    public static final int GSTRATE = AttributesEnum.GstRate.index();
+    public static final int WHTAMOUNT = AttributesEnum.WhtAmount.index();
+    public static final int WHTRATE = AttributesEnum.WhtRate.index();
+    public static final int SOURCEOU = AttributesEnum.SOURCEOU.index();
+    public static final int TARGETOU = AttributesEnum.TARGETOU.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public SgsRevAllocatedDataImpl() {
-    }
-
-    /**
-     * Gets the attribute value for RadId, using the alias name RadId.
-     * @return the value of RadId
-     */
-    public Integer getRadId() {
-        return (Integer) getAttributeInternal(RADID);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for RadId.
-     * @param value value to set the RadId
-     */
-    public void setRadId(Integer value) {
-        setAttributeInternal(RADID, value);
-    }
-
-    /**
-     * Gets the attribute value for AllocationId, using the alias name AllocationId.
-     * @return the value of AllocationId
-     */
-    public String getAllocationId() {
-        return (String) getAttributeInternal(ALLOCATIONID);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for AllocationId.
-     * @param value value to set the AllocationId
-     */
-    public void setAllocationId(String value) {
-        setAttributeInternal(ALLOCATIONID, value);
-    }
-
-    /**
-     * Gets the attribute value for CostIdentificationId, using the alias name CostIdentificationId.
-     * @return the value of CostIdentificationId
-     */
-    public String getCostIdentificationId() {
-        return (String) getAttributeInternal(COSTIDENTIFICATIONID);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for CostIdentificationId.
-     * @param value value to set the CostIdentificationId
-     */
-    public void setCostIdentificationId(String value) {
-        setAttributeInternal(COSTIDENTIFICATIONID, value);
-    }
-
-    /**
-     * Gets the attribute value for TpaApplicability, using the alias name TpaApplicability.
-     * @return the value of TpaApplicability
-     */
-    public String getTpaApplicability() {
-        return (String) getAttributeInternal(TPAAPPLICABILITY);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for TpaApplicability.
-     * @param value value to set the TpaApplicability
-     */
-    public void setTpaApplicability(String value) {
-        setAttributeInternal(TPAAPPLICABILITY, value);
-    }
-
-    /**
-     * Gets the attribute value for AllocationRuleId, using the alias name AllocationRuleId.
-     * @return the value of AllocationRuleId
-     */
-    public String getAllocationRuleId() {
-        return (String) getAttributeInternal(ALLOCATIONRULEID);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for AllocationRuleId.
-     * @param value value to set the AllocationRuleId
-     */
-    public void setAllocationRuleId(String value) {
-        setAttributeInternal(ALLOCATIONRULEID, value);
-    }
-
-    /**
-     * Gets the attribute value for TransactionCategory, using the alias name TransactionCategory.
-     * @return the value of TransactionCategory
-     */
-    public String getTransactionCategory() {
-        return (String) getAttributeInternal(TRANSACTIONCATEGORY);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for TransactionCategory.
-     * @param value value to set the TransactionCategory
-     */
-    public void setTransactionCategory(String value) {
-        setAttributeInternal(TRANSACTIONCATEGORY, value);
-    }
-
-    /**
-     * Gets the attribute value for SourceGlAccount, using the alias name SourceGlAccount.
-     * @return the value of SourceGlAccount
-     */
-    public Integer getSourceGlAccount() {
-        return (Integer) getAttributeInternal(SOURCEGLACCOUNT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for SourceGlAccount.
-     * @param value value to set the SourceGlAccount
-     */
-    public void setSourceGlAccount(Integer value) {
-        setAttributeInternal(SOURCEGLACCOUNT, value);
-    }
-
-    /**
-     * Gets the attribute value for SourceBu, using the alias name SourceBu.
-     * @return the value of SourceBu
-     */
-    public String getSourceBu() {
-        return (String) getAttributeInternal(SOURCEBU);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for SourceBu.
-     * @param value value to set the SourceBu
-     */
-    public void setSourceBu(String value) {
-        setAttributeInternal(SOURCEBU, value);
-    }
-
-    /**
-     * Gets the attribute value for SourceJobCode, using the alias name SourceJobCode.
-     * @return the value of SourceJobCode
-     */
-    public Integer getSourceJobCode() {
-        return (Integer) getAttributeInternal(SOURCEJOBCODE);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for SourceJobCode.
-     * @param value value to set the SourceJobCode
-     */
-    public void setSourceJobCode(Integer value) {
-        setAttributeInternal(SOURCEJOBCODE, value);
-    }
-
-    /**
-     * Gets the attribute value for SourceAmount, using the alias name SourceAmount.
-     * @return the value of SourceAmount
-     */
-    public BigDecimal getSourceAmount() {
-        return (BigDecimal) getAttributeInternal(SOURCEAMOUNT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for SourceAmount.
-     * @param value value to set the SourceAmount
-     */
-    public void setSourceAmount(BigDecimal value) {
-        setAttributeInternal(SOURCEAMOUNT, value);
-    }
-
-    /**
-     * Gets the attribute value for TargetAccount, using the alias name TargetAccount.
-     * @return the value of TargetAccount
-     */
-    public Integer getTargetAccount() {
-        return (Integer) getAttributeInternal(TARGETACCOUNT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for TargetAccount.
-     * @param value value to set the TargetAccount
-     */
-    public void setTargetAccount(Integer value) {
-        setAttributeInternal(TARGETACCOUNT, value);
-    }
-
-    /**
-     * Gets the attribute value for TargetBu, using the alias name TargetBu.
-     * @return the value of TargetBu
-     */
-    public String getTargetBu() {
-        return (String) getAttributeInternal(TARGETBU);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for TargetBu.
-     * @param value value to set the TargetBu
-     */
-    public void setTargetBu(String value) {
-        setAttributeInternal(TARGETBU, value);
-    }
-
-    /**
-     * Gets the attribute value for TargetJobCode, using the alias name TargetJobCode.
-     * @return the value of TargetJobCode
-     */
-    public Integer getTargetJobCode() {
-        return (Integer) getAttributeInternal(TARGETJOBCODE);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for TargetJobCode.
-     * @param value value to set the TargetJobCode
-     */
-    public void setTargetJobCode(Integer value) {
-        setAttributeInternal(TARGETJOBCODE, value);
-    }
-
-    /**
-     * Gets the attribute value for ServiceCategory, using the alias name ServiceCategory.
-     * @return the value of ServiceCategory
-     */
-    public String getServiceCategory() {
-        return (String) getAttributeInternal(SERVICECATEGORY);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for ServiceCategory.
-     * @param value value to set the ServiceCategory
-     */
-    public void setServiceCategory(String value) {
-        setAttributeInternal(SERVICECATEGORY, value);
-    }
-
-    /**
-     * Gets the attribute value for AccountingTreatment, using the alias name AccountingTreatment.
-     * @return the value of AccountingTreatment
-     */
-    public String getAccountingTreatment() {
-        return (String) getAttributeInternal(ACCOUNTINGTREATMENT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for AccountingTreatment.
-     * @param value value to set the AccountingTreatment
-     */
-    public void setAccountingTreatment(String value) {
-        setAttributeInternal(ACCOUNTINGTREATMENT, value);
-    }
-
-    /**
-     * Gets the attribute value for MarkUpRage, using the alias name MarkUpRage.
-     * @return the value of MarkUpRage
-     */
-    public String getMarkUpRage() {
-        return (String) getAttributeInternal(MARKUPRAGE);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for MarkUpRage.
-     * @param value value to set the MarkUpRage
-     */
-    public void setMarkUpRage(String value) {
-        setAttributeInternal(MARKUPRAGE, value);
-    }
-
-    /**
-     * Gets the attribute value for Amount, using the alias name Amount.
-     * @return the value of Amount
-     */
-    public BigDecimal getAmount() {
-        return (BigDecimal) getAttributeInternal(AMOUNT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Amount.
-     * @param value value to set the Amount
-     */
-    public void setAmount(BigDecimal value) {
-        setAttributeInternal(AMOUNT, value);
-    }
-
-    /**
-     * Gets the attribute value for MarkUpAmount, using the alias name MarkUpAmount.
-     * @return the value of MarkUpAmount
-     */
-    public String getMarkUpAmount() {
-        return (String) getAttributeInternal(MARKUPAMOUNT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for MarkUpAmount.
-     * @param value value to set the MarkUpAmount
-     */
-    public void setMarkUpAmount(String value) {
-        setAttributeInternal(MARKUPAMOUNT, value);
-    }
-
-    /**
-     * Gets the attribute value for TotalAmount, using the alias name TotalAmount.
-     * @return the value of TotalAmount
-     */
-    public BigDecimal getTotalAmount() {
-        return (BigDecimal) getAttributeInternal(TOTALAMOUNT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for TotalAmount.
-     * @param value value to set the TotalAmount
-     */
-    public void setTotalAmount(BigDecimal value) {
-        setAttributeInternal(TOTALAMOUNT, value);
-    }
-
-    /**
-     * Gets the attribute value for TargetTransaction, using the alias name TargetTransaction.
-     * @return the value of TargetTransaction
-     */
-    public String getTargetTransaction() {
-        return (String) getAttributeInternal(TARGETTRANSACTION);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for TargetTransaction.
-     * @param value value to set the TargetTransaction
-     */
-    public void setTargetTransaction(String value) {
-        setAttributeInternal(TARGETTRANSACTION, value);
-    }
-
-    /**
-     * Gets the attribute value for Status, using the alias name Status.
-     * @return the value of Status
-     */
-    public String getStatus() {
-        return (String) getAttributeInternal(STATUS);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Status.
-     * @param value value to set the Status
-     */
-    public void setStatus(String value) {
-        setAttributeInternal(STATUS, value);
-    }
-
-    /**
-     * Gets the attribute value for SelectInd, using the alias name SelectInd.
-     * @return the value of SelectInd
-     */
-    public String getSelectInd() {
-        return (String) getAttributeInternal(SELECTIND);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for SelectInd.
-     * @param value value to set the SelectInd
-     */
-    public void setSelectInd(String value) {
-        setAttributeInternal(SELECTIND, value);
-    }
-
-    /**
-     * Gets the attribute value for CreatedDate, using the alias name CreatedDate.
-     * @return the value of CreatedDate
-     */
-    public Date getCreatedDate() {
-        return (Date) getAttributeInternal(CREATEDDATE);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for CreatedDate.
-     * @param value value to set the CreatedDate
-     */
-    public void setCreatedDate(Date value) {
-        setAttributeInternal(CREATEDDATE, value);
-    }
-
-    /**
-     * Gets the attribute value for CreatedBy, using the alias name CreatedBy.
-     * @return the value of CreatedBy
-     */
-    public String getCreatedBy() {
-        return (String) getAttributeInternal(CREATEDBY);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for CreatedBy.
-     * @param value value to set the CreatedBy
-     */
-    public void setCreatedBy(String value) {
-        setAttributeInternal(CREATEDBY, value);
-    }
-
-    /**
-     * Gets the attribute value for UpdatedDate, using the alias name UpdatedDate.
-     * @return the value of UpdatedDate
-     */
-    public Date getUpdatedDate() {
-        return (Date) getAttributeInternal(UPDATEDDATE);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for UpdatedDate.
-     * @param value value to set the UpdatedDate
-     */
-    public void setUpdatedDate(Date value) {
-        setAttributeInternal(UPDATEDDATE, value);
-    }
-
-    /**
-     * Gets the attribute value for UpdatedBy, using the alias name UpdatedBy.
-     * @return the value of UpdatedBy
-     */
-    public String getUpdatedBy() {
-        return (String) getAttributeInternal(UPDATEDBY);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for UpdatedBy.
-     * @param value value to set the UpdatedBy
-     */
-    public void setUpdatedBy(String value) {
-        setAttributeInternal(UPDATEDBY, value);
     }
 
     /**
@@ -530,5 +130,88 @@ public class SgsRevAllocatedDataImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("com.sgs.model.entity.SgsRevAllocatedData");
     }
+
+
+    /**
+     * Gets the attribute value for CONSOLIDATEDINVAMOUNT, using the alias name CONSOLIDATEDINVAMOUNT.
+     * @return the value of CONSOLIDATEDINVAMOUNT
+     */
+    public String getCONSOLIDATEDINVAMOUNT() {
+        return (String) getAttributeInternal(CONSOLIDATEDINVAMOUNT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for CONSOLIDATEDINVAMOUNT.
+     * @param value value to set the CONSOLIDATEDINVAMOUNT
+     */
+    public void setCONSOLIDATEDINVAMOUNT(String value) {
+        setAttributeInternal(CONSOLIDATEDINVAMOUNT, value);
+    }
+
+    /**
+     * Gets the attribute value for GSTAMOUNT, using the alias name GSTAMOUNT.
+     * @return the value of GSTAMOUNT
+     */
+    public String getGSTAMOUNT() {
+        return (String) getAttributeInternal(GSTAMOUNT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for GSTAMOUNT.
+     * @param value value to set the GSTAMOUNT
+     */
+    public void setGSTAMOUNT(String value) {
+        setAttributeInternal(GSTAMOUNT, value);
+    }
+
+    /**
+     * Gets the attribute value for GSTRATE, using the alias name GSTRATE.
+     * @return the value of GSTRATE
+     */
+    public String getGSTRATE() {
+        return (String) getAttributeInternal(GSTRATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for GSTRATE.
+     * @param value value to set the GSTRATE
+     */
+    public void setGSTRATE(String value) {
+        setAttributeInternal(GSTRATE, value);
+    }
+
+    /**
+     * Gets the attribute value for WHTAMOUNT, using the alias name WHTAMOUNT.
+     * @return the value of WHTAMOUNT
+     */
+    public String getWHTAMOUNT() {
+        return (String) getAttributeInternal(WHTAMOUNT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for WHTAMOUNT.
+     * @param value value to set the WHTAMOUNT
+     */
+    public void setWHTAMOUNT(String value) {
+        setAttributeInternal(WHTAMOUNT, value);
+    }
+
+    /**
+     * Gets the attribute value for WHTRATE, using the alias name WHTRATE.
+     * @return the value of WHTRATE
+     */
+    public String getWHTRATE() {
+        return (String) getAttributeInternal(WHTRATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for WHTRATE.
+     * @param value value to set the WHTRATE
+     */
+    public void setWHTRATE(String value) {
+        setAttributeInternal(WHTRATE, value);
+    }
+
+
 }
 

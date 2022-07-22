@@ -132,6 +132,22 @@
       </PIMap>
     </ParameterMap>
   </ViewAccessor>
+  <ViewAccessor
+    Name="OUList"
+    ViewObjectName="com.sgs.model.view.SgsListVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="SgsListVOCriteria"
+      FullName="com.sgs.model.view.SgsListVO.SgsListVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="pType">
+        <TransientExpression
+          Name="ExpressionScript"
+          trustMode="untrusted"
+          CodeSourceName="SgsRunIntercompanyExtractionVO"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_BusinessUnit"
     ListVOName="BusinessUnitLOV"
@@ -258,6 +274,24 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_OperationUnit"
+    ListVOName="OUList"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="OperationUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Discription"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="SgsRunIntercompanyExtraction"
     Entity="com.sgs.model.entity.SgsRunIntercompanyExtraction"/>
@@ -268,6 +302,20 @@
     EntityUsage="SgsRunIntercompanyExtraction"
     AliasName="BUSINESS_UNIT"
     LOVName="LOV_BusinessUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="OperationUnit"
+    PrecisionRule="true"
+    EntityAttrName="OperationUnit"
+    EntityUsage="SgsRunIntercompanyExtraction"
+    AliasName="OPRATION_UNIT"
+    LOVName="LOV_OperationUnit">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

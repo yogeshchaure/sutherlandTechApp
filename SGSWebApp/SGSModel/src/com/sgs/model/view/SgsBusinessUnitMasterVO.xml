@@ -192,6 +192,22 @@
     AMUsageName="SGSAppModule"
     ViewInstanceName="SgsCustomersVO1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="OUList"
+    ViewObjectName="com.sgs.model.view.SgsListVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="SgsListVOCriteria"
+      FullName="com.sgs.model.view.SgsListVO.SgsListVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="pType">
+        <TransientExpression
+          Name="ExpressionScript"
+          trustMode="untrusted"
+          CodeSourceName="SgsBusinessUnitMasterVO"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_LeagalEntity"
     ListVOName="LegalEntityList"
@@ -333,6 +349,24 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_Opration_Unit"
+    ListVOName="OUList"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Opration_Unit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Discription"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="SgsBusinessUnitMaster"
     Entity="com.sgs.model.entity.SgsBusinessUnitMaster"/>
@@ -398,6 +432,20 @@
     EntityUsage="SgsBusinessUnitMaster"
     AliasName="BUSINESS_CONTROLLERS"
     LOVName="LOV_BusinessControllers">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Opration_Unit"
+    PrecisionRule="true"
+    EntityAttrName="Opration_Unit"
+    EntityUsage="SgsBusinessUnitMaster"
+    AliasName="OPRATION_UNIT"
+    LOVName="LOV_Opration_Unit">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -491,6 +539,12 @@
     EntityAttrName="ICoCustomerName"
     EntityUsage="SgsBusinessUnitMaster"
     AliasName="I_CO_CUSTOMER_NAME"/>
+  <ViewAttribute
+    Name="GstRegNum"
+    PrecisionRule="true"
+    EntityAttrName="GstRegNum"
+    EntityUsage="SgsBusinessUnitMaster"
+    AliasName="GST_REG_NUM"/>
   <ViewAttribute
     Name="CreatedDate"
     PrecisionRule="true"

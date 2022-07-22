@@ -32,8 +32,10 @@ public class SgsTpaMasterImpl extends EntityImpl {
         CreatedDate,
         CreatedBy,
         UpdatedDate,
-        UpdatedBy;
+        UpdatedBy,
+        OperationUnit;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -55,6 +57,9 @@ public class SgsTpaMasterImpl extends EntityImpl {
             return vals;
         }
     }
+    private static final ADFLogger LOG = ADFLogger.createADFLogger(SgsTpaMasterImpl.class);
+
+
     public static final int TPAMID = AttributesEnum.TpamId.index();
     public static final int TPAID = AttributesEnum.TpaId.index();
     public static final int LESERVICEPROVIDER = AttributesEnum.LeServiceProvider.index();
@@ -67,7 +72,7 @@ public class SgsTpaMasterImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
-    private static final ADFLogger LOG = ADFLogger.createADFLogger(SgsTpaMasterImpl.class);
+    public static final int OPERATIONUNIT = AttributesEnum.OperationUnit.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -212,27 +217,11 @@ public class SgsTpaMasterImpl extends EntityImpl {
     }
 
     /**
-     * Sets <code>value</code> as the attribute value for CreatedDate.
-     * @param value value to set the CreatedDate
-     */
-    public void setCreatedDate(Date value) {
-        setAttributeInternal(CREATEDDATE, value);
-    }
-
-    /**
      * Gets the attribute value for CreatedBy, using the alias name CreatedBy.
      * @return the value of CreatedBy
      */
     public String getCreatedBy() {
         return (String) getAttributeInternal(CREATEDBY);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for CreatedBy.
-     * @param value value to set the CreatedBy
-     */
-    public void setCreatedBy(String value) {
-        setAttributeInternal(CREATEDBY, value);
     }
 
     /**
@@ -244,14 +233,6 @@ public class SgsTpaMasterImpl extends EntityImpl {
     }
 
     /**
-     * Sets <code>value</code> as the attribute value for UpdatedDate.
-     * @param value value to set the UpdatedDate
-     */
-    public void setUpdatedDate(Date value) {
-        setAttributeInternal(UPDATEDDATE, value);
-    }
-
-    /**
      * Gets the attribute value for UpdatedBy, using the alias name UpdatedBy.
      * @return the value of UpdatedBy
      */
@@ -260,11 +241,19 @@ public class SgsTpaMasterImpl extends EntityImpl {
     }
 
     /**
-     * Sets <code>value</code> as the attribute value for UpdatedBy.
-     * @param value value to set the UpdatedBy
+     * Gets the attribute value for OperationUnit, using the alias name OperationUnit.
+     * @return the value of OperationUnit
      */
-    public void setUpdatedBy(String value) {
-        setAttributeInternal(UPDATEDBY, value);
+    public String getOperationUnit() {
+        return (String) getAttributeInternal(OPERATIONUNIT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for OperationUnit.
+     * @param value value to set the OperationUnit
+     */
+    public void setOperationUnit(String value) {
+        setAttributeInternal(OPERATIONUNIT, value);
     }
 
     /**
@@ -282,6 +271,7 @@ public class SgsTpaMasterImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("com.sgs.model.entity.SgsTpaMaster");
     }
+
 
     /**
      * Add attribute defaulting logic in this method.

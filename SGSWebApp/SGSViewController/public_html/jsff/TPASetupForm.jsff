@@ -55,6 +55,13 @@
                         <f:selectItems value="#{bindings.PassThroughBu.items}" id="si4"/>
                         <f:validator binding="#{bindings.PassThroughBu.validator}"/>
                     </af:selectOneChoice>
+                    <af:selectOneChoice value="#{bindings.OperationUnit.inputValue}"
+                                        label="Pass- Through OU"
+                                        required="#{bindings.OperationUnit.hints.mandatory}"
+                                        shortDesc="#{bindings.OperationUnit.hints.tooltip}" id="soc5">
+                        <f:selectItems value="#{bindings.OperationUnit.items}" id="si5"/>
+                        <f:validator binding="#{bindings.OperationUnit.validator}"/>
+                    </af:selectOneChoice>
                     <af:inputDate value="#{bindings.EffectiveStartDate.inputValue}"
                                   label="#{bindings.EffectiveStartDate.hints.label}"
                                   required="#{bindings.EffectiveStartDate.hints.mandatory}"

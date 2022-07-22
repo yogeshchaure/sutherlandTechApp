@@ -23,7 +23,8 @@
                 rows="#{bindings.SgsARStatisticalDataVO1.rangeSize}" styleClass="AFStretchWidth"
                 emptyText="#{bindings.SgsARStatisticalDataVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
                 rowBandingInterval="0" selectedRowKeys="#{bindings.SgsARStatisticalDataVO1.collectionModel.selectedRow}"
-                selectionListener="#{bindings.SgsARStatisticalDataVO1.collectionModel.makeCurrent}" fetchSize="#{bindings.SgsARStatisticalDataVO1.rangeSize}" id="resId1">
+                selectionListener="#{bindings.SgsARStatisticalDataVO1.collectionModel.makeCurrent}" fetchSize="#{bindings.SgsARStatisticalDataVO1.rangeSize}" id="resId1"
+                columnStretching="column:resId1c3">
         <af:column id="c2" align="center" headerText="Select">
           <af:selectBooleanCheckbox id="sbc1"/>
         </af:column>
@@ -39,7 +40,7 @@
             <af:convertDateTime pattern="#{bindings.SgsARStatisticalDataVO1.hints.Month.format}"/>
           </af:inputDate>
         </af:column>
-        <af:column headerText="#{bindings.SgsARStatisticalDataVO1.hints.StatisticalDataCategory.label}" id="resId1c3">
+        <af:column headerText="Statistical Data Category" id="resId1c3">
           <af:selectOneChoice value="#{row.bindings.StatisticalDataCategory.inputValue}"
                               label="#{row.bindings.StatisticalDataCategory.label}"
                               required="#{bindings.SgsARStatisticalDataVO1.hints.StatisticalDataCategory.mandatory}"
@@ -74,7 +75,7 @@
           <af:outputText value="#{row.DepartmentId}"
                          shortDesc="#{bindings.SgsARStatisticalDataVO1.hints.DepartmentId.tooltip}" id="ot5"/>
         </af:column>
-        <af:column headerText="#{bindings.SgsARStatisticalDataVO1.hints.UnitOfMeasure.label}" id="resId1c9">
+        <af:column headerText="Unit of Measure" id="resId1c9">
           <af:outputText value="#{row.UnitOfMeasure}"
                          shortDesc="#{bindings.SgsARStatisticalDataVO1.hints.UnitOfMeasure.tooltip}" id="ot7"/>
         </af:column>
