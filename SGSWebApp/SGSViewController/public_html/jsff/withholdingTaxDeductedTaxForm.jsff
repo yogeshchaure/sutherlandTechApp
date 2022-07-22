@@ -132,9 +132,9 @@
                 <af:outputText value="%" id="ot3"/>
               </af:panelGroupLayout>
             </af:panelLabelAndMessage>
-            <af:panelLabelAndMessage label="Recovery Rate" id="plam2">
+            <af:panelLabelAndMessage label="Recovery Rate (Foreign Tax Credit)" id="plam2">
               <af:panelGroupLayout id="pgl3" layout="horizontal">
-            <af:inputText value="#{bindings.RecoveryRate.inputValue}" label="Recovery Rate"
+            <af:inputText value="#{bindings.RecoveryRate.inputValue}" label="Recovery Rate (Foreign Tax Credit)"
                           required="#{bindings.RecoveryRate.hints.mandatory}" simple="true"
                           columns="#{bindings.RecoveryRate.hints.displayWidth}"
                           maximumLength="#{bindings.RecoveryRate.hints.precision}"
@@ -143,7 +143,7 @@
               <af:convertNumber groupingUsed="false" pattern="#{bindings.RecoveryRate.format}"/>
             </af:inputText>
              <af:spacer id="s2" width="2"/>
-                <af:outputText value="(Foreign Tax Credit)" id="ot2"/>
+                <af:outputText value="%" id="ot2"/>
             </af:panelGroupLayout>
             </af:panelLabelAndMessage>
             <af:selectOneChoice value="#{bindings.Currency.inputValue}" label="Currency"

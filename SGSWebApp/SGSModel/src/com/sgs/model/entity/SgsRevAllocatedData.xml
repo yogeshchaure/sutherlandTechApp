@@ -369,6 +369,18 @@
       <Attr Name="_DisplaySize" Value="80"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="TotalAmount_At"
+    Precision="80"
+    ColumnName="TOTAL_AMOUNT_AT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="SGS_REV_ALLOCATED_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
   <Key
     Name="PKSGSREVALLOCATEDDATA"
     PrimaryKey="true">

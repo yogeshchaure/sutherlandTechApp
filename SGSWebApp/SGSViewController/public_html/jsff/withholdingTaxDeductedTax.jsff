@@ -129,7 +129,7 @@
                                                           pattern="#{bindings.SgsTdsWhtVO.hints.RateOfTax.format}"/>
                                     </af:outputText>
                                 </af:column>
-                                <af:column headerText="Recovery Rate" id="resId1c12">
+                                <af:column headerText="Recovery Rate (Foreign Tax Credit)" id="resId1c12">
                                     <af:outputText value="#{row.RecoveryRate}"
                                                    shortDesc="#{bindings.SgsTdsWhtVO.hints.RecoveryRate.tooltip}"
                                                    id="ot7">

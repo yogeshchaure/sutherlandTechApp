@@ -846,6 +846,19 @@
     EntityAttrName="ConsolidatedInvAmount"
     EntityUsage="SgsRevAllocatedData"
     AliasName="CONSOLIDATED_INV_AMOUNT"/>
+  <ViewAttribute
+    Name="TotalAmount_At"
+    PrecisionRule="true"
+    EntityAttrName="TotalAmount_At"
+    EntityUsage="SgsRevAllocatedData"
+    AliasName="TOTAL_AMOUNT_AT">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.sgs.model.view.SgsRevAllocatedDataVO.TotalAmount_At_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewCriteria
     Name="SgsRevAllocatedDataVOCriteria"
     ViewObjectName="com.sgs.model.view.SgsRevAllocatedDataVO"

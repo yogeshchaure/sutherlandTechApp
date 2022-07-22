@@ -42,6 +42,7 @@
           <Item Value="GstRate"/>
           <Item Value="GstAmount"/>
           <Item Value="ConsolidatedInvAmount"/>
+          <Item Value="TotalAmount_At"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

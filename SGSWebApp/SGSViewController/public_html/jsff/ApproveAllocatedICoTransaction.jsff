@@ -248,6 +248,12 @@
                                                    shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.GstAmount.tooltip}"
                                                    id="ot8"/>
                                 </af:column>
+                                <af:column headerText="#{bindings.SgsRevAllocatedDataVO.hints.TotalAmount_At.label}"
+                                           id="c9">
+                                    <af:outputText value="#{row.TotalAmount_At}"
+                                                   shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.TotalAmount_At.tooltip}"
+                                                   id="ot16"/>
+                                </af:column>
                                 <af:column headerText="Consolidated Inv. Amount (Yearly)" id="c8">
                                     <af:outputText value="#{row.ConsolidatedInvAmount}"
                                                    shortDesc="#{bindings.SgsRevAllocatedDataVO.hints.ConsolidatedInvAmount.tooltip}"
